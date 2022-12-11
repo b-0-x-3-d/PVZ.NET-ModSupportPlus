@@ -4,8 +4,8 @@ namespace Lawn
 {
     public enum BeghouledUpgrade
     {
-        Repeater,
-        Fumeshroom,
+        IceRepeater,
+        Gloomshroom,
         Tallnut,
         BeghouledUpgradeCount
     }

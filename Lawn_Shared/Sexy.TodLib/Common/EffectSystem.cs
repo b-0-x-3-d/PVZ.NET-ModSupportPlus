@@ -18,8 +18,8 @@ namespace Sexy.TodLib
 
         public void EffectSystemInitialize()
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem == null);
-            Debug.ASSERT(mParticleHolder == null && mTrailHolder == null && mReanimationHolder == null && mAttachmentHolder == null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem == null);
+            //Debug.ASSERT(mParticleHolder == null && mTrailHolder == null && mReanimationHolder == null && mAttachmentHolder == null);
             EffectSystem.gEffectSystem = this;
             mParticleHolder = new TodParticleHolder();
             mTrailHolder = new TrailHolder();

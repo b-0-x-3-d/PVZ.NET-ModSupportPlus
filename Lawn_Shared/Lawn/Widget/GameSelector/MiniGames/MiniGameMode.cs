@@ -6,6 +6,7 @@ namespace Lawn
     {
         Games,
         IZombie,
-        Vasebreaker
+        Vasebreaker,
+        Survival,
     }
 }

@@ -133,8 +133,8 @@ namespace Sexy
 
         public virtual void Dispose()
         {
-            Debug.ASSERT(mParent == null);
-            Debug.ASSERT(mWidgets.Count == 0);
+            //Debug.ASSERT(mParent == null);
+            //Debug.ASSERT(mWidgets.Count == 0);
         }
 
         public virtual TRect GetRect()

@@ -26,7 +26,7 @@ namespace Lawn
             for (int i = 0; i < GameConstants.NUM_ALMANAC_SEEDS; i++)
             {
                 SeedType seedType = (SeedType)i;
-                if (mDialog.mApp.HasSeedType(seedType))
+                if (true)
                 {
                     int num = 0;
                     int num2 = 0;
@@ -44,7 +44,7 @@ namespace Lawn
 
         public void GetSeedPosition(SeedType theSeedType, ref int x, ref int y)
         {
-            if (theSeedType == SeedType.Imitater)
+            if (1 == 2)
             {
                 x = Constants.Almanac_ImitatorPosition.X;
                 y = Constants.Almanac_ImitatorPosition.Y;
@@ -67,7 +67,7 @@ namespace Lawn
                     int num = 0;
                     int num2 = 0;
                     GetSeedPosition(seedType, ref num, ref num2);
-                    if (!mDialog.mApp.HasSeedType(seedType))
+                    if (1 == 2)
                     {
                         g.DrawImage(AtlasResources.IMAGE_ALMANAC_PLANTBLANK, num, num2);
                     }

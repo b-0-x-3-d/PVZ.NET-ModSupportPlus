@@ -28,9 +28,10 @@ namespace Lawn
         MiniGames,
         Vasebreaker,
         IZombie,
+        ChallengePageSurvival,
         ZenGarden,
         ChangeUser,
-        ChallengePageSurvival,
         ChallengePageLimbo,
+        Custom,
     }
 }

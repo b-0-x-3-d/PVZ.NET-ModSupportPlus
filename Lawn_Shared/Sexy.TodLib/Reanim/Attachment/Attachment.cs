@@ -130,7 +130,7 @@ namespace Sexy.TodLib
                     break;
                 }
                 default:
-                    Debug.ASSERT(false);
+                    //Debug.ASSERT(false);
                     break;
                 }
                 if (!flag)
@@ -163,7 +163,7 @@ namespace Sexy.TodLib
 
         public void SetMatrix(ref SexyTransform2D theMatrix)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             for (int i = 0; i < mNumEffects; i++)
             {
                 AttachEffect attachEffect = mEffectArray[i];
@@ -241,7 +241,7 @@ namespace Sexy.TodLib
 
         public void OverrideColor(SexyColor theColor)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             for (int i = 0; i < mNumEffects; i++)
             {
                 AttachEffect attachEffect = mEffectArray[i];
@@ -283,7 +283,7 @@ namespace Sexy.TodLib
 
         public void OverrideScale(float theScale)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             for (int i = 0; i < mNumEffects; i++)
             {
                 AttachEffect attachEffect = mEffectArray[i];
@@ -325,8 +325,8 @@ namespace Sexy.TodLib
 
         public void Draw(Graphics g, bool theParentHidden, bool doScale)
         {
-            Debug.ASSERT(!mDead);
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(!mDead);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<TodParticleSystem> mParticleSystems = EffectSystem.gEffectSystem.mParticleHolder.mParticleSystems;
             List<Trail> mTrails = EffectSystem.gEffectSystem.mTrailHolder.mTrails;
             List<Reanimation> mReanimations = EffectSystem.gEffectSystem.mReanimationHolder.mReanimations;
@@ -391,7 +391,7 @@ namespace Sexy.TodLib
 
         public void AttachmentDie()
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<TodParticleSystem> mParticleSystems = EffectSystem.gEffectSystem.mParticleHolder.mParticleSystems;
             List<Trail> mTrails = EffectSystem.gEffectSystem.mTrailHolder.mTrails;
             List<Reanimation> mReanimations = EffectSystem.gEffectSystem.mReanimationHolder.mReanimations;
@@ -446,7 +446,7 @@ namespace Sexy.TodLib
 
         public void Detach()
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<TodParticleSystem> mParticleSystems = EffectSystem.gEffectSystem.mParticleHolder.mParticleSystems;
             List<Trail> mTrails = EffectSystem.gEffectSystem.mTrailHolder.mTrails;
             List<Reanimation> mReanimations = EffectSystem.gEffectSystem.mReanimationHolder.mReanimations;
@@ -467,7 +467,7 @@ namespace Sexy.TodLib
                     }
                     if (todParticleSystem != null)
                     {
-                        Debug.ASSERT(todParticleSystem.mIsAttachment);
+                        //Debug.ASSERT(todParticleSystem.mIsAttachment);
                         todParticleSystem.mIsAttachment = false;
                     }
                     break;
@@ -477,7 +477,7 @@ namespace Sexy.TodLib
                     Trail trail = mTrails[mTrails.IndexOf((Trail)attachEffect.mEffectID)];
                     if (trail != null)
                     {
-                        Debug.ASSERT(trail.mIsAttachment);
+                        //Debug.ASSERT(trail.mIsAttachment);
                         trail.mIsAttachment = false;
                     }
                     break;
@@ -487,7 +487,7 @@ namespace Sexy.TodLib
                     Reanimation reanimation = mReanimations[mReanimations.IndexOf((Reanimation)attachEffect.mEffectID)];
                     if (reanimation != null)
                     {
-                        Debug.ASSERT(reanimation.mIsAttachment);
+                        //Debug.ASSERT(reanimation.mIsAttachment);
                         reanimation.mIsAttachment = false;
                     }
                     break;
@@ -510,7 +510,7 @@ namespace Sexy.TodLib
 
         public void CrossFade(string theCrossFadeName)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             for (int i = 0; i < mNumEffects; i++)
             {
                 AttachEffect attachEffect = mEffectArray[i];
@@ -534,7 +534,7 @@ namespace Sexy.TodLib
 
         public void PropogateColor(SexyColor theColor, bool theEnableAdditiveColor, SexyColor theAdditiveColor, bool theEnableOverlayColor, SexyColor theOverlayColor)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             for (int i = 0; i < mNumEffects; i++)
             {
                 AttachEffect attachEffect = mEffectArray[i];
@@ -591,7 +591,7 @@ namespace Sexy.TodLib
 
         public void SetPosition(SexyVector2 thePosition)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             for (int i = 0; i < mNumEffects; i++)
             {
                 AttachEffect attachEffect = mEffectArray[i];

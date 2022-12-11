@@ -103,7 +103,7 @@ namespace Lawn
                   x,
                   y);
             }
-            if (mApp.mGameMode == GameMode.ChallengeColumn) 
+            if (mApp.mGameMode == GameMode.ChallengeColumn || mApp.mGameMode == GameMode.ChallengeHighGravity) 
             {
                 for (int i = 0; i < Constants.MAX_GRIDSIZEY; i++) 
                 {

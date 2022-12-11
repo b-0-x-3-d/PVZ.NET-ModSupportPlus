@@ -329,7 +329,7 @@ namespace Lawn
                 DrawIZombieBrain(g);
                 break;
             default:
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
                 break;
             }
             Reanimation reanimation = mApp.ReanimationTryToGet(mGridItemReanimID);
@@ -439,7 +439,7 @@ namespace Lawn
         public void DrawScaryPot(Graphics g)
         {
             int num = mGridItemState - GridItemState.ScaryPotQuestion;
-            Debug.ASSERT(num >= 0 && num < 3);
+            //Debug.ASSERT(num >= 0 && num < 3);
             int num2 = mBoard.GridToPixelX(mGridX, mGridY) - 5;
             int num3 = mBoard.GridToPixelY(mGridX, mGridY) - 15;
             if (mTransparentCounter > 0)
@@ -728,7 +728,7 @@ namespace Lawn
         {
             Reanimation reanimation = mApp.ReanimationGet(mGridItemReanimID);
             float animTime = reanimation.mAnimTime;
-            Debug.ASSERT(mMotionTrailCount <= 12);
+            //Debug.ASSERT(mMotionTrailCount <= 12);
             for (int i = mMotionTrailCount - 1; i >= 0; i--)
             {
                 if (i % 2 != 0)

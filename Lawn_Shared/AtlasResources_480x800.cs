@@ -1999,7 +1999,12 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
             new UNPACK_INFO(AtlasResources.IMAGE_REANIM_BLOVER_DIRT_FRONT, 1809, 511, 12, 3, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_REANIM_SQUASH_EYES, 1187, 365, 17, 2, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_REANIM_CACTUS_MOUTH, 2043, 14, 2, 11, 1, 1, AnimType.AnimType_None, 0, 0, 0),
-            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_TORCHWOOD_SPARK, 2043, 27, 4, 5, 1, 1, AnimType.AnimType_None, 0, 0, 0)
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_TORCHWOOD_SPARK, 2043, 27, 4, 5, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_DG1, 0, 1445, 28, 47, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_DG2, 0, 1545, 42, 35, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_PLANTERN_LEAF1, 30, 1445, 12, 12, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_INFINUT_BODY, 147, 1469, 83, 108, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_INFINUT_BASE, 61, 1469, 83, 108, 1, 1, AnimType.AnimType_None, 0, 0, 0),
         };
         mArrays["PlantsZombies"] = array;
         for (int i = 0; i < array.Length; i++)
@@ -4133,13 +4138,23 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
         num++;
         AtlasResources.IMAGE_REANIM_TORCHWOOD_SPARK = array[num].mpImage;
         num++;
+        AtlasResources.IMAGE_REANIM_DG1 = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_REANIM_DG2 = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_REANIM_PLANTERN_LEAF1 = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_REANIM_INFINUT_BODY = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_REANIM_INFINUT_BASE = array[num].mpImage;
+        num++;
     }
 
     public override void UnpackSeedAtlasAtlasImages()
     {
         UNPACK_INFO[] array = new UNPACK_INFO[]
         {
-            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKETS, 1, 1, 324, 689, 13, 4, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKETS, 1000, 1, 324, 1325, 25, 4, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SOD3ROW, 327, 1, 617, 284, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_STORE_SPEECHBUBBLE, 327, 287, 435, 267, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SOD1ROW, 327, 556, 617, 101, 1, 1, AnimType.AnimType_None, 0, 0, 0),
@@ -4178,7 +4193,12 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKETS_GREEN_TAB, 946, 160, 33, 20, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKETS_PURPLE_TAB, 946, 182, 33, 20, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_GRAD_LEFT_TO_RIGHT, 764, 369, 98, 5, 1, 1, AnimType.AnimType_None, 0, 0, 0),
-            new UNPACK_INFO(AtlasResources.IMAGE_GRAD_TOP_TO_BOTTOM, 981, 106, 3, 60, 1, 1, AnimType.AnimType_None, 0, 0, 0)
+            new UNPACK_INFO(AtlasResources.IMAGE_GRAD_TOP_TO_BOTTOM, 981, 106, 3, 60, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+
+            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_IR, 1, 1, 324, 689, 13, 4, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_LS, 84, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_MG, 167, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_MS, 247, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
         };
         mArrays["SeedAtlas"] = array;
         for (int i = 0; i < array.Length; i++)
@@ -4267,6 +4287,14 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
         AtlasResources.IMAGE_GRAD_LEFT_TO_RIGHT = array[num].mpImage;
         num++;
         AtlasResources.IMAGE_GRAD_TOP_TO_BOTTOM = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_SEEDPACKET_IR = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_SEEDPACKET_LS = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_SEEDPACKET_MG = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_SEEDPACKET_MS = array[num].mpImage;
         num++;
     }
 

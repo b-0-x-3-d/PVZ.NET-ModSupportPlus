@@ -359,7 +359,7 @@ namespace Lawn
                 do
                 {
                     mPage++;
-                    if (mPage >= StorePage.NumStorePages)
+                    if (mPage >= StorePage.Zen2)
                     {
                         mPage = StorePage.SlotUpgrades;
                     }
@@ -554,13 +554,8 @@ namespace Lawn
                 }
                 return StoreItem.STORE_ITEM_INVALID;
             }
-            else
+            else if (mPage == StorePage.Zen2)
             {
-                if (mPage != StorePage.Zen2)
-                {
-                    Debug.ASSERT(false);
-                    return StoreItem.STORE_ITEM_INVALID;
-                }
                 if (theSpotIndex == 0)
                 {
                     return StoreItem.STORE_ITEM_MUSHROOM_GARDEN;
@@ -576,6 +571,19 @@ namespace Lawn
                 if (theSpotIndex == 3)
                 {
                     return StoreItem.STORE_ITEM_STINKY_THE_SNAIL;
+                }
+                return StoreItem.STORE_ITEM_INVALID;
+            }
+            else
+            {
+                if (mPage != StorePage.Misc)
+                {
+                    //Debug.ASSERT(false);
+                    return StoreItem.STORE_ITEM_INVALID;
+                }
+                if (theSpotIndex == 0)
+                {
+                    return StoreItem.STORE_ITEM_SOLAR_FIELD;
                 }
                 return StoreItem.STORE_ITEM_INVALID;
             }
@@ -635,7 +643,7 @@ namespace Lawn
             }
             if (theStoreItem == StoreItem.STORE_ITEM_PACKET_UPGRADE)
             {
-                return mApp.mPlayerInfo.mPurchases[21] >= 3;
+                return mApp.mPlayerInfo.mPurchases[21] >= 6;
             }
             if (theStoreItem == StoreItem.STORE_ITEM_FERTILIZER || theStoreItem == StoreItem.STORE_ITEM_BUG_SPRAY)
             {
@@ -650,7 +658,7 @@ namespace Lawn
                 int currentDaysSince = LawnCommon.GetCurrentDaysSince2000();
                 return mApp.mZenGarden.IsZenGardenFull(true) || mApp.mPlayerInfo.mPurchases[(int)theStoreItem] == currentDaysSince;
             }
-            Debug.ASSERT(theStoreItem >= StoreItem.STORE_ITEM_PLANT_GATLINGPEA && theStoreItem < (StoreItem)80);
+            //Debug.ASSERT(theStoreItem >= StoreItem.STORE_ITEM_PLANT_GATLINGPEA && theStoreItem < (StoreItem)80);
             return mApp.mPlayerInfo.mPurchases[(int)theStoreItem] != 0;
         }
 
@@ -714,7 +722,7 @@ namespace Lawn
                     {
                         return 2000;
                     }
-                    return 2000;
+                    return 4500;
                 case StoreItem.STORE_ITEM_POOL_CLEANER:
                     return 100;
                 case StoreItem.STORE_ITEM_ROOF_CLEANER:
@@ -725,8 +733,10 @@ namespace Lawn
                     return 3000;
                 case StoreItem.STORE_ITEM_FIRSTAID:
                     return 200;
+                case StoreItem.STORE_ITEM_SOLAR_FIELD:
+                    return 30;
                 }
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
                 return 0;
             }
             if (lawnApp.mPlayerInfo.mPurchases[9] == 0)
@@ -786,11 +796,7 @@ namespace Lawn
                 theMessageIndex = 2009;
                 goto IL_23F;
             case StoreItem.STORE_ITEM_POTTED_MARIGOLD_1:
-                theMessageIndex = 2010;
-                goto IL_23F;
             case StoreItem.STORE_ITEM_POTTED_MARIGOLD_2:
-                theMessageIndex = 2010;
-                goto IL_23F;
             case StoreItem.STORE_ITEM_POTTED_MARIGOLD_3:
                 theMessageIndex = 2010;
                 goto IL_23F;
@@ -851,8 +857,11 @@ namespace Lawn
             case StoreItem.STORE_ITEM_FIRSTAID:
                 theMessageIndex = 2033;
                 goto IL_23F;
+            case StoreItem.STORE_ITEM_SOLAR_FIELD:
+                theMessageIndex = 2033;
+                goto IL_23F;
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             IL_23F:
             string crazyDaveText = mApp.GetCrazyDaveText(theMessageIndex);
             int aQuantity = mApp.mPlayerInfo.mPurchases[21] + 7;
@@ -908,7 +917,7 @@ namespace Lawn
             }
             else
             {
-                Debug.ASSERT(storeItem >= StoreItem.STORE_ITEM_PLANT_GATLINGPEA && storeItem < (StoreItem)80);
+                //Debug.ASSERT(storeItem >= StoreItem.STORE_ITEM_PLANT_GATLINGPEA && storeItem < (StoreItem)80);
                 mApp.mPlayerInfo.mPurchases[(int)storeItem] = 1;
             }
             if (storeItem == StoreItem.STORE_ITEM_FIRSTAID)

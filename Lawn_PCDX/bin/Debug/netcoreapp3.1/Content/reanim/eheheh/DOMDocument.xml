@@ -1,0 +1,331 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="80" height="80" frameRate="12" currentTimeline="1" xflVersion="2.980" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 21.0 build 39603" majorVersion="21" buildNumber="39603" vanishingPoint3DX="40" vanishingPoint3DY="40" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="8296B372A5005348A0B79A0DF424A70F">
+     <media>
+          <DOMBitmapItem name="infinut_base.png" itemID="6395c86f-000000c6" sourceExternalFilepath="C:/Users/boxed/Downloads/PlantsVsZombies.NET-MOD/Lawn_PCDX/bin/Debug/netcoreapp3.1/Content/reanim/eheheh/LIBRARY/wallnut_twitch.png" sourceLastImported="1670760559" externalFileSize="3202" originalCompressionType="lossless" href="infinut_base.png" bitmapDataHRef="M 13 1670759806.dat" frameRight="1000" frameBottom="1300"/>
+          <DOMBitmapItem name="infinut_body.png" itemID="6395c708-000000a6" sourceExternalFilepath="./LIBRARY/wallnut_body.png" sourceLastImported="1670760258" externalFileSize="3372" originalCompressionType="lossless" href="infinut_body.png" bitmapDataHRef="M 14 1670759806.dat" frameRight="1000" frameBottom="1300"/>
+          <DOMBitmapItem name="TMP238089C08EFDE6395C57E.png" itemID="6395c57e-00000015" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFDE6395C57E.png" bitmapDataHRef="M 3 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFDE6395C57E.png copy" itemID="6395c5b1-00000090" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFDE6395C57E.png" bitmapDataHRef="M 5 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFDE6395C57E.png copy 2" itemID="6395c5b1-00000091" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFDE6395C57E.png" bitmapDataHRef="M 4 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFEE6395C57E.png" itemID="6395c57e-00000024" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFEE6395C57E.png" bitmapDataHRef="M 6 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFEE6395C57E.png copy" itemID="6395c5b1-00000092" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFEE6395C57E.png" bitmapDataHRef="M 10 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFEE6395C57E.png copy 2" itemID="6395c5b1-00000093" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFEE6395C57E.png" bitmapDataHRef="M 9 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFEE6395C57E.png copy 3" itemID="6395c5b1-00000094" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFEE6395C57E.png" bitmapDataHRef="M 8 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFEE6395C57E.png copy 4" itemID="6395c5b1-00000095" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFEE6395C57E.png" bitmapDataHRef="M 7 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFFD6395C57E.png" itemID="6395c57e-0000003d" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFFD6395C57E.png" bitmapDataHRef="M 11 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="TMP238089C08EFFD6395C57E.png copy" itemID="6395c5b1-00000096" sourceLastImported="1670759806" originalCompressionType="lossless" href="TMP238089C08EFFD6395C57E.png" bitmapDataHRef="M 12 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="wallnut_blink1.png" itemID="6395c57e-0000000b" sourceLastImported="1670759806" externalFileSize="619" originalCompressionType="lossless" href="wallnut_blink1.png" bitmapDataHRef="M 1 1670759806.dat" frameRight="2120" frameBottom="860"/>
+          <DOMBitmapItem name="wallnut_blink2.png" itemID="6395c57e-00000010" sourceLastImported="1670759806" externalFileSize="619" originalCompressionType="lossless" href="wallnut_blink2.png" bitmapDataHRef="M 2 1670759806.dat" frameRight="2120" frameBottom="860"/>
+     </media>
+     <symbols>
+          <Include href="infinut_base.xml" loadImmediate="false" itemID="6395c872-000000c7" lastModified="1670760562"/>
+          <Include href="infinut_body.xml" loadImmediate="false" itemID="6395c704-000000a5" lastModified="1670760196"/>
+          <Include href="Locator.xml" loadImmediate="false" itemID="46c33f61-0000004b" lastModified="1187200865"/>
+          <Include href="wallnut_blink1.xml" loadImmediate="false" itemID="6395c57e-00000003"/>
+          <Include href="wallnut_blink2.xml" loadImmediate="false" itemID="6395c57e-00000004"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" currentFrame="25">
+               <layers>
+                    <DOMLayer name="anim_face" color="#4F4FFF" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_body">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartOut">
+                                   <tweens>
+                                        <Ease target="all" method="quartOut"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_body" centerPoint3DX="21.15" centerPoint3DY="26.2">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="2.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="13" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_body" centerPoint3DX="21.15" centerPoint3DY="25.2">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="19" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartOut">
+                                   <tweens>
+                                        <Ease target="all" method="quartOut"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_body" centerPoint3DX="21.15" centerPoint3DY="24.2">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="0.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="25" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_body">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="anim_base" color="#4F4FFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="13" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="19" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="25" tweenType="motion" motionTweenSnap="true" keyMode="22017" easeMethodName="quartIn">
+                                   <tweens>
+                                        <Ease target="all" method="quartIn"/>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="anim_blink_thrice" color="#4F4FFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" duration="4" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="2" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="7" duration="4" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="11" duration="8" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="19" duration="2" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="21" duration="5" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="anim_blink_twice" color="#4F4FFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" duration="2" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="3" duration="6" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="2" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="11" duration="6" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="17" duration="6" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="23" duration="3" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="anim_blink_twitch" color="#4F4FFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="11" duration="4" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="15" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="infinut_base">
+                                             <matrix>
+                                                  <Matrix a="0.699999988079071" d="0.718999981880188" tx="3.65" ty="1.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="25" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="anim_idle" color="#4F4FFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="25" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Locator">
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="25" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>

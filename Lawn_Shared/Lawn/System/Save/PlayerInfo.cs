@@ -105,6 +105,7 @@ namespace Lawn
             }
             mDoVibration = true;
             mRunWhileLocked = Main.RunWhenLocked;
+            mDaveChoose = false;
             mNeedsGrayedPlantWarning = true;
             for (int n = 0; n < mPlantTypesUsed.Length; n++)
             {
@@ -175,6 +176,7 @@ namespace Lawn
                     mDidntPurchasePacketUpgrade = buffer.ReadLong();
                     mDoVibration = buffer.ReadBoolean();
                     mRunWhileLocked = buffer.ReadBoolean();
+                    mDaveChoose = buffer.ReadBoolean();
                     mFinishedAdventure = buffer.ReadLong();
                     mHasNewIZombie = buffer.ReadBoolean();
                     mHasNewMiniGame = buffer.ReadBoolean();
@@ -299,6 +301,7 @@ namespace Lawn
                 buffer.WriteLong(mDidntPurchasePacketUpgrade);
                 buffer.WriteBoolean(mDoVibration);
                 buffer.WriteBoolean(mRunWhileLocked);
+                buffer.WriteBoolean(mDaveChoose);
                 buffer.WriteLong(mFinishedAdventure);
                 buffer.WriteBoolean(mHasNewIZombie);
                 buffer.WriteBoolean(mHasNewMiniGame);
@@ -365,7 +368,7 @@ namespace Lawn
         public void ResetChallengeRecord(GameMode theGameMode)
         {
             int num = theGameMode - GameMode.SurvivalNormalStage1;
-            Debug.ASSERT(num >= 0 && num < 122);
+            //Debug.ASSERT(num >= 0 && num < 122);
             mChallengeRecords[num] = 0;
         }
 
@@ -442,6 +445,8 @@ namespace Lawn
         public bool mDoVibration;
 
         public bool mRunWhileLocked;
+
+        public bool mDaveChoose;
 
         public DateTime mLastSeenMoreGames = default(DateTime);
 

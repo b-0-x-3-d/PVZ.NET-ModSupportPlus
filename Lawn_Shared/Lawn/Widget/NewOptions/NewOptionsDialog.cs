@@ -26,6 +26,7 @@ namespace Lawn
             mSfxVolumeSlider.SetValue(theApp.GetSfxVolume());
             mVibrateCheckbox = LawnCommon.MakeNewCheckbox(8, this, mApp.mPlayerInfo.mDoVibration);
             mRunWhileLocked = LawnCommon.MakeNewCheckbox(11, this, mApp.mPlayerInfo.mRunWhileLocked);
+            mDaveCheckbox = LawnCommon.MakeNewCheckbox(13, this, mApp.mPlayerInfo.mDaveChoose);
             mEnableCheat = LawnCommon.MakeNewCheckbox(12, this, mApp.mDebugKeysEnabled);
             mLinkCredits = new HyperlinkWidget(10, this);
             mLinkCredits.SetFont(Resources.FONT_BRIANNETOD12);
@@ -46,7 +47,7 @@ namespace Lawn
                 mTallBottom = (mApp.mGameScene != GameScenes.LevelIntro);
                 mLinkCredits.SetVisible(false);
             }
-            if (mApp.mGameMode == GameMode.ChallengeIce || mApp.mGameMode == GameMode.ChallengeZenGarden || mApp.mGameMode == GameMode.TreeOfWisdom)
+            if (mApp.mGameMode == GameMode.ChallengeZenGarden || mApp.mGameMode == GameMode.TreeOfWisdom)
             {
                 mRestartButton.SetVisible(false);
             }
@@ -99,6 +100,7 @@ namespace Lawn
                 AddWidget(mAboutButton);
                 AddWidget(mHelpButton);
             }
+            AddWidget(mDaveCheckbox);
         }
 
         public override void RemovedFromManager(WidgetManager theWidgetManager)
@@ -114,6 +116,7 @@ namespace Lawn
             RemoveWidget(mBackToGameButton);
             RemoveWidget(mRestartButton);
             RemoveWidget(mLinkCredits);
+            RemoveWidget(mDaveCheckbox);
             if (mFromGameSelector)
             {
                 RemoveWidget(mAboutButton);
@@ -128,12 +131,17 @@ namespace Lawn
             int theX2 = (int)Constants.InvertAndScale(244f);
             mMusicVolumeSlider.Resize(theX2, (int)Constants.InvertAndScale(66f), (int)Constants.InvertAndScale(135f), (int)Constants.InvertAndScale(40f));
             mSfxVolumeSlider.Resize(theX2, (int)Constants.InvertAndScale(93f), (int)Constants.InvertAndScale(135f), (int)Constants.InvertAndScale(40f));
-            mVibrateCheckbox.Resize(theX2, (int)Constants.InvertAndScale(125f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
+            mVibrateCheckbox.Resize(theX2 - 250, (int)Constants.InvertAndScale(125f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
             //mRunWhileLocked.Resize(theX2, (int)Constants.InvertAndScale(195f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
-            mEnableCheat.Resize(theX2, (int)Constants.InvertAndScale(195f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
+            mEnableCheat.Resize(theX2 - 250, (int)Constants.InvertAndScale(195f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
             mMusicVolumeSlider.mY += (int)Constants.InvertAndScale(5f);
             mSfxVolumeSlider.mY += (int)Constants.InvertAndScale(15f);
             mVibrateCheckbox.mY += (int)Constants.InvertAndScale(25f);
+            mVibrateCheckbox.Resize(theX2 - 250, (int)Constants.InvertAndScale(125f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
+            mVibrateCheckbox.mY += (int)Constants.InvertAndScale(25f);
+
+            mDaveCheckbox.Resize(theX2 - 50, (int)Constants.InvertAndScale(125f), (int)Constants.InvertAndScale(46f), (int)Constants.InvertAndScale(45f));
+            mDaveCheckbox.mY += (int)Constants.InvertAndScale(25f);
             if (mFromGameSelector)
             {
                 int num = (int)Constants.InvertAndScale(100f);
@@ -183,10 +191,13 @@ namespace Lawn
             int num = mMusicSliderOn ? Constants.NewOptionsDialog_MusicLabel_On_Y : Constants.NewOptionsDialog_MusicLabel_Off_Y;
             TodCommon.TodDrawString(g, mMusicSliderOn ? "[OPTIONS_MUSIC_VOLUME]" : "[OPTIONS_MUSIC_OFF]", Constants.NewOptionsDialog_MusicLabel_X, num + newOptionsDialog_Music_Offset, Resources.FONT_DWARVENTODCRAFT18, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Right);
             TodCommon.TodDrawString(g, "[OPTIONS_SOUND_FX]", Constants.NewOptionsDialog_FXLabel_X, Constants.NewOptionsDialog_FXLabel_Y + newOptionsDialog_FX_Offset, Resources.FONT_DWARVENTODCRAFT18, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Right);
-            TodCommon.TodDrawString(g, "[OPTIONS_VABRATION]", Constants.NewOptionsDialog_VibrationLabel_X, Constants.NewOptionsDialog_VibrationLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_DWARVENTODCRAFT18, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Right);
+            TodCommon.TodDrawString(g, "[OPTIONS_VABRATION]", Constants.NewOptionsDialog_VibrationLabel_X - 150, Constants.NewOptionsDialog_VibrationLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_PICO129, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Left);
             //TodCommon.TodDrawString(g, "[OPTIONS_RUN_LOCKED]", Constants.NewOptionsDialog_VibrationLabel_X, Constants.NewOptionsDialog_LockedLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_DWARVENTODCRAFT18, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Right);
-            TodCommon.TodDrawString(g, "[OPTIONS_ENABLE_CHEAT]", Constants.NewOptionsDialog_VibrationLabel_X, Constants.NewOptionsDialog_LockedLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_DWARVENTODCRAFT18, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Right);
+            TodCommon.TodDrawString(g, "Cheats", Constants.NewOptionsDialog_VibrationLabel_X - 150, Constants.NewOptionsDialog_LockedLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_PICO129, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Left);
             TodCommon.TodDrawString(g, LawnApp.AppVersionNumber, mWidth / 2, mVersionY, Resources.FONT_PICO129, theColor, DrawStringJustification.Center);
+            TodCommon.TodDrawString(g, "Dave Chooses Seeds", Constants.NewOptionsDialog_VibrationLabel_X + 75, Constants.NewOptionsDialog_VibrationLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_PICO129, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Left);
+            TodCommon.TodDrawString(g, "Hard Mode", Constants.NewOptionsDialog_VibrationLabel_X + 75, Constants.NewOptionsDialog_LockedLabel_Y + newOptionsDialog_FullScreenOffset, Resources.FONT_PICO129, theColor, Constants.NewOptionsDialog_VibrationLabel_MaxWidth, DrawStringJustification.Left);
+
         }
 
         public virtual void SliderVal(int theId, double theVal)
@@ -240,6 +251,9 @@ namespace Lawn
             }
             case 12:
                 mApp.mDebugKeysEnabled = check;
+                return;
+            case 13:
+                mApp.mPlayerInfo.mDaveChoose = check;
                 return;
             default:
                 return;
@@ -397,6 +411,8 @@ namespace Lawn
         public Checkbox mRunWhileLocked;
 
         public Checkbox mEnableCheat;
+
+        public Checkbox mDaveCheckbox;
 
         public string mVersion = string.Empty;
 

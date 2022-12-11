@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using Microsoft.Xna.Framework;
 using Sexy;
 using Sexy.TodLib;
@@ -36,6 +37,8 @@ namespace Lawn
             mStoreButton.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_StoreButton_X, Constants.GameSelector_StoreButton_Y, AtlasResources.IMAGE_SELECTORSCREEN_STORE.mWidth, AtlasResources.IMAGE_SELECTORSCREEN_STORE.mHeight);
             mAlmanacButton = GameButton.MakeNewButton(114, this, "", null, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC, AtlasResources.IMAGE_SELECTORSCREEN_ALMANACHIGHLIGHT, AtlasResources.IMAGE_SELECTORSCREEN_ALMANACHIGHLIGHT);
             mAlmanacButton.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_AlmanacButton_X, Constants.GameSelector_AlmanacButton_Y, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC.mWidth, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC.mHeight);
+            mCustomLevel = GameButton.MakeNewButton((int)GameSelectorButtons.Custom, this, "", null, AtlasResources.IMAGE_REANIM_DIAMOND, AtlasResources.IMAGE_REANIM_DIAMOND, AtlasResources.IMAGE_REANIM_DIAMOND);
+            mCustomLevel.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_AlmanacButton_X - (int)Constants.InvertAndScale(125f), Constants.GameSelector_AlmanacButton_Y - (int)Constants.InvertAndScale(100f), AtlasResources.IMAGE_REANIM_DIAMOND.mWidth, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC.mHeight);
             mMoreGamesButton = GameButton.MakeNewButton(115, this, "", null, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_BUTTON, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_HIGHLIGHT, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_HIGHLIGHT);
             mMoreGamesButton.Resize(Constants.MAIN_MENU_ORIGIN_X + (int)Constants.InvertAndScale(10f), (int)Constants.InvertAndScale(170f), AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_BUTTON.mWidth, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_BUTTON.mHeight);
             mMoreGamesButton.mTranslateX = 0;
@@ -72,9 +75,9 @@ namespace Lawn
             //mUserButton.mColors[1] = new SexyColor(200, 200, 255);
             //mUserButton.Resize(Constants.MAIN_MENU_ORIGIN_X + (int)Constants.InvertAndScale(20f), (int)Constants.InvertAndScale(90f), (int)Constants.InvertAndScale(120f), (int)Constants.InvertAndScale(30f));
             float limboBtnOffset = 190;
-            mChallengePageSurvivalButton = GameButton.MakeButton((int)GameSelectorButtons.ChallengePageSurvival, this, "[GAMESELECTOR_SURVIVAL]");
+            mChallengePageSurvivalButton = GameButton.MakeButton((int)GameSelectorButtons.ChallengePageSurvival, this, "Survival");
             mChallengePageSurvivalButton.Resize(Constants.QUICKPLAY_ORIGIN_X + (int)Constants.InvertAndScale(20f), (int)Constants.InvertAndScale(limboBtnOffset), (int)Constants.InvertAndScale(100f), (int)Constants.InvertAndScale(30f));
-            mChallengePageLimboButton = GameButton.MakeButton((int)GameSelectorButtons.ChallengePageLimbo, this, "[GAMESELECTOR_LIMBO]");
+            mChallengePageLimboButton = GameButton.MakeButton((int)GameSelectorButtons.ChallengePageLimbo, this, "Limbo Page");
             mChallengePageLimboButton.Resize(Constants.QUICKPLAY_ORIGIN_X + (int)Constants.InvertAndScale(20f), (int)Constants.InvertAndScale(limboBtnOffset + 30f), (int)Constants.InvertAndScale(100f), (int)Constants.InvertAndScale(30f));
 
 
@@ -111,14 +114,11 @@ namespace Lawn
             AddWidget(mOptionsButton);
             AddWidget(mStoreButton);
             AddWidget(mAlmanacButton);
+            AddWidget(mCustomLevel);
             AddWidget(mZenGardenButton);
             AddWidget(mAchievementsButton);
-
-            if (mApp.mPlayerInfo != null && mApp.mDebugKeysEnabled)
-            {
                 AddWidget(mChallengePageSurvivalButton);
                 AddWidget(mChallengePageLimboButton);
-            }
 
             if (mApp.mPlayerInfo != null && mApp.mPlayerInfo.mHasUnlockedPuzzleMode)
             {
@@ -645,6 +645,9 @@ namespace Lawn
             case GameSelectorButtons.Almanac:
                 mApp.DoAlmanacDialog(SeedType.None, ZombieType.Invalid, this);
                 return;
+            case GameSelectorButtons.Custom:
+                
+                return;
             case GameSelectorButtons.MoreGames:
                 mMoreGamesButton.mVisible = false;
                 mMoreGamesButton.mDisabled = true;
@@ -870,6 +873,7 @@ namespace Lawn
             mUserDialogButton.SetDisabled(true);
             mStoreButton.SetDisabled(true);
             mAlmanacButton.SetDisabled(true);
+            mCustomLevel.SetDisabled(true);
             mMoreGamesButton.SetDisabled(true);
             mAchievementsButton.SetDisabled(true);
             mApp.KillGameSelector();
@@ -1067,6 +1071,8 @@ namespace Lawn
         public DialogButton mStoreButton;
 
         public DialogButton mAlmanacButton;
+
+        public DialogButton mCustomLevel;
 
         public DialogButton mUserDialogButton;
 

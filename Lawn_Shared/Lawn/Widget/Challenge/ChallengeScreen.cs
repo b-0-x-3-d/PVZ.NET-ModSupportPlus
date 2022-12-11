@@ -30,6 +30,7 @@ namespace Lawn
             mScrollWidget.EnableIndicators(AtlasResources.IMAGE_SCROLL_INDICATOR);
             mScrollWidget.Resize(base.M(0), base.M1(65), base.M2(800), base.M3(415));
             AddWidget(mScrollWidget);
+
             for (int i = 0; i < 4; i++)
             {
                 mPageButton[i] = new ButtonWidget(300 + i, this);
@@ -62,16 +63,11 @@ namespace Lawn
                 mChallengeButton[j].mFrameNoDraw = true;
                 if (challengeDefinition.mPage == ChallengePage.Challenge || challengeDefinition.mPage == ChallengePage.Limbo || challengeDefinition.mPage == ChallengePage.Puzzle)
                 {
-                    mChallengeButton[j].Resize(base.M(75) + challengeDefinition.mCol * base.M1(150), base.M2(15) + challengeDefinition.mRow * base.M3(95), 50, 60);
+                    mChallengeButton[j].Resize(base.M(100) + challengeDefinition.mCol * base.M1(150), base.M2(15) + challengeDefinition.mRow * base.M3(75), 50, 60);
                 }
                 else
                 {
-                    mChallengeButton[j].Resize(base.S(38 + challengeDefinition.mCol * 155), base.S(125 + challengeDefinition.mRow * 145), base.S(104), base.S(115));
-                }
-                if (MoreTrophiesNeeded(j) != 0)
-                {
-                    mChallengeButton[j].mDoFinger = false;
-                    mChallengeButton[j].mDisabled = true;
+                    mChallengeButton[j].Resize(base.S(125 + challengeDefinition.mCol * 150), base.S(15 + challengeDefinition.mRow * 105), base.S(104), base.S(115));
                 }
             }
             UpdateButtons();
@@ -508,11 +504,11 @@ namespace Lawn
             new ChallengeDefinition(GameMode.SurvivalHardStage3, 7, ChallengePage.Survival, 1, 2, "[SURVIVAL_POOL_HARD]"),
             new ChallengeDefinition(GameMode.SurvivalHardStage4, 8, ChallengePage.Survival, 1, 3, "[SURVIVAL_FOG_HARD]"),
             new ChallengeDefinition(GameMode.SurvivalHardStage5, 9, ChallengePage.Survival, 1, 4, "[SURVIVAL_ROOF_HARD]"),
-            new ChallengeDefinition(GameMode.SurvivalEndlessStage1, 10, ChallengePage.Limbo, 3, 0, "[SURVIVAL_DAY_ENDLESS]"),
-            new ChallengeDefinition(GameMode.SurvivalEndlessStage2, 10, ChallengePage.Limbo, 3, 1, "[SURVIVAL_NIGHT_ENDLESS]"),
+            new ChallengeDefinition(GameMode.SurvivalEndlessStage1, 10, ChallengePage.Survival, 2, 0, "[SURVIVAL_DAY_ENDLESS]"),
+            new ChallengeDefinition(GameMode.SurvivalEndlessStage2, 10, ChallengePage.Survival, 2, 1, "[SURVIVAL_NIGHT_ENDLESS]"),
             new ChallengeDefinition(GameMode.SurvivalEndlessStage3, 10, ChallengePage.Survival, 2, 2, "[SURVIVAL_POOL_ENDLESS]"),
-            new ChallengeDefinition(GameMode.SurvivalEndlessStage4, 10, ChallengePage.Limbo, 3, 2, "[SURVIVAL_FOG_ENDLESS]"),
-            new ChallengeDefinition(GameMode.SurvivalEndlessStage5, 10, ChallengePage.Limbo, 3, 3, "[SURVIVAL_ROOF_ENDLESS]"),
+            new ChallengeDefinition(GameMode.SurvivalEndlessStage4, 10, ChallengePage.Survival, 2, 3, "[SURVIVAL_FOG_ENDLESS]"),
+            new ChallengeDefinition(GameMode.SurvivalEndlessStage5, 10, ChallengePage.Survival, 2, 4, "[SURVIVAL_ROOF_ENDLESS]"),
             new ChallengeDefinition(GameMode.ChallengeWarAndPeas, 0, ChallengePage.Challenge, 0, 0, "[WAR_AND_PEAS]"),
             new ChallengeDefinition(GameMode.ChallengeWallnutBowling, 6, ChallengePage.Challenge, 0, 1, "[WALL_NUT_BOWLING]"),
             new ChallengeDefinition(GameMode.ChallengeSlotMachine, 2, ChallengePage.Challenge, 0, 2, "[SLOT_MACHINE]"),
@@ -532,15 +528,17 @@ namespace Lawn
             new ChallengeDefinition(GameMode.ChallengeWallnutBowling2, 6, ChallengePage.Challenge, 3, 2, "[WALL_NUT_BOWLING_EXTREME]"),
             new ChallengeDefinition(GameMode.ChallengePogoParty, 14, ChallengePage.Challenge, 3, 3, "[POGO_PARTY]"),
             new ChallengeDefinition(GameMode.ChallengeFinalBoss, 19, ChallengePage.Challenge, 3, 4, "[FINAL_BOSS]"),
-            new ChallengeDefinition(GameMode.ChallengeArtChallenge1, 0, ChallengePage.Limbo, 0, 0, "[ART_CHALLENGE_WALL_NUT]"),
-            new ChallengeDefinition(GameMode.ChallengeSunnyDay, 1, ChallengePage.Limbo, 0, 1, "[SUNNY_DAY]"),
-            new ChallengeDefinition(GameMode.ChallengeResodded, 2, ChallengePage.Limbo, 0, 2, "[UNSODDED]"),
-            new ChallengeDefinition(GameMode.ChallengeBigTime, 3, ChallengePage.Limbo, 0, 3, "[BIG_TIME]"),
+            new ChallengeDefinition(GameMode.ChallengeIce, 6, ChallengePage.Challenge, 1, 1, "[ICE_LEVEL]"),
+            new ChallengeDefinition(GameMode.ChallengeSunnyDay, 6, ChallengePage.Challenge, 1, 1, "[UB]"),
+            new ChallengeDefinition(GameMode.ChallengeResodded, 2, ChallengePage.Challenge, 0, 2, "[UNSODDED]"),
+            new ChallengeDefinition(GameMode.ChallengeBigTime, 3, ChallengePage.Challenge, 0, 3, "[BIG_TIME]"),
+            new ChallengeDefinition(GameMode.ChallengeHighGravity, 8, ChallengePage.Challenge, 0, 0, "[HIGH_GRAVITY]"),
+            new ChallengeDefinition(GameMode.ChallengeAirRaid, 5, ChallengePage.Challenge, 1, 0, "[AIR_RAID]"),
+            new ChallengeDefinition(GameMode.ChallengeCustom, 5, ChallengePage.Challenge, 1, 0, "Wall-Nut Bowling ULTIMATE"),
+            new ChallengeDefinition(GameMode.ChallengeFinalBoss2, 19, ChallengePage.Challenge, 3, 4, "Return of the Zombot (Part 1)"),
+            new ChallengeDefinition(GameMode.ChallengeArtChallenge1, 0, ChallengePage.Limbo, 0, 4, "[ART_CHALLENGE_WALL_NUT]"),
             new ChallengeDefinition(GameMode.ChallengeArtChallenge2, 4, ChallengePage.Limbo, 0, 4, "[ART_CHALLENGE_SUNFLOWER]"),
-            new ChallengeDefinition(GameMode.ChallengeAirRaid, 5, ChallengePage.Limbo, 1, 0, "[AIR_RAID]"),
-            new ChallengeDefinition(GameMode.ChallengeIce, 6, ChallengePage.Limbo, 1, 1, "[ICE_LEVEL]"),
             new ChallengeDefinition(GameMode.ChallengeZenGarden, 7, ChallengePage.Limbo, 1, 2, "[ZEN_GARDEN]"),
-            new ChallengeDefinition(GameMode.ChallengeHighGravity, 8, ChallengePage.Limbo, 1, 3, "[HIGH_GRAVITY]"),
             new ChallengeDefinition(GameMode.ChallengeGraveDanger, 11, ChallengePage.Limbo, 1, 4, "[GRAVE_DANGER]"),
             new ChallengeDefinition(GameMode.ChallengeShovel, 10, ChallengePage.Limbo, 2, 0, "[CAN_YOU_DIG_IT]"),
             new ChallengeDefinition(GameMode.ChallengeStormyNight, 13, ChallengePage.Limbo, 2, 1, "[DARK_STORMY_NIGHT]"),

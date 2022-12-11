@@ -54,20 +54,8 @@ namespace Lawn
 
         public void GetZombiePosition(ZombieType theZombieType, ref int x, ref int y)
         {
-            if (theZombieType == ZombieType.Boss)
-            {
-                x = Constants.Almanac_BossPosition.X;
-                y = Constants.Almanac_BossPosition.Y;
-                return;
-            }
-            if (theZombieType == ZombieType.Imp)
-            {
-                x = Constants.Almanac_ImpPosition.X;
-                y = Constants.Almanac_ImpPosition.Y;
-                return;
-            }
-            x = (int)theZombieType % 3 * Constants.Almanac_ZombieSpace.X;
-            y = 5 + (int)theZombieType / 3 * Constants.Almanac_ZombieSpace.Y;
+            x = (int)theZombieType % 4 * Constants.Almanac_ZombieSpace.X / 3 * 2;
+            y = (int)theZombieType / 4 * Constants.Almanac_ZombieSpace.Y / 3 * 2;
         }
 
         public bool ZombieIsShown(ZombieType theZombieType)
@@ -82,7 +70,7 @@ namespace Lawn
             {
                 return mDialog.mApp.CanSpawnYetis() || mDialog.ZombieHasSilhouette(ZombieType.Yeti);
             }
-            return theZombieType <= ZombieType.Boss && (mDialog.mApp.HasFinishedAdventure() || (zombieDefinition.mStartingLevel <= level && (zombieDefinition.mStartingLevel != level || (theZombieType != ZombieType.Imp && theZombieType != ZombieType.Bobsled && theZombieType != ZombieType.BackupDancer) || AlmanacDialog.gZombieDefeated[(int)theZombieType])));
+            return theZombieType < ZombieType.ZombieTypesCount && (mDialog.mApp.HasFinishedAdventure() || (zombieDefinition.mStartingLevel <= level && (zombieDefinition.mStartingLevel != level || (theZombieType != ZombieType.Imp && theZombieType != ZombieType.Bobsled && theZombieType != ZombieType.BackupDancer) || AlmanacDialog.gZombieDefeated[(int)theZombieType])));
         }
 
         public override void Draw(Graphics g)
@@ -98,6 +86,11 @@ namespace Lawn
                     if (!ZombieIsShown(zombieType))
                     {
                         g.DrawImage(AtlasResources.IMAGE_ALMANAC_ZOMBIEBLANK, num, num2);
+                    }
+					else if (zombieType >= ZombieType.PeaHead)
+                    {
+                        g.DrawImage(AtlasResources.IMAGE_ALMANAC_ZOMBIEWINDOW, num + (int)Constants.InvertAndScale(5f), num2 + (int)Constants.InvertAndScale(6f));
+                        g.DrawImage(AtlasResources.IMAGE_ALMANAC_ZOMBIEWINDOW2, num + Constants.ZombieGalleryWidget_Window_Offset.X, num2 + Constants.ZombieGalleryWidget_Window_Offset.Y);
                     }
                     else
                     {

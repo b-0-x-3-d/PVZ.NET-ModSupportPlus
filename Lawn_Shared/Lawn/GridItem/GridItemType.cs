@@ -16,6 +16,8 @@ namespace Lawn
         ZenTool,
         Stinky,
         Rake,
-        IzombieBrain
+        IzombieBrain,
+        Rail,
+        RailCart
     }
 }

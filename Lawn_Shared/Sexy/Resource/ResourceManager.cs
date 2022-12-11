@@ -1285,7 +1285,7 @@ namespace Sexy
             {
                 mLoadedCount++;
                 mProgress = mLoadedCount / (double)mTotalResources;
-                Debug.OutputDebug<string>(mProgress.ToString());
+                //Debug.OutputDebug<string>(mProgress.ToString());
             }
             return flag;
         }

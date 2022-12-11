@@ -3580,6 +3580,24 @@ public/*internal*/ class AtlasResources
             return AtlasResources.IMAGE_REANIM_SPIKEROCK_BIGSPIKE2;
         case 11747:
             return AtlasResources.IMAGE_REANIM_SPIKEROCK_BIGSPIKE3;
+        case 20000:
+            return AtlasResources.IMAGE_SEEDPACKET_IR;
+        case 20001:
+            return AtlasResources.IMAGE_SEEDPACKET_LS;
+        case 20002:
+            return AtlasResources.IMAGE_SEEDPACKET_MG;
+        case 20003:
+            return AtlasResources.IMAGE_SEEDPACKET_MS;
+        case 30000:
+            return AtlasResources.IMAGE_REANIM_DG1;
+        case 30001:
+            return AtlasResources.IMAGE_REANIM_DG2;
+        case 30002:
+            return AtlasResources.IMAGE_REANIM_PLANTERN_LEAF1;
+        case 30003:
+            return AtlasResources.IMAGE_REANIM_INFINUT_BODY;
+        case 30004:
+            return AtlasResources.IMAGE_REANIM_INFINUT_BASE;
         default:
             return Resources.GetImageById(theId);
         }
@@ -10307,6 +10325,18 @@ public/*internal*/ class AtlasResources
         {
             return 10136;
         }
+        if (theImage == AtlasResources.IMAGE_REANIM_DG1)
+        {
+            return 30000;
+        }
+        if (theImage == AtlasResources.IMAGE_REANIM_DG2)
+        {
+            return 30001;
+        }
+        if (theImage == AtlasResources.IMAGE_REANIM_PLANTERN_LEAF1)
+        {
+            return 30002;
+        }
         if (theImage == AtlasResources.IMAGE_PILE_ZOMBIE_PILE_2A)
         {
             return 10039;
@@ -10586,6 +10616,30 @@ public/*internal*/ class AtlasResources
         if (theImage == AtlasResources.IMAGE_MINIGAMES_ZOMBOTANY2)
         {
             return 10002;
+        }
+        if (theImage == AtlasResources.IMAGE_SEEDPACKET_IR)
+        {
+            return 20000;
+        }
+        if (theImage == AtlasResources.IMAGE_SEEDPACKET_LS)
+        {
+            return 20001;
+        }
+        if (theImage == AtlasResources.IMAGE_SEEDPACKET_MG)
+        {
+            return 20002;
+        }
+        if (theImage == AtlasResources.IMAGE_SEEDPACKET_MS)
+        {
+            return 20003;
+        }
+        if (theImage == AtlasResources.IMAGE_REANIM_INFINUT_BODY)
+        {
+            return 20004;
+        }
+        if (theImage == AtlasResources.IMAGE_REANIM_INFINUT_BASE)
+        {
+            return 20005;
         }
         int idByImage = (int)Resources.GetIdByImage(theImage);
         if (idByImage == 249)
@@ -13301,6 +13355,12 @@ public/*internal*/ class AtlasResources
 
     public static Image IMAGE_REANIM_TORCHWOOD_SPARK;
 
+    public static Image IMAGE_REANIM_DG1;
+
+    public static Image IMAGE_REANIM_DG2;
+
+    public static Image IMAGE_REANIM_PLANTERN_LEAF1;
+
     public static Image IMAGE_SEEDPACKETS;
 
     public static Image IMAGE_SOD3ROW;
@@ -13340,6 +13400,11 @@ public/*internal*/ class AtlasResources
     public static Image IMAGE_SEEDPACKET_SHUFFLE;
 
     public static Image IMAGE_SEEDPACKET_SUN;
+	
+    public static Image IMAGE_SEEDPACKET_IR;
+    public static Image IMAGE_SEEDPACKET_LS;
+    public static Image IMAGE_SEEDPACKET_MG;
+    public static Image IMAGE_SEEDPACKET_MS;
 
     public static Image IMAGE_SEEDPACKET_DIAMOND;
 
@@ -14090,6 +14155,10 @@ public/*internal*/ class AtlasResources
     public static Image IMAGE_MINIGAMES_ZOMBOTANY;
 
     public static Image IMAGE_MINIGAMES_ZOMBOTANY2;
+
+    public static Image IMAGE_REANIM_INFINUT_BODY;
+
+    public static Image IMAGE_REANIM_INFINUT_BASE;
 
     private static AtlasResources.AtlasStringTable[] table = new AtlasResources.AtlasStringTable[]
     {
@@ -15465,6 +15534,10 @@ public/*internal*/ class AtlasResources
         new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_CRATER", 10183),
         new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_SHUFFLE", 10184),
         new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_SUN", 10185),
+        new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_IR", 20000),
+        new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_LS", 20001),
+        new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_MG", 20002),
+        new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_MS", 20003),
         new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_DIAMOND", 10186),
         new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_ZOMBIEQUARIUM", 10187),
         new AtlasResources.AtlasStringTable("IMAGE_SEEDPACKET_TROPHY", 10188),
@@ -15770,6 +15843,9 @@ public/*internal*/ class AtlasResources
         new AtlasResources.AtlasStringTable("IMAGE_REANIM_STINKY_ANTENNA", 10085),
         new AtlasResources.AtlasStringTable("IMAGE_REANIM_ZENGARDEN_PHONOGRAPH_NEEDLE", 10108),
         new AtlasResources.AtlasStringTable("IMAGE_REANIM_ZEN_SPROUT_BODY2", 10136),
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_DG1", 30000),
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_DG2", 30001),
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_PLANTERN_LEAF1", 30002),
         new AtlasResources.AtlasStringTable("IMAGE_PILE_ZOMBIE_PILE_2A", 10039),
         new AtlasResources.AtlasStringTable("IMAGE_PILE_YELLOW_CLOUD", 10027),
         new AtlasResources.AtlasStringTable("IMAGE_PILE_DAVE_ASTRONAUT_HELMET_FRONT", 10058),
@@ -15839,7 +15915,9 @@ public/*internal*/ class AtlasResources
         new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBIE_NIMBLE", 10018),
         new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBOSS", 10019),
         new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBOTANY", 10001),
-        new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBOTANY2", 10002)
+        new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBOTANY2", 10002),
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_INFINUT_BODY", 30003),
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_INFINUT_BASE", 30004)
     };
 
     public enum AtlasImageId
@@ -17563,6 +17641,9 @@ public/*internal*/ class AtlasResources
         IMAGE_REANIM_SPLASH_2_ID,
         IMAGE_REANIM_SPLASH_3_ID,
         IMAGE_REANIM_SPLASH_4_ID,
+        IMAGE_REANIM_DG1_ID,
+        IMAGE_REANIM_DG2_ID,
+        IMAGE_REANIM_PLANTERN_LEAF1_ID,
         IMAGE_CREDITS_PLAYBUTTON_ID,
         IMAGE_SOD1ROW_ID,
         IMAGE_SOD3ROW_ID,
@@ -17591,7 +17672,13 @@ public/*internal*/ class AtlasResources
         IMAGE_STORE_PACKETUPGRADE_ID,
         IMAGE_STORE_FIRSTAIDWALLNUTICON_ID,
         IMAGE_REANIM_SPIKEROCK_BIGSPIKE2_ID,
-        IMAGE_REANIM_SPIKEROCK_BIGSPIKE3_ID
+        IMAGE_REANIM_SPIKEROCK_BIGSPIKE3_ID,
+        IMAGE_REANIM_INFINUT_BODY_ID,
+        IMAGE_REANIM_INFINUT_BASE_ID,
+        IMAGE_SEEDPACKET_IR_ID,
+        IMAGE_SEEDPACKET_LS_ID,
+        IMAGE_SEEDPACKET_MG_ID,
+        IMAGE_SEEDPACKET_MS_ID,
     }
 
     public class AtlasStringTable

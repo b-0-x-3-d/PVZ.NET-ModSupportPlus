@@ -18,7 +18,7 @@ namespace Sexy.TodLib
             for (int j = 0; j < TodParticleGlobal.gParticleParamArraySize; j++)
             {
                 ParticleParams particleParams = theParticleParamArray[j];
-                Debug.ASSERT(particleParams.mParticleEffect == (ParticleEffect)j);
+                //Debug.ASSERT(particleParams.mParticleEffect == (ParticleEffect)j);
                 TodParticleDefinition todParticleDefinition = TodParticleGlobal.gParticleDefArray[j];
                 if (!TodParticleGlobal.TodParticleLoadADef(ref todParticleDefinition, particleParams.mParticleFileName))
                 {

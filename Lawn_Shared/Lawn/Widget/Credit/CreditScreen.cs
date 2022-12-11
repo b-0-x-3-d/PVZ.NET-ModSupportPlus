@@ -81,7 +81,7 @@ namespace Lawn
             mNumSections = 0;
             for (;;)
             {
-                Debug.ASSERT(mNumSections < 57);
+                //Debug.ASSERT(mNumSections < 57);
                 string theString = Common.StrFormat_("[CREDITS_ROLES{0}]", mNumSections + 1);
                 if (!TodStringFile.TodStringListExists(theString))
                 {

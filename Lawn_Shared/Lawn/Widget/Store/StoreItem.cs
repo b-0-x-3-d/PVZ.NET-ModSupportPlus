@@ -34,6 +34,7 @@ namespace Lawn
         STORE_ITEM_TREE_OF_WISDOM,
         STORE_ITEM_TREE_FOOD,
         STORE_ITEM_FIRSTAID,
+        STORE_ITEM_SOLAR_FIELD,
         STORE_ITEM_INVALID = -1
     }
 }

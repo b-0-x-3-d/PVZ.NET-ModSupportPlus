@@ -220,8 +220,8 @@ namespace Lawn
 
         public void AddSeed(SeedType theSeedType)
         {
-            Debug.ASSERT(mBoard.HasConveyorBeltSeedBank());
-            Debug.ASSERT(theSeedType != SeedType.None);
+            //Debug.ASSERT(mBoard.HasConveyorBeltSeedBank());
+            //Debug.ASSERT(theSeedType != SeedType.None);
             int numSeedsOnConveyorBelt = GetNumSeedsOnConveyorBelt();
             if (numSeedsOnConveyorBelt == mNumPackets)
             {
@@ -246,8 +246,8 @@ namespace Lawn
 
         public void RemoveSeed(int theIndex)
         {
-            Debug.ASSERT(mBoard.HasConveyorBeltSeedBank());
-            Debug.ASSERT(theIndex >= 0 && theIndex < GetNumSeedsOnConveyorBelt());
+            //Debug.ASSERT(mBoard.HasConveyorBeltSeedBank());
+            //Debug.ASSERT(theIndex >= 0 && theIndex < GetNumSeedsOnConveyorBelt());
             for (int i = theIndex; i < mNumPackets; i++)
             {
                 SeedPacket seedPacket = mSeedPackets[i];

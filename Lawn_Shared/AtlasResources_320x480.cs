@@ -4166,7 +4166,9 @@ internal class AtlasResources_320x480 : AtlasResources
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKETS_GREEN_TAB, 243, 340, 22, 13, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKETS_PURPLE_TAB, 275, 377, 22, 13, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_GRAD_LEFT_TO_RIGHT, 339, 439, 65, 3, 1, 1, AnimType.AnimType_None, 0, 0, 0),
-            new UNPACK_INFO(AtlasResources.IMAGE_GRAD_TOP_TO_BOTTOM, 508, 1, 2, 40, 1, 1, AnimType.AnimType_None, 0, 0, 0)
+            new UNPACK_INFO(AtlasResources.IMAGE_GRAD_TOP_TO_BOTTOM, 508, 1, 2, 40, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+			
+            new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_IR, 1, 1, 54, 35, 1, 1, AnimType.AnimType_None, 0, 0, 0),
         };
         for (int i = 0; i < array.Length; i++)
         {
@@ -4254,6 +4256,8 @@ internal class AtlasResources_320x480 : AtlasResources
         AtlasResources.IMAGE_GRAD_LEFT_TO_RIGHT = array[num].mpImage;
         num++;
         AtlasResources.IMAGE_GRAD_TOP_TO_BOTTOM = array[num].mpImage;
+        num++;
+        AtlasResources.IMAGE_SEEDPACKET_IR = array[num].mpImage;
         num++;
     }
 

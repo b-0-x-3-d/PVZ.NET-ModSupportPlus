@@ -26,7 +26,7 @@ namespace Lawn
             mChooseState = SeedChooserState.Normal;
             mViewLawnTime = 0;
             mDoStartButton = false;
-            mSeedPacketsWidget = new SeedPacketsWidget(mApp, Has12Rows() ? 12 : 11, false, this);
+            mSeedPacketsWidget = new SeedPacketsWidget(mApp, Has12Rows() ? 22 : 21, false, this);
             mScrollWidget = new ScrollWidget();
             mScrollWidget.Resize(Constants.SCROLL_AREA_OFFSET_X, Constants.SCROLL_AREA_OFFSET_Y, mSeedPacketsWidget.mWidth + (int)Constants.InvertAndScale(10f), (int)Constants.InvertAndScale(227f));
             mScrollWidget.AddWidget(mSeedPacketsWidget);
@@ -112,6 +112,17 @@ namespace Lawn
             mImitaterButton.mDisabledImage = null;
             mImitaterButton.Resize((int)Constants.InvertAndScale(310f), (int)Constants.InvertAndScale(27f), Constants.SMALL_SEEDPACKET_WIDTH, Constants.SMALL_SEEDPACKET_HEIGHT);
             mImitaterButton.mParentWidget = this;
+            mPlantModeButton = new GameButton(199, this);
+            mPlantModeButton.SetLabel("Plant Modes");
+            mPlantModeButton.mButtonImage = AtlasResources.IMAGE_SEEDCHOOSER_BUTTON2;
+            mPlantModeButton.mOverImage = AtlasResources.IMAGE_SEEDCHOOSER_BUTTON2_GLOW;
+            mPlantModeButton.mDownImage = null;
+            mPlantModeButton.SetFont(Resources.FONT_BRIANNETOD12);
+            mPlantModeButton.mColors[0] = new SexyColor(42, 42, 90);
+            mPlantModeButton.mColors[1] = new SexyColor(42, 42, 90);
+            mPlantModeButton.Resize((int)Constants.InvertAndScale(402f), (int)Constants.InvertAndScale(286f), AtlasResources.IMAGE_SEEDCHOOSER_BUTTON2.mWidth, (int)Constants.InvertAndScale(26f));
+            mPlantModeButton.mParentWidget = this;
+            mPlantModeButton.mTextOffsetY = (int)Constants.InvertAndScale(2f);
             if (!mApp.CanShowAlmanac())
             {
                 mAlmanacButton.mBtnNoDraw = true;
@@ -170,7 +181,7 @@ namespace Lawn
                 chosenSeed3.mSeedIndexInBank = 0;
                 mSeedsInBank++;
             }
-            if (mApp.IsAdventureMode() && !mApp.IsFirstTimeAdventureMode())
+            if (mApp.IsAdventureMode() && !mApp.IsFirstTimeAdventureMode() && mApp.mPlayerInfo.mDaveChoose)
             {
                 CrazyDavePickSeeds();
             }
@@ -187,6 +198,7 @@ namespace Lawn
             mRandomButton.Dispose();
             mViewLawnButton.Dispose();
             mAlmanacButton.Dispose();
+            mPlantModeButton.Dispose();
             mImitaterButton.Dispose();
             mStoreButton.Dispose();
             mMenuButton.Dispose();
@@ -202,7 +214,7 @@ namespace Lawn
             mSeedChooserAge++;
             for (SeedType i = 0; i < SeedType.SeedsInChooserCount; i++)
             {
-                if (mApp.HasSeedType(i))
+                if (mApp.HasSeedType(i) || (mChosenSeeds[(int)i].mSeedType >= SeedType.ExplodeONut))
                 {
                     ChosenSeed chosenSeed = mChosenSeeds[(int)i];
                     if (chosenSeed.mSeedState == ChosenSeedState.SEED_FLYING_TO_BANK || chosenSeed.mSeedState == ChosenSeedState.SEED_FLYING_TO_CHOOSER)
@@ -288,6 +300,7 @@ namespace Lawn
             mRandomButton.Draw(g);
             mViewLawnButton.Draw(g);
             mAlmanacButton.Draw(g);
+            mPlantModeButton.Draw(g);
             mStoreButton.Draw(g);
             Graphics @new = Graphics.GetNew(g);
             @new.mTransX -= mX;
@@ -374,6 +387,14 @@ namespace Lawn
             }
             else
             {
+                if (theId == 199)
+                {
+                    PlantModeDialog plantModeDialog = new PlantModeDialog();
+                    mApp.AddDialog(plantModeDialog.mId, plantModeDialog);
+                    plantModeDialog.Resize((mWidth - plantModeDialog.mWidth) / 2, (mHeight - plantModeDialog.mHeight) / 2, plantModeDialog.mWidth, plantModeDialog.mHeight);
+                    mApp.mWidgetManager.SetFocus(plantModeDialog);
+                    return;
+                }
                 if (theId == 105)
                 {
                     StoreScreen storeScreen = mApp.ShowStoreScreen(this);
@@ -406,6 +427,7 @@ namespace Lawn
         public override void MouseDown(int x, int y, int theClickCount)
         {
             base.MouseDown(x, y, theClickCount);
+
             if (mSeedsInFlight > 0)
             {
                 for (SeedType i = 0; i < SeedType.SeedsInChooserCount; i++)
@@ -426,6 +448,7 @@ namespace Lawn
             mImitaterButton.Update();
             mStoreButton.Update();
             mMenuButton.Update();
+            mPlantModeButton.Update();
             if (mRandomButton.IsMouseOver())
             {
                 mApp.PlaySample(Resources.SOUND_TAP);
@@ -451,6 +474,10 @@ namespace Lawn
                 mApp.PlaySample(Resources.SOUND_TAP);
             }
             if (mStoreButton.IsMouseOver())
+            {
+                mApp.PlaySample(Resources.SOUND_TAP);
+            }
+            if (mPlantModeButton.IsMouseOver())
             {
                 mApp.PlaySample(Resources.SOUND_TAP);
             }
@@ -497,6 +524,11 @@ namespace Lawn
             if (mAlmanacButton.IsMouseOver())
             {
                 ButtonDepress(103);
+                return;
+            }
+            if (mPlantModeButton.IsMouseOver())
+            {
+                ButtonDepress(199);
                 return;
             }
             if (mStoreButton.IsMouseOver())
@@ -628,7 +660,7 @@ namespace Lawn
         {
             for (SeedType i = 0; i < SeedType.SeedsInChooserCount; i++)
             {
-                if (mApp.HasSeedType(i))
+                if (mApp.HasSeedType(i) || (mChosenSeeds[(int)i].mSeedType >= SeedType.ExplodeONut))
                 {
                     ChosenSeed chosenSeed = mChosenSeeds[(int)i];
                     if (chosenSeed.mSeedState == ChosenSeedState.SEED_IN_BANK && chosenSeed.mSeedIndexInBank == theIndexInBank)
@@ -663,12 +695,13 @@ namespace Lawn
 
         public bool SeedNotAllowedToPick(SeedType theSeedType)
         {
-            return mApp.mGameMode == GameMode.ChallengeLastStand && (theSeedType == SeedType.Sunflower || theSeedType == SeedType.Sunshroom || theSeedType == SeedType.Twinsunflower || theSeedType == SeedType.Seashroom || theSeedType == SeedType.Puffshroom);
+            return (mApp.mGameMode == GameMode.ChallengeLastStand && (theSeedType == SeedType.Sunflower || theSeedType == SeedType.Sunshroom || theSeedType == SeedType.Twinsunflower || theSeedType == SeedType.Seashroom || theSeedType == SeedType.Puffshroom)) 
+                || (mApp.mGameMode == GameMode.ChallengeHighGravity && (theSeedType == SeedType.Twinsunflower || theSeedType == SeedType.Gatlingpea || theSeedType == SeedType.Gloomshroom || theSeedType == SeedType.Cattail || theSeedType == SeedType.GoldMagnet || theSeedType == SeedType.Cobcannon || theSeedType == SeedType.Wintermelon || theSeedType == SeedType.Spikerock));
         }
 
         public void CloseSeedChooser()
         {
-            Debug.ASSERT(mBoard.mSeedBank.mNumPackets == mBoard.GetNumSeedsInBank());
+            //Debug.ASSERT(mBoard.mSeedBank.mNumPackets == mBoard.GetNumSeedsInBank());
             for (int i = 0; i < mBoard.mSeedBank.mNumPackets; i++)
             {
                 SeedType seedType = FindSeedInBank(i);
@@ -1011,7 +1044,7 @@ namespace Lawn
             {
                 num += theArray[i].mWeight;
             }
-            Debug.ASSERT(num > 0);
+            //Debug.ASSERT(num > 0);
             int num2 = RandomNumbers.NextNumber(num);
             int num3 = 0;
             for (int j = 0; j < theCount; j++)
@@ -1022,7 +1055,7 @@ namespace Lawn
                     return (int)theArray[j].mItem;
                 }
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             return -666;
         }
 
@@ -1142,6 +1175,8 @@ namespace Lawn
         public GameButton mMenuButton;
 
         public GameButton mImitaterButton;
+
+        public GameButton mPlantModeButton;
 
         public SeedPacketsWidget mSeedPacketsWidget;
 

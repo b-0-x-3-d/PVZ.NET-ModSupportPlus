@@ -37,7 +37,7 @@ namespace Lawn
         public void SetLabel(string theNewLabel, MessageStyle theMessageStyle, Image theIcon)
         {
             string text = TodStringFile.TodStringTranslate(theNewLabel);
-            Debug.ASSERT(text.length() < 127);
+            //Debug.ASSERT(text.length() < 127);
             if (mReanimType != ReanimationType.None && mDuration > 0)
             {
                 mMessageStyleNext = theMessageStyle;
@@ -90,7 +90,7 @@ namespace Lawn
             }
             else
             {
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
             }
             if (mReanimType != ReanimationType.None)
             {
@@ -249,7 +249,7 @@ namespace Lawn
                 num3 = 192;
                 break;
             default:
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
                 break;
             }
             num2 = (int)(num2 * Constants.S);
@@ -415,7 +415,7 @@ namespace Lawn
             {
                 if (i == length || mLabel[i] == '\n')
                 {
-                    Debug.ASSERT(num < 5);
+                    //Debug.ASSERT(num < 5);
                     int num4 = i - num3;
                     int num5 = num3;
                     num3 = i + 1;
@@ -438,7 +438,7 @@ namespace Lawn
                 if (mLabel[j] == '\n')
                 {
                     num++;
-                    Debug.ASSERT(num < 5);
+                    //Debug.ASSERT(num < 5);
                     num6 = -array[num] * 0.5f;
                     num7 += font.GetLineSpacing();
                 }

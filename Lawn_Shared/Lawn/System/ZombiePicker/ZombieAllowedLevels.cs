@@ -12,6 +12,6 @@ namespace Lawn
 
         public ZombieType mZombieType;
 
-        public int[] mAllowedOnLevel = new int[50];
+        public int[] mAllowedOnLevel = new int[60];
     }
 }

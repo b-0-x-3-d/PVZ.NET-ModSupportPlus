@@ -124,6 +124,9 @@ namespace Sexy.TodLib
         ZombieFlagpole,
         Woodsign,
         Astronaut,
+        Lobbashroom,
+        DG,
+        Infinut,
         NumReanims
     }
 }

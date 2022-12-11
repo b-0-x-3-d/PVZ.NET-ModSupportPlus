@@ -64,18 +64,30 @@ namespace Lawn
                 GetSeedPosition(seedType, ref num2, ref num3);
                 if (seedType != SeedType.Imitater)
                 {
-                    if (mApp.HasSeedType(seedType))
+                    if (mApp.HasSeedType(seedType) || (seedType >= SeedType.ExplodeONut))
                     {
                         ChosenSeed chosenSeed = mApp.mSeedChooserScreen.mChosenSeeds[i];
                         if (chosenSeed.mSeedState != ChosenSeedState.SEED_IN_CHOOSER)
                         {
                             if (mImitaters)
                             {
-                                SeedPacket.DrawSmallSeedPacket(g, num2, num3, SeedType.Imitater, seedType, 0f, 255, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)seedType] == 2)
+                                    SeedPacket.DrawSmallSeedPacket(g, num2, num3, SeedType.Imitater, seedType, 0f, 128, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                
+                                if ((int)GameConstants.PLANT_MODE[(int)seedType] == 1)
+                                    SeedPacket.DrawSmallSeedPacket(g, num2, num3, SeedType.Imitater, seedType, 0f, 196, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)seedType] == 0)
+                                    SeedPacket.DrawSmallSeedPacket(g, num2, num3, SeedType.Imitater, seedType, 0f, 255, theDrawCost, false, theDrawBackground, theDrawBackground);
                             }
                             else
                             {
-                                SeedPacket.DrawSmallSeedPacket(g, num2, num3, seedType, SeedType.None, 0f, 55, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)seedType] == 2)
+                                    SeedPacket.DrawSmallSeedPacket(g, num2, num3, seedType, SeedType.None, 0f, 5, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                
+                                if ((int)GameConstants.PLANT_MODE[(int)seedType] == 1)
+                                    SeedPacket.DrawSmallSeedPacket(g, num2, num3, seedType, SeedType.None, 0f, 25, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)seedType] == 0)
+                                    SeedPacket.DrawSmallSeedPacket(g, num2, num3, seedType, SeedType.None, 0f, 55, theDrawCost, false, theDrawBackground, theDrawBackground);
                             }
                         }
                     }
@@ -112,11 +124,21 @@ namespace Lawn
                         float num7 = flag ? 115 : 255;
                         if (mImitaters)
                         {
-                            SeedPacket.DrawSmallSeedPacket(g, num5, num6, SeedType.Imitater, chosenSeed2.mSeedType, 0f, (int)num7, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)chosenSeed2.mSeedType] == 2)
+                                    SeedPacket.DrawSmallSeedPacket(g, num5, num6, SeedType.Imitater, chosenSeed2.mSeedType, 0f, (int)num7-50, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)chosenSeed2.mSeedType] == 1)
+                                    SeedPacket.DrawSmallSeedPacket(g, num5, num6, SeedType.Imitater, chosenSeed2.mSeedType, 0f, (int)num7-25, theDrawCost, false, theDrawBackground, theDrawBackground);
+                                if ((int)GameConstants.PLANT_MODE[(int)chosenSeed2.mSeedType] == 0)
+                                    SeedPacket.DrawSmallSeedPacket(g, num5, num6, SeedType.Imitater, chosenSeed2.mSeedType, 0f, (int)num7, theDrawCost, false, theDrawBackground, theDrawBackground);
                         }
                         else
                         {
-                            SeedPacket.DrawSmallSeedPacket(g, num5, num6, chosenSeed2.mSeedType, chosenSeed2.mImitaterType, 0f, (int)num7, theDrawCost, false, theDrawBackground, theDrawBackground);
+                            if ((int)GameConstants.PLANT_MODE[(int)chosenSeed2.mSeedType] == 2)
+                                SeedPacket.DrawSmallSeedPacket(g, num5, num6, chosenSeed2.mSeedType, SeedType.None, 0f, (int)num7-50, theDrawCost, false, theDrawBackground, theDrawBackground);
+                            if ((int)GameConstants.PLANT_MODE[(int)chosenSeed2.mSeedType] == 1)
+                                SeedPacket.DrawSmallSeedPacket(g, num5, num6, chosenSeed2.mSeedType, SeedType.None, 0f, (int)num7-25, theDrawCost, false, theDrawBackground, theDrawBackground);
+                            if ((int)GameConstants.PLANT_MODE[(int)chosenSeed2.mSeedType] == 0)
+                                SeedPacket.DrawSmallSeedPacket(g, num5, num6, chosenSeed2.mSeedType, SeedType.None, 0f, (int)num7, theDrawCost, false, theDrawBackground, theDrawBackground);
                         }
                     }
                 }

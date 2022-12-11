@@ -171,7 +171,7 @@ namespace Sexy
 
         public void RemoveBaseModal(Widget theWidget)
         {
-            Debug.ASSERT(mPreModalInfoList.Count > 0);
+            //Debug.ASSERT(mPreModalInfoList.Count > 0);
             bool flag = true;
             while (mPreModalInfoList.Count > 0)
             {
@@ -758,7 +758,7 @@ namespace Sexy
 
         public bool MouseExit(int x, int y)
         {
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             return true;
         }
 

@@ -19,6 +19,10 @@ namespace Lawn
         Butter,
         ZombiePea,
         ZombiePeaMindControl,
+        BlueFire,
+        Diamond,
+        ZombieFirepea,
+        Turkey,
         ProjectilesCount
     }
 }

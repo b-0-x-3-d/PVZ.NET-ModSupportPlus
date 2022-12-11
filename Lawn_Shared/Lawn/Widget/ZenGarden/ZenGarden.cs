@@ -187,7 +187,7 @@ namespace Lawn
 
         public void AddPottedPlant(PottedPlant thePottedPlant)
         {
-            Debug.ASSERT(mApp.mPlayerInfo.mNumPottedPlants < GameConstants.MAX_POTTED_PLANTS);
+            //Debug.ASSERT(mApp.mPlayerInfo.mNumPottedPlants < GameConstants.MAX_POTTED_PLANTS);
             int numPottedPlants = mApp.mPlayerInfo.mNumPottedPlants;
             PottedPlant aPottedPlant = mApp.mPlayerInfo.mPottedPlant[numPottedPlants];
             aPottedPlant.mDrawVariation = thePottedPlant.mDrawVariation;
@@ -277,7 +277,7 @@ namespace Lawn
             {
                 aPosY -= Constants.ZenGardenGreenhouseOffset.Y;
             }
-            Debug.ASSERT(mBoard.GetTopPlantAt(theGridX, theGridY, TopPlant.Any) == null);
+            //Debug.ASSERT(mBoard.GetTopPlantAt(theGridX, theGridY, TopPlant.Any) == null);
             bool aIsSleeping = thePlant.mIsAsleep;
             thePlant.SetSleeping(false);
             Plant aTopPlantAtGrid = mBoard.GetTopPlantAt(thePlant.mPlantCol, thePlant.mRow, TopPlant.OnlyUnderPlant);
@@ -543,7 +543,7 @@ namespace Lawn
                 {
                     return 300;
                 }
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
             }
             if (pottedPlant.mPlantAge == PottedPlantAge.Sprout)
             {
@@ -559,7 +559,7 @@ namespace Lawn
             }
             if (pottedPlant.mPlantAge != PottedPlantAge.Full)
             {
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
                 return -666;
             }
             if (Plant.IsNocturnal(pottedPlant.mSeedType) || Plant.IsAquatic(pottedPlant.mSeedType))
@@ -629,7 +629,7 @@ namespace Lawn
         public void MouseDownWithFullWheelBarrow(int x, int y)
         {
             PottedPlant pottedPlantInWheelbarrow = GetPottedPlantInWheelbarrow();
-            Debug.ASSERT(pottedPlantInWheelbarrow != null);
+            //Debug.ASSERT(pottedPlantInWheelbarrow != null);
             if (mApp.mZenGarden.mGardenType == GardenType.Aquarium && !Plant.IsAquatic(pottedPlantInWheelbarrow.mSeedType))
             {
                 mBoard.DisplayAdvice("[ZEN_ONLY_AQUATIC_PLANTS]", MessageStyle.HintTallFast, AdviceType.None);
@@ -739,7 +739,7 @@ namespace Lawn
             }
             else
             {
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
             }
             if ((mBoard.mBackground == BackgroundType.MushroomGarden || mBoard.mBackground == BackgroundType.Zombiquarium) && mApp.mPlayerInfo.mPurchases[19] == 0)
             {
@@ -788,7 +788,7 @@ namespace Lawn
                 theCount = ZenGarden.gGreenhouseGridPlacement.Length;
                 return ZenGarden.gGreenhouseGridPlacement;
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             return null;
         }
 
@@ -1052,7 +1052,7 @@ namespace Lawn
             }
             if (theCursorType == CursorType.Chocolate)
             {
-                Debug.ASSERT(mApp.mPlayerInfo.mPurchases[26] > 1000);
+                //Debug.ASSERT(mApp.mPlayerInfo.mPurchases[26] > 1000);
                 GridItem stinky = GetStinky();
                 if (!IsStinkyHighOnChocolate() && stinky != null)
                 {
@@ -1118,7 +1118,7 @@ namespace Lawn
                     newGridItem.mGridItemReanimID = mApp.ReanimationGetID(reanimation4);
                     newGridItem.mGridItemState = GridItemState.ZenToolFertilizer;
                     mApp.PlayFoley(FoleyType.Fertilizer);
-                    Debug.ASSERT(mApp.mPlayerInfo.mPurchases[14] > 1000);
+                    //Debug.ASSERT(mApp.mPlayerInfo.mPurchases[14] > 1000);
                     mApp.mPlayerInfo.mPurchases[14]--;
                 }
                 else if (theCursorType == CursorType.BugSpray)
@@ -1128,7 +1128,7 @@ namespace Lawn
                     newGridItem.mGridItemReanimID = mApp.ReanimationGetID(reanimation5);
                     newGridItem.mGridItemState = GridItemState.ZenToolBugSpray;
                     mApp.PlayFoley(FoleyType.Bugspray);
-                    Debug.ASSERT(mApp.mPlayerInfo.mPurchases[15] > 1000);
+                    //Debug.ASSERT(mApp.mPlayerInfo.mPurchases[15] > 1000);
                     mApp.mPlayerInfo.mPurchases[15]--;
                 }
                 else if (theCursorType == CursorType.Phonograph)
@@ -1178,7 +1178,7 @@ namespace Lawn
 
         public PottedPlant PottedPlantFromIndex(int thePottedPlantIndex)
         {
-            Debug.ASSERT(thePottedPlantIndex >= 0 && thePottedPlantIndex < mApp.mPlayerInfo.mNumPottedPlants);
+            //Debug.ASSERT(thePottedPlantIndex >= 0 && thePottedPlantIndex < mApp.mPlayerInfo.mNumPottedPlants);
             return mApp.mPlayerInfo.mPottedPlant[thePottedPlantIndex];
         }
 
@@ -1518,7 +1518,7 @@ namespace Lawn
             {
                 ReanimatorTrackInstance trackInstanceByName = aStinkyReanim.GetTrackInstanceByName("shell");
                 Reanimation reanimation2 = GlobalMembersAttachment.FindReanimAttachment(trackInstanceByName.mAttachmentID);
-                Debug.ASSERT(reanimation2 != null);
+                //Debug.ASSERT(reanimation2 != null);
                 if (mBoard.mCursorObject.mCursorType == CursorType.Chocolate)
                 {
                     reanimation2.AssignRenderGroupToPrefix("z", -1);
@@ -1769,7 +1769,7 @@ namespace Lawn
                 int aPickCount = 0;
                 int aCount = 0;
                 SpecialGridPlacement[] specialGridPlacements = GetSpecialGridPlacements(ref aCount);
-                Debug.ASSERT(aCount < Constants.GRIDSIZEX * Constants.MAX_GRIDSIZEY);
+                //Debug.ASSERT(aCount < Constants.GRIDSIZEX * Constants.MAX_GRIDSIZEY);
                 for (int j = 0; j < aCount; j++)
                 {
                     SpecialGridPlacement specialGridPlacement = specialGridPlacements[j];

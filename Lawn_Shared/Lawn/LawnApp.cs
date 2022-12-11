@@ -261,7 +261,7 @@ namespace Lawn
             TodStringFile.TodStringListLoad("Content/"+"LawnStrings_" + Constants.LanguageSubDir + ".txt");
             mTitleScreen.mLoaderScreenIsLoaded = true;
             mNumLoadingThreadTasks += mResourceManager.GetNumResources("LoadingFonts") * 54;
-            mNumLoadingThreadTasks += mResourceManager.GetNumResources("LoadingImages") * 9;
+            mNumLoadingThreadTasks += mResourceManager.GetNumResources("LoadingImages") * 10;
             mNumLoadingThreadTasks += mResourceManager.GetNumResources("LoadingSounds") * 54;
             mNumLoadingThreadTasks += 612;
             mNumLoadingThreadTasks += 8092;
@@ -279,7 +279,7 @@ namespace Lawn
             mResourceManager.LoadAllResources();
             Resources.ExtractResources(mResourceManager, AtlasResources.mAtlasResources);
             AtlasResources.mAtlasResources.ExtractResources();
-            ReanimatorXnaHelpers.ReanimatorLoadDefinitions(ref GameConstants.gLawnReanimationArray, 119);
+            ReanimatorXnaHelpers.ReanimatorLoadDefinitions(ref GameConstants.gLawnReanimationArray, 120);
             TodStringFile.TodStringListSetColors(GameConstants.gLawnStringFormats, GameConstants.gLawnStringFormatCount);
             if (mLoadingFailed || mShutdown || mCloseRequest)
             {
@@ -346,16 +346,16 @@ namespace Lawn
                 string @string = base.GetString("ContentUpdateSitePrefix");
                 if (!string.IsNullOrEmpty(@string))
                 {
-                    Debug.OutputDebug<string>(Common.StrFormat_("Content Update: URL={0}\n", @string));
+                    //Debug.OutputDebug<string>(Common.StrFormat_("Content Update: URL={0}\n", @string));
                 }
                 else
                 {
-                    Debug.OutputDebug<string>("Content Update: Failed to find property 'ContentUpdateSitePrefix'.\n");
+                    //Debug.OutputDebug<string>("Content Update: Failed to find property 'ContentUpdateSitePrefix'.\n");
                 }
             }
             else
             {
-                Debug.OutputDebug<string>(Common.StrFormat_("Content Update: Failed to parse properties file: {0}\n", propertiesParser.GetErrorText()));
+                //Debug.OutputDebug<string>(Common.StrFormat_("Content Update: Failed to parse properties file: {0}\n", propertiesParser.GetErrorText()));
             }
             GC.Collect();
             SexyAppBase.XnaGame.CompensateForSlowUpdate();
@@ -485,6 +485,14 @@ namespace Lawn
             base.AddDialog(35, cheatDialog);
         }
 
+        public void DoZombieDialog()
+        {
+            KillDialog(35);
+            ZombieDialog cheatDialog = new ZombieDialog(this);
+            LawnApp.CenterDialog(cheatDialog, cheatDialog.mWidth, cheatDialog.mHeight);
+            base.AddDialog(35, cheatDialog);
+        }
+
         public void FinishCheatDialog(bool isYes)
         {
             CheatDialog cheatDialog = (CheatDialog)base.GetDialog(Dialogs.DIALOG_CHEAT);
@@ -502,6 +510,24 @@ namespace Lawn
                 mMusic.StopAllMusic();
                 mBoardResult = BoardResult.Cheat;
                 PreNewGame(mGameMode, false);
+            }
+        }
+
+        public void FinishZombieDialog(bool isYes)
+        {
+            ZombieDialog cheatDialog = (ZombieDialog)base.GetDialog(Dialogs.DIALOG_CHEAT);
+            if (cheatDialog == null)
+            {
+                return;
+            }
+            if (isYes && !cheatDialog.ApplyCheat())
+            {
+                return;
+            }
+            KillDialog(36);
+            if (isYes)
+            {
+                mBoardResult = BoardResult.Cheat;
             }
         }
 
@@ -1033,7 +1059,7 @@ namespace Lawn
 
         public void ShowSeedChooserScreen()
         {
-            Debug.ASSERT(mSeedChooserScreen == null);
+            //Debug.ASSERT(mSeedChooserScreen == null);
             mSeedChooserScreen = new SeedChooserScreen();
             mSeedChooserScreen.Resize(0, 0, mWidth, mHeight);
             mWidgetManager.AddWidget(mSeedChooserScreen);
@@ -1474,7 +1500,6 @@ namespace Lawn
                 case 25:
                 case 26:
                 case 27:
-                case 36:
                 case 37:
                 case 38:
                 case 40:
@@ -1559,6 +1584,10 @@ namespace Lawn
                     return;
                 case 35:
                     FinishCheatDialog(true);
+                    return;
+                case 36:
+                    FinishZombieDialog(true);
+                    KillDialog(36);
                     return;
                 case 39:
                     FinishRestartConfirmDialog();
@@ -1647,6 +1676,10 @@ namespace Lawn
                             return;
                         case 35:
                             FinishCheatDialog(false);
+                            return;
+                        case 36:
+                            FinishZombieDialog(false);
+							KillDialog(36);
                             return;
                         default:
                             if (num2 != 42)
@@ -1746,7 +1779,7 @@ namespace Lawn
             }
             else if (GlobalStaticVars.gFastMo)
             {
-                num = 20;
+                num = 2;
             }
             for (int i = 0; i < num; i++)
             {
@@ -1768,6 +1801,11 @@ namespace Lawn
         public bool IsAdventureMode()
         {
             return mGameMode == GameMode.Adventure;
+        }
+
+        public bool HasFrozenZombies()
+        {
+            return mBoard != null && mBoard.mBackground == BackgroundType.Num9Special;
         }
 
         public bool IsQuickPlayMode()
@@ -1860,7 +1898,7 @@ namespace Lawn
             string text;
             if (!cachedStageStrings.TryGetValue(theLevel, out text))
             {
-                int num = TodCommon.ClampInt((theLevel - 1) / 10 + 1, 1, 6);
+                int num = TodCommon.ClampInt((theLevel - 1) / 10 + 1, 1, 100);
                 int num2 = theLevel - (num - 1) * 10;
                 text = Common.StrFormat_(TodStringFile.TodStringTranslate("[STAGE_STRING]"), num, num2);
                 cachedStageStrings.Add(theLevel, text);
@@ -1922,12 +1960,12 @@ namespace Lawn
             {
                 int level = mBoard.mLevel;
                 KillBoard();
-                if (IsFirstTimeAdventureMode() && level < 50)
+                if (IsFirstTimeAdventureMode() && level < 70)
                 {
                     ShowAwardScreen(AwardType.ForLevel, flag);
                     return;
                 }
-                if (level == 50)
+                if (level == 70)
                 {
                     if (mPlayerInfo.mFinishedAdventure != 1)
                     {
@@ -2039,12 +2077,12 @@ namespace Lawn
         public int GetSeedsAvailable()
         {
             int level = mPlayerInfo.GetLevel();
-            if (HasFinishedAdventure() || level > 50)
+            if (HasFinishedAdventure() || level > 60)
             {
-                return 49;
+                return 67;
             }
             int awardSeedForLevel = (int)GetAwardSeedForLevel(level);
-            return Math.Min(49, awardSeedForLevel);
+            return Math.Min(67, awardSeedForLevel);
         }
 
         public Reanimation AddReanimation(float theX, float theY, int aRenderOrder, ReanimationType theReanimationType)
@@ -2139,7 +2177,7 @@ namespace Lawn
             DelayLoadMainMenuResource(true);
             DelayLoadZenGardenResources(true);
             FinishModelessDialogs();
-            Debug.ASSERT(base.GetDialog(Dialogs.DIALOG_STORE) == null);
+            //Debug.ASSERT(base.GetDialog(Dialogs.DIALOG_STORE) == null);
             StoreScreen storeScreen = new StoreScreen(this, theListener);
             base.AddDialog(4, storeScreen);
             mWidgetManager.SetFocus(storeScreen);
@@ -2230,12 +2268,12 @@ namespace Lawn
 
         public bool IsWallnutBowlingLevel()
         {
-            return mBoard != null && (mGameMode == GameMode.ChallengeWallnutBowling || mGameMode == GameMode.ChallengeWallnutBowling2 || ((IsAdventureMode() && mPlayerInfo.mLevel == 5) || mGameMode == GameMode.Quickplay5));
+            return mBoard != null && (mGameMode == GameMode.ChallengeWallnutBowling || mGameMode == GameMode.ChallengeWallnutBowling2 || mGameMode == GameMode.ChallengeCustom || ((IsAdventureMode() && mPlayerInfo.mLevel == 5) || mGameMode == GameMode.Quickplay5));
         }
 
         public bool IsMiniBossLevel()
         {
-            return mBoard != null && ((IsAdventureMode() && mPlayerInfo.mLevel == 10) || mGameMode == GameMode.Quickplay10 || ((IsAdventureMode() && mPlayerInfo.mLevel == 20) || mGameMode == GameMode.Quickplay20) || ((IsAdventureMode() && mPlayerInfo.mLevel == 30) || mGameMode == GameMode.Quickplay30));
+            return mBoard != null && ((IsAdventureMode() && mPlayerInfo.mLevel == 10) || mGameMode == GameMode.Quickplay10 || ((IsAdventureMode() && mPlayerInfo.mLevel == 20) || mGameMode == GameMode.Quickplay20) || ((IsAdventureMode() && mPlayerInfo.mLevel == 30) || mGameMode == GameMode.Quickplay30) || (IsAdventureMode() && mPlayerInfo.mLevel == 50));
         }
 
         public bool IsSlotMachineLevel()
@@ -2255,7 +2293,7 @@ namespace Lawn
 
         public bool IsFinalBossLevel()
         {
-            return mBoard != null && (mGameMode == GameMode.ChallengeFinalBoss || ((IsAdventureMode() && mPlayerInfo.mLevel == 50) || mGameMode == GameMode.Quickplay50));
+            return mBoard != null && (mGameMode == GameMode.ChallengeFinalBoss || ((IsAdventureMode() && mPlayerInfo.mLevel == 70) || mGameMode == GameMode.Quickplay60));
         }
 
         public bool IsBungeeBlitzLevel()
@@ -2299,7 +2337,7 @@ namespace Lawn
 
         public bool IsNight()
         {
-            return (mBoard != null && mBoard.StageIsNight()) || (!IsIceDemo() && mPlayerInfo != null && ((mPlayerInfo.mLevel >= 11 && mPlayerInfo.mLevel <= 20) || (mPlayerInfo.mLevel >= 31 && mPlayerInfo.mLevel <= 40) || mPlayerInfo.mLevel == 50));
+            return (mBoard != null && mBoard.StageIsNight()) || (!IsIceDemo() && mPlayerInfo != null && ((mPlayerInfo.mLevel >= 11 && mPlayerInfo.mLevel <= 20) || (mPlayerInfo.mLevel >= 31 && mPlayerInfo.mLevel <= 40) || (mPlayerInfo.mLevel >= 51 && mPlayerInfo.mLevel <= 60)));
         }
 
         public bool CanShowStore()
@@ -2314,7 +2352,7 @@ namespace Lawn
                 return false;
             }
             int num = theGameMode - GameMode.SurvivalNormalStage1;
-            Debug.ASSERT(num >= 0 && num < 122);
+            //Debug.ASSERT(num >= 0 && num < 122);
             if (IsSurvivalNormal(theGameMode))
             {
                 return mPlayerInfo.mChallengeRecords[num] >= GameConstants.SURVIVAL_NORMAL_FLAGS;
@@ -2328,7 +2366,7 @@ namespace Lawn
 
         public PottedPlant GetPottedPlantByIndex(int thePottedPlantIndex)
         {
-            Debug.ASSERT(thePottedPlantIndex >= 0 && thePottedPlantIndex < mPlayerInfo.mNumPottedPlants);
+            //Debug.ASSERT(thePottedPlantIndex >= 0 && thePottedPlantIndex < mPlayerInfo.mNumPottedPlants);
             return mPlayerInfo.mPottedPlant[thePottedPlantIndex];
         }
 
@@ -2365,8 +2403,8 @@ namespace Lawn
 
         public void CrazyDaveEnter()
         {
-            Debug.ASSERT(mCrazyDaveState == CrazyDaveState.Off);
-            Debug.ASSERT(ReanimationTryToGet(mCrazyDaveReanimID) == null);
+            //Debug.ASSERT(mCrazyDaveState == CrazyDaveState.Off);
+            //Debug.ASSERT(ReanimationTryToGet(mCrazyDaveReanimID) == null);
             Reanimation reanimation = AddReanimation(0f, 0f, 0, ReanimationType.CrazyDave);
             reanimation.mIsAttachment = true;
             reanimation.SetBasePoseFromAnim(GlobalMembersReanimIds.ReanimTrackId_anim_idle_handing);
@@ -2870,7 +2908,7 @@ namespace Lawn
 
         public int GetNumPreloadingTasks()
         {
-            int num = 10;
+            int num = 11;
             if (mPlayerInfo != null)
             {
                 for (SeedType i = 0; i < SeedType.SeedTypeCount; i++)
@@ -3201,7 +3239,7 @@ namespace Lawn
                 if (Main.LOW_MEMORY_DEVICE)
                 {
                     ResourceManager.mReanimContentManager.Unload();
-                    ReanimatorXnaHelpers.ReanimatorLoadDefinitions(ref GameConstants.gLawnReanimationArray, 119);
+                    ReanimatorXnaHelpers.ReanimatorLoadDefinitions(ref GameConstants.gLawnReanimationArray, 120);
                     ResourceManager.mParticleContentManager.Unload();
                     TodParticleGlobal.TodParticleLoadDefinitions(ref GameConstants.gLawnParticleArray, 102);
                 }
@@ -3246,7 +3284,7 @@ namespace Lawn
                 if (Main.LOW_MEMORY_DEVICE)
                 {
                     ResourceManager.mReanimContentManager.Unload();
-                    ReanimatorXnaHelpers.ReanimatorLoadDefinitions(ref GameConstants.gLawnReanimationArray, 119);
+                    ReanimatorXnaHelpers.ReanimatorLoadDefinitions(ref GameConstants.gLawnReanimationArray, 120);
                     ResourceManager.mParticleContentManager.Unload();
                     TodParticleGlobal.TodParticleLoadDefinitions(ref GameConstants.gLawnParticleArray, 102);
                 }

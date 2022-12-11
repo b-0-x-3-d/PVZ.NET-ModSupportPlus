@@ -173,6 +173,14 @@ namespace Lawn
             {
                 mCrazyDaveDialogStart = 1304;
             }
+            else if (mApp.IsFirstTimeAdventureMode() && mBoard.mLevel == 71)
+            {
+                mCrazyDaveDialogStart = 4100;
+            }
+            else if (mApp.IsFirstTimeAdventureMode() && mBoard.mLevel == 55)
+            {
+                mCrazyDaveDialogStart = 4120;
+            }
             else if (!mApp.IsFirstTimeAdventureMode() && !mApp.IsQuickPlayMode() && mBoard.mLevel == 1)
             {
                 mCrazyDaveDialogStart = 1601;
@@ -191,14 +199,14 @@ namespace Lawn
             {
                 mCrazyDaveDialogStart = 3000;
             }
-            else if (mApp.IsFinalBossLevel() && mApp.IsAdventureMode() && !flag2)
+            else if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2 && mApp.IsAdventureMode() && !flag2)
             {
                 mCrazyDaveDialogStart = 2300;
             }
             if (mCrazyDaveDialogStart != -1)
             {
                 mCrazyDaveTime = CutScene.TimeEarlyDaveLeaveEnd - CutScene.TimePanRightStart;
-                if (mApp.IsFinalBossLevel() && mApp.IsAdventureMode())
+                if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2 && mApp.IsAdventureMode())
                 {
                     mCrazyDaveTime += 4000;
                 }
@@ -211,7 +219,7 @@ namespace Lawn
             {
                 mFogTime = 0;
             }
-            if (mApp.IsFinalBossLevel())
+            if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
             {
                 mBossTime = 4000;
             }
@@ -228,7 +236,7 @@ namespace Lawn
                 CancelIntro();
                 return;
             }
-            if (mApp.IsFinalBossLevel() || mApp.IsScaryPotterLevel() || mApp.IsWallnutBowlingLevel())
+            if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2 || mApp.IsScaryPotterLevel() || mApp.IsWallnutBowlingLevel())
             {
                 PreloadResources();
                 PlaceLawnItems();
@@ -250,7 +258,7 @@ namespace Lawn
                 }
                 else
                 {
-                    Debug.ASSERT(false);
+                    //Debug.ASSERT(false);
                 }
             }
             text = TodCommon.TodReplaceString(text, "{PLAYER}", mApp.mPlayerInfo.mName);
@@ -273,7 +281,7 @@ namespace Lawn
                 mApp.mMusic.MakeSureMusicIsPlaying(MusicTune.TitleCrazyDaveMainTheme);
                 return;
             }
-            if (mApp.IsFinalBossLevel())
+            if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
             {
                 mApp.mMusic.StopAllMusic();
                 return;
@@ -331,7 +339,7 @@ namespace Lawn
                 {
                     mBoard.mChallenge.mChallengeStateCounter = 0;
                 }
-                if (mApp.IsFinalBossLevel())
+                if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
                 {
                     mBoard.mChallenge.PlayBossEnter();
                 }
@@ -341,7 +349,7 @@ namespace Lawn
                 }
                 mBoard.mEnableGraveStones = true;
                 ShowShovel();
-                if (mApp.IsFinalBossLevel())
+                if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
                 {
                     mApp.mMusic.StartGameMusic();
                 }
@@ -448,7 +456,7 @@ namespace Lawn
             AnimateBoard();
         }
 
-        public void AnimateBoard()
+        public bool AnimateBoard()
         {
             int timeEarlyDaveEnterStart = CutScene.TimeEarlyDaveEnterStart;
             int timeEarlyDaveEnterEnd = CutScene.TimeEarlyDaveEnterEnd;
@@ -637,7 +645,7 @@ namespace Lawn
             {
                 mBoard.mChallenge.PlayBossEnter();
             }
-            if (mApp.IsFinalBossLevel() && mCutsceneTime == num13)
+            if ((mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2) && mCutsceneTime == num13)
             {
                 mApp.mMusic.StartGameMusic();
             }
@@ -648,12 +656,15 @@ namespace Lawn
                 int y = Constants.CutScene_ReadySetPlant_Pos.Y;
                 mApp.AddReanimation(x2 * Constants.IS, y * Constants.IS, 900000, ReanimationType.Readysetplant);
                 mApp.PlaySample(Resources.SOUND_READYSETPLANT);
+                if (mApp.mGameMode == GameMode.ChallengeFinalBoss2) return true;
                 mApp.IsFinalBossLevel();
             }
             if (mReadySetPlantTime == 0 && mCutsceneTime == num23 - 2000)
             {
+                if (mApp.mGameMode == GameMode.ChallengeFinalBoss2) return true;
                 mApp.IsFinalBossLevel();
             }
+            return false;
         }
 
         public void StartSeedChooser()
@@ -683,7 +694,7 @@ namespace Lawn
                 return;
             }
             mPlacedZombies = true;
-            if (mApp.IsFinalBossLevel())
+            if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
             {
                 return;
             }
@@ -694,7 +705,7 @@ namespace Lawn
             {
                 array[i] = 0;
             }
-            Debug.ASSERT(mBoard.mNumWaves <= GameConstants.MAX_ZOMBIE_WAVES);
+            //Debug.ASSERT(mBoard.mNumWaves <= GameConstants.MAX_ZOMBIE_WAVES);
             for (int j = 0; j < mBoard.mNumWaves; j++)
             {
                 for (int k = 0; k < 50; k++)
@@ -707,7 +718,7 @@ namespace Lawn
                     num2 += Zombie.GetZombieDefinition(zombieType).mZombieValue;
                     if (zombieType != ZombieType.Flag && (zombieType != ZombieType.Yeti || (!mApp.IsQuickPlayMode() && mApp.IsStormyNightLevel())) && (zombieType != ZombieType.Bobsled || mApp.mGameMode == GameMode.ChallengeBobsledBonanza))
                     {
-                        Debug.ASSERT(zombieType >= ZombieType.Normal && zombieType < ZombieType.ZombieTypesCount);
+                        //Debug.ASSERT(zombieType >= ZombieType.Normal && zombieType < ZombieType.ZombieTypesCount);
                         array[(int)zombieType]++;
                         num++;
                         if (zombieType == ZombieType.Bungee || zombieType == ZombieType.Bobsled)
@@ -752,7 +763,7 @@ namespace Lawn
             {
                 num3 = 18;
             }
-            Debug.ASSERT(num3 <= 18);
+            //Debug.ASSERT(num3 <= 18);
             for (ZombieType num4 = 0; num4 < ZombieType.ZombieTypesCount; num4++)
             {
                 if (array[(int)num4] != 0 && (Is2x2Zombie(num4) || num4 == ZombieType.Zamboni))
@@ -796,7 +807,7 @@ namespace Lawn
                 flag = true;
             }
             Zombie zombie = mBoard.AddZombieInRow(theZombieType, 0, GameConstants.ZOMBIE_WAVE_CUTSCENE);
-            Debug.ASSERT(zombie != null);
+            //Debug.ASSERT(zombie != null);
             zombie.mPosX = 830 + 56 * theGridX + 110;
             zombie.mPosY = 70 + 90 * theGridY;
             if (theGridX % 2 == 1)
@@ -942,6 +953,10 @@ namespace Lawn
             {
                 num = 3;
             }
+            else if (mBoard.mBackground == BackgroundType.Num8Special)
+            {
+                num = 2;
+            }
             for (int i = 0; i < num; i++)
             {
                 for (int j = 0; j < Constants.MAX_GRIDSIZEY; j++)
@@ -951,6 +966,24 @@ namespace Lawn
                         Plant newPlant = Plant.GetNewPlant();
                         newPlant.mIsOnBoard = true;
                         newPlant.PlantInitialize(i, j, SeedType.Flowerpot, SeedType.None);
+                        mBoard.mPlants.Add(newPlant);
+                    }
+                }
+            }
+            num = 0;
+            if (mBoard.mBackground == BackgroundType.Num8Special)
+            {
+                num = 2;
+            }
+            for (int i = 0; i < num; i++)
+            {
+                for (int j = 0; j < Constants.MAX_GRIDSIZEY; j++)
+                {
+                    if (mBoard.CanPlantAt(i, j, SeedType.Lilypad) == PlantingReason.Ok)
+                    {
+                        Plant newPlant = Plant.GetNewPlant();
+                        newPlant.mIsOnBoard = true;
+                        newPlant.PlantInitialize(i, j, SeedType.Lilypad, SeedType.None);
                         mBoard.mPlants.Add(newPlant);
                     }
                 }
@@ -1029,7 +1062,7 @@ namespace Lawn
 
         public bool IsCutSceneOver()
         {
-            Debug.ASSERT(mApp.mGameScene == GameScenes.ZombiesWon);
+            //Debug.ASSERT(mApp.mGameScene == GameScenes.ZombiesWon);
             return mCutsceneTime >= CutScene.LostTimeEnd;
         }
 
@@ -1202,7 +1235,7 @@ namespace Lawn
             }
             if (Is2x2Zombie(theZombieType))
             {
-                Debug.ASSERT(num > 0 && num2 > 0);
+                //Debug.ASSERT(num > 0 && num2 > 0);
                 theZombieGrid[num - 1, num2] = true;
                 theZombieGrid[num, num2 - 1] = true;
                 theZombieGrid[num - 1, num2 - 1] = true;
@@ -1305,7 +1338,7 @@ namespace Lawn
             }
             if (mApp.mGameMode == GameMode.Intro)
             {
-                mApp.DelayLoadBackgroundResource("DelayLoad_Background3");
+                mApp.DelayLoadBackgroundResource("DelayLoad_Background4");
                 Zombie.PreloadZombieResources(ZombieType.Normal);
                 Zombie.PreloadZombieResources(ZombieType.TrafficCone);
                 Zombie.PreloadZombieResources(ZombieType.Pail);
@@ -1335,7 +1368,7 @@ namespace Lawn
 
         public bool IsNonScrollingCutscene()
         {
-            return mApp.mGameMode == GameMode.ChallengeIce || mApp.mGameMode == GameMode.Upsell || mApp.IsScaryPotterLevel() || mApp.IsIZombieLevel() || mApp.IsWhackAZombieLevel() || mApp.IsShovelLevel() || mApp.IsSquirrelLevel() || mApp.IsWallnutBowlingLevel() || mApp.mGameMode == GameMode.ChallengeZenGarden || mApp.mGameMode == GameMode.TreeOfWisdom || mApp.mGameMode == GameMode.ChallengeZombiquarium;
+            return mApp.mGameMode == GameMode.Upsell || mApp.IsScaryPotterLevel() || mApp.IsIZombieLevel() || mApp.IsWhackAZombieLevel() || mApp.IsShovelLevel() || mApp.IsSquirrelLevel() || mApp.IsWallnutBowlingLevel() || mApp.mGameMode == GameMode.ChallengeZenGarden || mApp.mGameMode == GameMode.TreeOfWisdom || mApp.mGameMode == GameMode.ChallengeZombiquarium;
         }
 
         public bool IsScrolledLeftAtStart()
@@ -1363,6 +1396,7 @@ namespace Lawn
             if (!IsSurvivalRepick())
             {
                 mBoard.PlaceRake();
+                mBoard.SolarField();
             }
         }
 

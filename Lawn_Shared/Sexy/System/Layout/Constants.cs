@@ -31,7 +31,7 @@ namespace Sexy
             Constants.MORE_GAMES_PLANK_WIDTH = 320;
             Constants.MORE_GAMES_ITEM_GAP = 2;
             Constants.SMALL_SEEDPACKET_WIDTH = 54;
-            Constants.SMALL_SEEDPACKET_HEIGHT = 35;
+            Constants.SMALL_SEEDPACKET_HEIGHT = 20;
             Constants.SEED_CHOOSER_OFFSETSCREEN_OFFSET = 320;
             Constants.SCROLL_AREA_OFFSET_X = 67;
             Constants.SCROLL_AREA_OFFSET_Y = 28;
@@ -112,7 +112,7 @@ namespace Sexy
             Constants.SeedChooserScreen_Background_Top = new Point(58, 2);
             Constants.SeedChooserScreen_Background_Middle = new Point(58, 31);
             Constants.SeedChooserScreen_Background_Middle_Height = 220;
-            Constants.SeedChooserScreen_Background_Bottom = new Point(58, 251);
+            Constants.SeedChooserScreen_Background_Bottom = new Point(58, 451);
             Constants.SeedChooserScreen_Gradient_Top = new Rectangle(0, 24, 222, 12);
             Constants.SeedChooserScreen_Gradient_Bottom = new Rectangle(-1, 246, 223, 12);
             Constants.SeedPacket_Cost = new Point(29, 18);
@@ -600,7 +600,7 @@ namespace Sexy
             Constants.MORE_GAMES_PLANK_WIDTH = 320;
             Constants.MORE_GAMES_ITEM_GAP = 2;
             Constants.SMALL_SEEDPACKET_WIDTH = 81;
-            Constants.SMALL_SEEDPACKET_HEIGHT = 52;
+            Constants.SMALL_SEEDPACKET_HEIGHT = 40;
             Constants.SEED_CHOOSER_OFFSETSCREEN_OFFSET = 480;
             Constants.SCROLL_AREA_OFFSET_X = 102;
             Constants.SCROLL_AREA_OFFSET_Y = (int)Constants.InvertAndScale(28f);
@@ -687,7 +687,7 @@ namespace Sexy
             Constants.SeedChooserScreen_MenuButton_X = 665;
             Constants.SeedChooserScreen_Background_Top = new Point(88, 4);
             Constants.SeedChooserScreen_Background_Middle = new Point(Constants.SeedChooserScreen_Background_Top.X, Constants.SeedChooserScreen_Background_Top.Y + 44);
-            Constants.SeedChooserScreen_Background_Middle_Height = 325;
+            Constants.SeedChooserScreen_Background_Middle_Height = 425;
             Constants.SeedChooserScreen_Background_Bottom = new Point(Constants.SeedChooserScreen_Background_Top.X, Constants.SeedChooserScreen_Background_Middle.Y + Constants.SeedChooserScreen_Background_Middle_Height);
             Constants.SeedChooserScreen_Gradient_Top = new Rectangle(0, 40, 336, 22);
             Constants.SeedChooserScreen_Gradient_Bottom = new Rectangle(0, 362, 336, 22);
@@ -695,12 +695,12 @@ namespace Sexy
             Constants.SeedPacket_Cost_IZombie = new Point(41, 27);
             Constants.SeedPacket_CostText_Pos = new Point(74, 22);
             Constants.SeedPacket_CostText_IZombie_Pos = new Point(73, 23);
-            Constants.ImitaterDialog_Size = new Point(0, 240);
+            Constants.ImitaterDialog_Size = new Point(0, 360);
             Constants.ImitaterDialog_ScrollWidget_Offset_X = 5;
             Constants.ImitaterDialog_ScrollWidget_Y = 120;
             Constants.ImitaterDialog_ScrollWidget_ExtraWidth = 20;
-            Constants.ImitaterDialog_Height = 250;
-            Constants.ImitaterDialog_BottomGradient_Y = 235;
+            Constants.ImitaterDialog_Height = 360;
+            Constants.ImitaterDialog_BottomGradient_Y = 355;
             Constants.CutScene_ReadySetPlant_Pos = new Point(370, 260);
             Constants.CutScene_LogoEndPos = 350;
             Constants.CutScene_LogoBackRect_Height = 150;
@@ -1257,12 +1257,12 @@ namespace Sexy
             Constants.SeedPacket_Cost_IZombie = new Point(41, 27);
             Constants.SeedPacket_CostText_Pos = new Point(74, 22);
             Constants.SeedPacket_CostText_IZombie_Pos = new Point(73, 23);
-            Constants.ImitaterDialog_Size = new Point(0, 240);
+            Constants.ImitaterDialog_Size = new Point(0, 360);
             Constants.ImitaterDialog_ScrollWidget_Offset_X = 5;
             Constants.ImitaterDialog_ScrollWidget_Y = 120;
             Constants.ImitaterDialog_ScrollWidget_ExtraWidth = 20;
-            Constants.ImitaterDialog_Height = 250;
-            Constants.ImitaterDialog_BottomGradient_Y = 235;
+            Constants.ImitaterDialog_Height = 360;
+            Constants.ImitaterDialog_BottomGradient_Y = 355;
             Constants.CutScene_ReadySetPlant_Pos = new Point(370, 260);
             Constants.CutScene_LogoEndPos = 350;
             Constants.CutScene_LogoBackRect_Height = 150;
@@ -1388,7 +1388,7 @@ namespace Sexy
             Constants.Almanac_NamePosition = new Point(622, 0);
             Constants.Almanac_ClayRect = new TRect(450, 6, 340, 465);
             Constants.Almanac_BrownRect = new TRect(513, 41, 198, 198);
-            Constants.Almanac_ZombieSpace = new Point(137, 117);
+            Constants.Almanac_ZombieSpace = new Point(97, 117);
             Constants.Almanac_ZombieOffset = new Point(0, 5);
             Constants.Almanac_BossPosition = new Point(205, 944);
             Constants.Almanac_ImpPosition = new Point(68, 944);

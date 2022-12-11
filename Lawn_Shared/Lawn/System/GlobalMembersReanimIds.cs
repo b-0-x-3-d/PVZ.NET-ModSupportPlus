@@ -524,5 +524,7 @@ namespace Lawn
         public static string ReanimTrackId_anim_wheelie2 = ReanimatorXnaHelpers.ReanimatorTrackNameToId("anim_wheelie2");
 
         public static string ReanimTrackId_anim_loop = ReanimatorXnaHelpers.ReanimatorTrackNameToId("anim_loop");
+		
+        public static string ReanimTrackId_anim_head_glasses = ReanimatorXnaHelpers.ReanimatorTrackNameToId("anim_head_glasses");
     }
 }

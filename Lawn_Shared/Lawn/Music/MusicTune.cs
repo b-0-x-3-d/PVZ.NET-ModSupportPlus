@@ -17,6 +17,7 @@ namespace Lawn
         Conveyer,
         FinalBossBrainiacManiac,
         ZenGarden,
+        MoonOutOfCorpse,
         MusicTuneCount
     }
 }

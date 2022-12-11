@@ -44,6 +44,7 @@ namespace Lawn
         CobcannonReady,
         CobcannonFiring,
         KernelpultButter,
+        SnowpeaButter,
         UmbrellaTriggered,
         UmbrellaReflecting,
         ImitaterMorphing,

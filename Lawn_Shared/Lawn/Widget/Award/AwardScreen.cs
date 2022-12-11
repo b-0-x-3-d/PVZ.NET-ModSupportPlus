@@ -77,19 +77,31 @@ namespace Lawn
                 }
                 else if (level == 30)
                 {
-                    mApp.DelayLoadBackgroundResource("DelayLoad_Background1");
+                    mApp.DelayLoadBackgroundResource("DelayLoad_Background3");
                     mApp.DelayLoadZombieNotePaperResource("DelayLoad_ZombieNote");
                     mApp.DelayLoadZombieNoteResource("DelayLoad_ZombieNote3");
                 }
                 else if (level == 40)
                 {
-                    mApp.DelayLoadBackgroundResource("DelayLoad_Background2");
+                    mApp.DelayLoadBackgroundResource("DelayLoad_Background4");
                     mApp.DelayLoadZombieNotePaperResource("DelayLoad_ZombieNote");
                     mApp.DelayLoadZombieNoteResource("DelayLoad_ZombieNote4");
                 }
                 else if (level == 50)
                 {
-                    mApp.DelayLoadBackgroundResource("DelayLoad_Background1");
+                    mApp.DelayLoadBackgroundResource("DelayLoad_Background5");
+                    mApp.DelayLoadZombieNotePaperResource("DelayLoad_ZombieNote");
+                    mApp.DelayLoadZombieNoteResource("DelayLoad_ZombieNote1");
+                }
+                else if (level == 60)
+                {
+                    mApp.DelayLoadBackgroundResource("DelayLoad_Background6");
+                    mApp.DelayLoadZombieNotePaperResource("DelayLoad_ZombieNote");
+                    mApp.DelayLoadZombieNoteResource("DelayLoad_ZombieNote1");
+                }
+                else if (level == 70)
+                {
+                    mApp.DelayLoadBackgroundResource("DelayLoad_Background9");
                     mApp.DelayLoadZombieNotePaperResource("DelayLoad_ZombieNote");
                     mApp.DelayLoadZombieNoteResource("DelayLoad_ZombieFinalNote");
                 }

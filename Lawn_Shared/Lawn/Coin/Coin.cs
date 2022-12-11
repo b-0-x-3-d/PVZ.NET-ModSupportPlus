@@ -25,6 +25,10 @@ namespace Lawn
             mPosY = theY;
             mDisappearCounter = 0;
             mIsBeingCollected = false;
+            if (mType >= CoinType.Silver && mType <= CoinType.Largesun)
+            {
+                mIsBeingCollected = true;
+            }
             mFadeCount = 0;
             mCoinMotion = theCoinMotion;
             mCoinAge = 0;
@@ -244,10 +248,24 @@ namespace Lawn
                     SeedType theSeedType6 = (SeedType)TodCommon.TodPickFromArray(array5, array5.Length);
                     mPottedPlantSpec.InitializePottedPlant(theSeedType6);
                 }
+                else if (mBoard.mBackground == BackgroundType.Num6Boss)
+                {
+                    int[] array5 = new int[]
+                    {
+                        32,
+                        34,
+                        35,
+                        36,
+                        37,
+                        39
+                    };
+                    SeedType theSeedType7 = (SeedType)TodCommon.TodPickFromArray(array5, array5.Length);
+                    mPottedPlantSpec.InitializePottedPlant(theSeedType7);
+                }
                 else
                 {
-                    SeedType theSeedType7 = mApp.mZenGarden.PickRandomSeedType();
-                    mPottedPlantSpec.InitializePottedPlant(theSeedType7);
+                    SeedType theSeedType8 = mApp.mZenGarden.PickRandomSeedType();
+                    mPottedPlantSpec.InitializePottedPlant(theSeedType8);
                 }
             }
             else if (mType == CoinType.AwardMoneyBag || mType == CoinType.AwardBagDiamond)
@@ -325,7 +343,7 @@ namespace Lawn
                 mGroundY = (int)mPosY + 40;
                 break;
             default:
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
                 break;
             }
             if (mCoinMotion != CoinMotion.LawnmowerCoin && mApp.mGameMode != GameMode.ChallengeZenGarden && mPosX - mWidth < Constants.LAWN_XMIN)
@@ -432,7 +450,7 @@ namespace Lawn
 
         public void Die()
         {
-            Debug.ASSERT(mBoard == null || mBoard.mCursorObject.mCoinID != mBoard.mCoins[mBoard.mCoins.IndexOf(this)]);
+            //Debug.ASSERT(mBoard == null || mBoard.mCursorObject.mCoinID != mBoard.mCoins[mBoard.mCoins.IndexOf(this)]);
             mDead = true;
             GlobalMembersAttachment.AttachmentDie(ref mAttachmentID);
         }
@@ -678,7 +696,7 @@ namespace Lawn
                         g.SetColorizeImages(false);
                         return;
                     }
-                    Debug.ASSERT(false);
+                    //Debug.ASSERT(false);
                 }
             }
             g.SetColorizeImages(true);
@@ -702,7 +720,7 @@ namespace Lawn
             }
             if (mType == CoinType.AwardPresent || mType == CoinType.PresentPlant)
             {
-                Debug.ASSERT(mBoard != null);
+                //Debug.ASSERT(mBoard != null);
                 if (mApp.mZenGarden.IsZenGardenFull(false))
                 {
                     mBoard.DisplayAdvice("[DIALOG_ZEN_GARDEN_FULL]", MessageStyle.HintFast, AdviceType.None);
@@ -828,7 +846,7 @@ namespace Lawn
                     mApp.PlaySample(Resources.SOUND_TAP2);
                 }
                 mApp.AddTodParticle(mPosX + 30f, mPosY + 30f, mRenderOrder + 1, ParticleEffect.Starburst);
-                Debug.ASSERT(mBoard != null);
+                //Debug.ASSERT(mBoard != null);
                 mBoard.FadeOutLevel();
                 GlobalMembersAttachment.AttachmentDetachCrossFadeParticleType(ref mAttachmentID, ParticleEffect.SeedPacket, null);
                 GlobalMembersAttachment.AttachmentDetachCrossFadeParticleType(ref mAttachmentID, ParticleEffect.AwardPickupArrow, null);
@@ -850,7 +868,7 @@ namespace Lawn
             }
             if (mType == CoinType.UsableSeedPacket)
             {
-                Debug.ASSERT(mBoard != null);
+                //Debug.ASSERT(mBoard != null);
                 //
                 mBoard.ClearCursor();
                 //
@@ -1160,7 +1178,6 @@ namespace Lawn
                 mFadeCount = b.ReadLong();
                 mGroundY = b.ReadLong();
                 mHitGround = b.ReadBoolean();
-                mIsBeingCollected = b.ReadBoolean();
                 mNeedsBouncyArrow = b.ReadBoolean();
                 mPosX = b.ReadFloat();
                 mPosY = b.ReadFloat();
@@ -1178,6 +1195,11 @@ namespace Lawn
                 mScale = b.ReadFloat();
                 mTimesDropped = b.ReadLong();
                 mType = (CoinType)b.ReadLong();
+                mIsBeingCollected = false;
+                if (mType >= CoinType.Silver && mType <= CoinType.Largesun)
+                {
+                    mIsBeingCollected = true;
+                }
                 mUsableSeedType = (SeedType)b.ReadLong();
                 mVelX = b.ReadFloat();
                 mVelY = b.ReadFloat();
@@ -1394,7 +1416,7 @@ namespace Lawn
 
         public void FanOutCoins(CoinType theCoinType, int theNumCoins)
         {
-            Debug.ASSERT(mBoard != null);
+            //Debug.ASSERT(mBoard != null);
             for (int i = 0; i < theNumCoins; i++)
             {
                 float num = 1.5707964f + 3.1415927f * (i + 1) / (theNumCoins + 1);

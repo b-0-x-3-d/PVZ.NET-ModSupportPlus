@@ -6,7 +6,7 @@ namespace Sexy
 {
     public class XNAMusicInterfaceConstants
     {
-        public static int MAX_SONGS = 13;
+        public static int MAX_SONGS = 14;
     }
 
     internal class XNAMusicInterface : MusicInterface
@@ -220,7 +220,7 @@ namespace Sexy
 
         private const float VOLUME_LIMIT = 0.5f;
 
-        private Song[] mSongs = new Song[13];
+        private Song[] mSongs = new Song[14];
 
         private bool mEnabled;
 

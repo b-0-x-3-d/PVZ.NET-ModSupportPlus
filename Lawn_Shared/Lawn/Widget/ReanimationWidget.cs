@@ -50,7 +50,7 @@ namespace Lawn
 
         public void AddReanimation(float x, float y, ReanimationType theReanimationType)
         {
-            Debug.ASSERT(mReanim == null);
+            //Debug.ASSERT(mReanim == null);
             mPosX = x;
             mPosY = y;
             mReanim = mApp.mEffectSystem.mReanimationHolder.AllocReanimation(x, y, 0, theReanimationType);

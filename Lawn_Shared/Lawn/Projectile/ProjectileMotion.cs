@@ -13,6 +13,9 @@ namespace Lawn
         Backwards,
         Star,
         FloatOver,
-        Homing
+        Homing,
+        LobPuff,
+        StarPlus,
+        StarBurst,
     }
 }

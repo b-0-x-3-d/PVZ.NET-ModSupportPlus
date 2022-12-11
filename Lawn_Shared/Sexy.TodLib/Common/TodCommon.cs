@@ -150,7 +150,7 @@ namespace Sexy.TodLib
                 num = (float)Math.Sin(TodCommon.TodCurveS(theTime) * 3.1415927f * 2f);
                 goto IL_101;
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             IL_101:
             return thePositionStart + (thePositionEnd - thePositionStart) * num;
         }
@@ -189,7 +189,7 @@ namespace Sexy.TodLib
             {
                 num += theArray[i].mWeight;
             }
-            Debug.ASSERT(num > 0);
+            //Debug.ASSERT(num > 0);
             int num2 = RandomNumbers.NextNumber(num);
             int num3 = 0;
             for (int j = 0; j < theCount; j++)
@@ -200,7 +200,7 @@ namespace Sexy.TodLib
                     return theArray[j];
                 }
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             return null;
         }
 
@@ -211,7 +211,7 @@ namespace Sexy.TodLib
             {
                 num += theArray[i].mWeight;
             }
-            Debug.ASSERT(num > 0);
+            //Debug.ASSERT(num > 0);
             int num2 = RandomNumbers.NextNumber(num);
             int num3 = 0;
             for (int j = 0; j < theCount; j++)
@@ -222,13 +222,13 @@ namespace Sexy.TodLib
                     return theArray[j];
                 }
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
             return null;
         }
 
         public static int TodPickFromArray(int[] theArray, int theCount)
         {
-            Debug.ASSERT(theCount > 0);
+            //Debug.ASSERT(theCount > 0);
             int num = RandomNumbers.NextNumber(theCount);
             return theArray[num];
         }
@@ -240,14 +240,14 @@ namespace Sexy.TodLib
             {
                 num += theArray[i].mWeight;
             }
-            Debug.ASSERT(num > 0f);
+            //Debug.ASSERT(num > 0f);
             float num2 = 1f / num;
             float num3 = 0f;
             for (int j = 0; j < theCount; j++)
             {
                 num3 += TodCommon.TodCalcSmoothWeight(theArray[j].mWeight * num2, theArray[j].mLastPicked, theArray[j].mSecondLastPicked);
             }
-            Debug.ASSERT(num3 > 0f);
+            //Debug.ASSERT(num3 > 0f);
             float num4 = RandomNumbers.NextNumber(num3);
             float num5 = 0f;
             int k;
@@ -285,7 +285,7 @@ namespace Sexy.TodLib
 
         public static int RandRangeInt(int theMin, int theMax)
         {
-            Debug.ASSERT(theMin <= theMax);
+            //Debug.ASSERT(theMin <= theMax);
             return theMin + RandomNumbers.NextNumber(theMax - theMin + 1);
         }
 
@@ -377,9 +377,9 @@ namespace Sexy.TodLib
 
         public static void TodDrawImageCelScaled(Graphics g, Image theImageStrip, int thePosX, int thePosY, int theCelCol, int theCelRow, float theScaleX, float theScaleY)
         {
-            Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
-            Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
-            Debug.ASSERT(theCelRow >= 0 && theCelRow < theImageStrip.mNumRows);
+            //Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
+            //Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
+            //Debug.ASSERT(theCelRow >= 0 && theCelRow < theImageStrip.mNumRows);
             int celWidth = theImageStrip.GetCelWidth();
             int celHeight = theImageStrip.GetCelHeight();
             TRect theSrcRect = new TRect(celWidth * theCelCol, celHeight * theCelRow, celWidth, celHeight);
@@ -389,8 +389,8 @@ namespace Sexy.TodLib
 
         public static void TodDrawImageCelF(Graphics g, Image theImageStrip, float thePosX, float thePosY, int theCelCol, int theCelRow)
         {
-            Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
-            Debug.ASSERT(theCelRow >= 0 && theCelRow < theImageStrip.mNumRows);
+            //Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
+            //Debug.ASSERT(theCelRow >= 0 && theCelRow < theImageStrip.mNumRows);
             int celWidth = theImageStrip.GetCelWidth();
             int celHeight = theImageStrip.GetCelHeight();
             TRect theSrcRect = new TRect(celWidth * theCelCol, celHeight * theCelRow, celWidth, celHeight);
@@ -399,7 +399,7 @@ namespace Sexy.TodLib
 
         public static void TodDrawImageCelScaledF(Graphics g, Image theImageStrip, float thePosX, float thePosY, int theCelCol, int theCelRow, float theScaleX, float theScaleY)
         {
-            Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
+            //Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
             int celWidth = theImageStrip.GetCelWidth();
             int celHeight = theImageStrip.GetCelHeight();
             TRect theSrcRect = new TRect(celWidth * theCelCol, celHeight * theCelRow, celWidth, celHeight);
@@ -419,7 +419,7 @@ namespace Sexy.TodLib
 
         public static void TodDrawImageCelCenterScaledF(Graphics g, Image theImageStrip, float thePosX, float thePosY, int theCelCol, float theScaleX, float theScaleY)
         {
-            Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
+            //Debug.ASSERT(theCelCol >= 0 && theCelCol < theImageStrip.mNumCols);
             int celWidth = theImageStrip.GetCelWidth();
             int celHeight = theImageStrip.GetCelHeight();
             TRect theSrcRect = new TRect(celWidth * theCelCol, 0, celWidth, celHeight);
@@ -590,7 +590,7 @@ namespace Sexy.TodLib
 
         public static bool TodIsPointInPolygon(SexyVector2[] thePolygonPoint, int theNumberPolygonPoints, SexyVector2 theCheckPoint)
         {
-            Debug.ASSERT(theNumberPolygonPoints >= 3);
+            //Debug.ASSERT(theNumberPolygonPoints >= 3);
             for (int i = 0; i < theNumberPolygonPoints; i++)
             {
                 SexyVector2 rhs = thePolygonPoint[i];

@@ -85,7 +85,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\SeedPacket\SeedType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Strings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\System\AdviceType.cs" />
-	<Compile Include="$(MSBuildThisFileDirectory)Lawn\System\CutScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lawn\System\CutScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\System\DamageFlags.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\System\DamageRangeFlags.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\System\DebugTextMode.cs" />
@@ -130,6 +130,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Basic\LawnEditWidget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Basic\LawnStoneButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Basic\NewLawnButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\SeedChooser\PlantModeDialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\SeedChooser\ChosenSeed\ChosenSeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\SeedChooser\ChosenSeed\ChosenSeedState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\SeedChooser\ImitaterDialog.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Challenge\ChallengeScreenWidget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Challenge\UnlockingState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\CheatDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\ZombieDialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\ConfirmPurchaseDialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Continue\ContinueDialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Lawn\Widget\Continue\ContinueDialogs.cs" />
@@ -391,5 +393,4 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Microsoft.Xna.Framework.RuntimeProfile" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Microsoft.Xna.Framework.XlastConfiguration" />
   </ItemGroup>
-  
 </Project>

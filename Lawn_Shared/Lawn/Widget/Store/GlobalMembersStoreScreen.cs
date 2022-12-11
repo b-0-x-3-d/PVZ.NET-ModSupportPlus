@@ -13,9 +13,9 @@ namespace Lawn
             if (theItemType == StoreItem.STORE_ITEM_PACKET_UPGRADE)
             {
                 g.DrawImage(AtlasResources.IMAGE_STORE_PACKETUPGRADE, aPosX - Constants.StoreScreen_PacketUpgrade_X, aPosY + Constants.StoreScreen_PacketUpgrade_Y);
-                if (aQuantity > 9)
+                if (aQuantity > 12)
                 {
-                    aQuantity = 9;
+                    aQuantity = 12;
                 }
                 string text;
                 if (!GlobalMembersStoreScreen.seedNumberUpgradeCache.TryGetValue(aQuantity, out text))
@@ -101,6 +101,12 @@ namespace Lawn
             if (theItemType == StoreItem.STORE_ITEM_WHEEL_BARROW)
             {
                 g.DrawImage(AtlasResources.IMAGE_ZEN_WHEELBARROW, aPosX + 5, aPosY + Constants.StoreScreenWheelbarrowOffsetY);
+                return;
+            }
+            if (theItemType == StoreItem.STORE_ITEM_SOLAR_FIELD)
+            {
+
+                SeedPacket.DrawSmallSeedPacket(g, aPosX + -3, aPosY + Constants.StoreScreen_Default_Offset_Y, SeedType.Sunflower, SeedType.None, 0f, 255, false, false, true, false);
                 return;
             }
             if (StoreScreen.IsPottedPlant(theItemType))

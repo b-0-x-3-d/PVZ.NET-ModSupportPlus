@@ -241,7 +241,7 @@ namespace Lawn
             case MiniGameMode.Vasebreaker:
                 return GetImageForVasebreaker(index);
             default:
-                return null;
+                return GetImageForGames(1);
             }
         }
 

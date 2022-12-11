@@ -6,10 +6,10 @@ namespace Lawn
 {
     internal class ImitaterDialog : LawnDialog, SeedPacketsWidgetListener
     {
-        public ImitaterDialog() : base(GlobalStaticVars.gLawnApp, null, 50, true, "[CHOOSE_SEED_TO_COPY]", "", "[DIALOG_BUTTON_OK]", 3)
+        public ImitaterDialog() : base(GlobalStaticVars.gLawnApp, null, 50, true, "Choose a Special Seed!", "", "[DIALOG_BUTTON_OK]", 3)
         {
             base.CalcSize(Constants.ImitaterDialog_Size.X, Constants.ImitaterDialog_Size.Y);
-            mSeedPacketsWidget = new SeedPacketsWidget(mApp, 10, true, this);
+            mSeedPacketsWidget = new SeedPacketsWidget(mApp, 16, true, this);
             mScrollWidget = new ScrollWidget();
             AddWidget(mScrollWidget);
             mScrollWidget.AddWidget(mSeedPacketsWidget);
@@ -54,7 +54,7 @@ namespace Lawn
                 ChosenSeed chosenSeed = mApp.mSeedChooserScreen.mChosenSeeds[48];
                 chosenSeed.mSeedState = ChosenSeedState.SEED_IN_CHOOSER;
                 chosenSeed.mImitaterType = theSeedType;
-                mApp.mSeedChooserScreen.GetSeedPositionInChooser(48, ref chosenSeed.mX, ref chosenSeed.mY);
+                mApp.mSeedChooserScreen.GetSeedPositionInChooser(49, ref chosenSeed.mX, ref chosenSeed.mY);
                 mApp.mSeedChooserScreen.ClickedSeedInChooser(ref chosenSeed);
                 mApp.mSeedChooserScreen.UpdateImitaterButton();
                 mApp.KillDialog(mId);

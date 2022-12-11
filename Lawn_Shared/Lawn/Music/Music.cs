@@ -44,6 +44,8 @@ namespace Lawn
             mApp.mCompletedLoadingThreadTasks += 3500;
             LoadSong(MusicTune.ZenGarden, "zengarden");
             mApp.mCompletedLoadingThreadTasks += 3500;
+            LoadSong(MusicTune.MoonOutOfCorpse, "moon");
+            mApp.mCompletedLoadingThreadTasks += 3500;
         }
 
         public void StopAllMusic()
@@ -55,13 +57,13 @@ namespace Lawn
 
         public void StartGameMusic()
         {
-            Debug.ASSERT(mApp.mBoard != null);
+            //Debug.ASSERT(mApp.mBoard != null);
             if (mApp.mGameMode == GameMode.ChallengeZenGarden || mApp.mGameMode == GameMode.TreeOfWisdom)
             {
                 MakeSureMusicIsPlaying(MusicTune.ZenGarden);
                 return;
             }
-            if (mApp.IsFinalBossLevel())
+            if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
             {
                 MakeSureMusicIsPlaying(MusicTune.FinalBossBrainiacManiac);
                 return;
@@ -94,6 +96,11 @@ namespace Lawn
             if (mApp.mBoard.mBackground == BackgroundType.Num4Fog)
             {
                 MakeSureMusicIsPlaying(MusicTune.FogRigormormist);
+                return;
+            }
+            if (mApp.mBoard.mBackground == BackgroundType.Num6Boss)
+            {
+                MakeSureMusicIsPlaying(MusicTune.MoonOutOfCorpse);
                 return;
             }
             if (mApp.mBoard.StageIsNight())

@@ -11,7 +11,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachmentID != null && theAttachmentID.mActive)
@@ -40,7 +40,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachmentID != null && theAttachmentID.mActive)
@@ -69,7 +69,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachmentID != null && theAttachmentID.mActive)
@@ -88,7 +88,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachmentID != null && theAttachmentID.mActive)
@@ -107,7 +107,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (mAttachments.Contains(theAttachmentID))
@@ -130,7 +130,7 @@ namespace Sexy.TodLib
             {
                 g.HardwareClip();
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachmentID != null && theAttachmentID.mActive)
@@ -153,7 +153,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (mAttachments.Contains(theAttachmentID))
@@ -173,7 +173,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (mAttachments.Contains(theAttachmentID))
@@ -190,7 +190,7 @@ namespace Sexy.TodLib
         public static AttachEffect AttachReanim(ref Attachment theAttachmentID, Reanimation theReanimation, float theOffsetX, float theOffsetY)
         {
             AttachEffect result = GlobalMembersAttachment.CreateEffectAttachment(ref theAttachmentID, EffectType.Reanim, theReanimation, theOffsetX, theOffsetY);
-            Debug.ASSERT(!theReanimation.mIsAttachment);
+            //Debug.ASSERT(!theReanimation.mIsAttachment);
             theReanimation.mIsAttachment = true;
             return result;
         }
@@ -202,7 +202,7 @@ namespace Sexy.TodLib
                 return null;
             }
             AttachEffect result = GlobalMembersAttachment.CreateEffectAttachment(ref theAttachmentID, EffectType.Particle, theParticleSystem, theOffsetX, theOffsetY);
-            Debug.ASSERT(!theParticleSystem.mIsAttachment);
+            //Debug.ASSERT(!theParticleSystem.mIsAttachment);
             theParticleSystem.mIsAttachment = true;
             return result;
         }
@@ -211,7 +211,7 @@ namespace Sexy.TodLib
         {
             Trail theDataID = EffectSystem.gEffectSystem.mTrailHolder.mTrails[EffectSystem.gEffectSystem.mTrailHolder.mTrails.IndexOf(theTrail)];
             AttachEffect result = GlobalMembersAttachment.CreateEffectAttachment(ref theAttachmentID, EffectType.Trail, theDataID, theOffsetX, theOffsetY);
-            Debug.ASSERT(!theTrail.mIsAttachment);
+            //Debug.ASSERT(!theTrail.mIsAttachment);
             theTrail.mIsAttachment = true;
             return result;
         }
@@ -228,7 +228,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(theParticleEffect >= ParticleEffect.Melonsplash && theParticleEffect < (ParticleEffect)TodParticleGlobal.gParticleDefCount);
+            //Debug.ASSERT(theParticleEffect >= ParticleEffect.Melonsplash && theParticleEffect < (ParticleEffect)TodParticleGlobal.gParticleDefCount);
             TodParticleDefinition todParticleDefinition = TodParticleGlobal.gParticleDefArray[(int)theParticleEffect];
             List<TodParticleSystem> mParticleSystems = EffectSystem.gEffectSystem.mParticleHolder.mParticleSystems;
             for (int i = 0; i < attachment.mNumEffects; i++)
@@ -263,7 +263,7 @@ namespace Sexy.TodLib
             {
                 return;
             }
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachment.mActive)
@@ -278,7 +278,7 @@ namespace Sexy.TodLib
 
         public static Reanimation FindReanimAttachment(Attachment theAttachmentID)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (mAttachments.Contains(theAttachmentID))
@@ -307,7 +307,7 @@ namespace Sexy.TodLib
 
         public static AttachEffect FindFirstAttachment(Attachment theAttachmentID)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (mAttachments.Contains(theAttachmentID))
@@ -354,7 +354,7 @@ namespace Sexy.TodLib
 
         public static bool IsFullOfAttachments(ref Attachment theAttachmentID)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             if (theAttachmentID != null && theAttachmentID.mActive)
@@ -366,7 +366,7 @@ namespace Sexy.TodLib
 
         public static AttachEffect CreateEffectAttachment(ref Attachment theAttachmentID, EffectType theEffectType, object theDataID, float theOffsetX, float theOffsetY)
         {
-            Debug.ASSERT(EffectSystem.gEffectSystem != null);
+            //Debug.ASSERT(EffectSystem.gEffectSystem != null);
             List<Attachment> mAttachments = EffectSystem.gEffectSystem.mAttachmentHolder.mAttachments;
             Attachment attachment = null;
             int num = mAttachments.IndexOf(theAttachmentID);
@@ -379,8 +379,8 @@ namespace Sexy.TodLib
                 attachment = EffectSystem.gEffectSystem.mAttachmentHolder.AllocAttachment();
                 theAttachmentID = attachment;
             }
-            Debug.ASSERT(attachment.mNumEffects < 16);
-            Debug.ASSERT(!attachment.mDead);
+            //Debug.ASSERT(attachment.mNumEffects < 16);
+            //Debug.ASSERT(!attachment.mDead);
             if (attachment.mNumEffects >= attachment.mEffectArray.Length)
             {
                 return null;

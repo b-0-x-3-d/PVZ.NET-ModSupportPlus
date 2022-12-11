@@ -65,7 +65,7 @@ namespace Sexy.TodLib
             }
             else if (reanimOptimisationType == ReanimReader.ReanimOptimisationType.CopyPrevious)
             {
-                Debug.ASSERT(ReanimReader.previous != null);
+                //Debug.ASSERT(ReanimReader.previous != null);
                 transform = ReanimReader.previous;
             }
             else

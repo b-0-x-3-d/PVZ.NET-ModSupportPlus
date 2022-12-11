@@ -21,7 +21,7 @@ namespace Lawn
             mListener = theListener;
             mOpenPage = AlmanacPage.Index;
             mSelectedSeed = SeedType.Peashooter;
-            mSelectedZombie = ZombieType.Normal;
+            mSelectedZombie = ZombieType.Mustache;
             mZombie = null;
             mPlant = null;
             mDrawStandardBack = false;
@@ -299,7 +299,7 @@ namespace Lawn
                 mIndexButton.mBtnNoDraw = false;
                 return;
             }
-            Debug.ASSERT(false);
+            //Debug.ASSERT(false);
         }
 
         public void DrawZombies(Graphics g)
@@ -444,6 +444,10 @@ namespace Lawn
                 num2 += (int)Constants.InvertAndScale(-20f);
             }
             if (mSelectedSeed == SeedType.InstantCoffee)
+            {
+                num2 += (int)Constants.InvertAndScale(20f);
+            }
+            if (mSelectedSeed == SeedType.PlantFood)
             {
                 num2 += (int)Constants.InvertAndScale(20f);
             }
@@ -700,7 +704,15 @@ namespace Lawn
             new TPoint(4, 12),
             new TPoint(18, 10),
             new TPoint(23, 27),
-            new TPoint(1, 15)
+            new TPoint(1, 15),
+            new TPoint(20, 11),
+            new TPoint(20, 11),
+            new TPoint(20, 11),
+            new TPoint(20, 11),
+            new TPoint(20, 11),
+            new TPoint(20, 11),
+            new TPoint(1, 15),
+            new TPoint(20, 11),
         };
 
         public static bool[] gZombieDefeated = new bool[(int)ZombieType.ZombieTypesCount];

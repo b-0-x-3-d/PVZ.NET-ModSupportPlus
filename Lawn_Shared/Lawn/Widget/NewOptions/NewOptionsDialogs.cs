@@ -15,6 +15,8 @@ namespace Lawn
         NewOptionsDialog_Vibrate,
         NewOptionsDialog_HardwareAcceleration,
         NewOptionsDialog_Credits,
-        NewOptionsDialog_RunWhileLocked
+        NewOptionsDialog_RunWhileLocked,
+        NewOptionsDialog_Dave,
+        NewOptionsDialog_Hard
     }
 }

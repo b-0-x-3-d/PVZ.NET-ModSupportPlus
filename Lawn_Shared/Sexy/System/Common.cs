@@ -236,7 +236,7 @@ namespace Sexy
 
         public static char CharAtStringIndex(string theString, int theIndex)
         {
-            Debug.ASSERT(theIndex <= theString.Length);
+            //Debug.ASSERT(theIndex <= theString.Length);
             int num = 0;
             for (int i = 0; i < theString.Length; i++)
             {
@@ -452,7 +452,7 @@ namespace Sexy
 
         public static long GetFileDate(string theFileName)
         {
-            Debug.ASSERT(Common.FileExists(theFileName));
+            //Debug.ASSERT(Common.FileExists(theFileName));
             return File.GetLastWriteTime(theFileName).ToFileTime();
         }
 

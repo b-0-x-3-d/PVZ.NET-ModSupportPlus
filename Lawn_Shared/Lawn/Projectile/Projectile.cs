@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Sexy;
 using Sexy.TodLib;
+using static Lawn.Plant;
+using static IronPython.Modules._ast;
 
 namespace Lawn
 {
@@ -63,6 +65,7 @@ namespace Lawn
             b.WriteFloat(mVelX);
             b.WriteFloat(mVelY);
             b.WriteFloat(mVelZ);
+            b.WriteLong((int)mProjectileBee);
             GameObject.SaveId(mTargetZombieID, b);
             return true;
         }
@@ -96,6 +99,7 @@ namespace Lawn
             mVelY = b.ReadFloat();
             mVelZ = b.ReadFloat();
             mTargetZombieIDSaved = GameObject.LoadId(b);
+            mProjectileBee = b.ReadLong();
             return true;
         }
 
@@ -108,6 +112,10 @@ namespace Lawn
             if (mProjectileType == ProjectileType.Fireball)
             {
                 ConvertToFireball();
+            }
+            if (mProjectileType == ProjectileType.BlueFire)
+            {
+                ConvertToBlueFire();
             }
         }
 
@@ -141,6 +149,7 @@ namespace Lawn
             mCobTargetRow = 0;
             mTargetZombieID = null;
             mLastPortalX = 0;
+            mProjectileBee = 0;
         }
 
         public void ProjectileInitialize(int theX, int theY, int theRenderOrder, int theRow, ProjectileType theProjectileType)
@@ -187,6 +196,7 @@ namespace Lawn
             mWidth = 40;
             mHeight = 40;
             mAnimTicksPerFrame = 0;
+            mProjectileBee = 0;
             bool flag = false;
             if (mProjectileType == ProjectileType.Cabbage || mProjectileType == ProjectileType.Butter)
             {
@@ -212,7 +222,11 @@ namespace Lawn
             }
             else if (mProjectileType == ProjectileType.Fireball)
             {
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
+            }
+            else if (mProjectileType == ProjectileType.BlueFire)
+            {
+                //Debug.ASSERT(false);
             }
             else if (mProjectileType == ProjectileType.Cobbig)
             {
@@ -247,6 +261,12 @@ namespace Lawn
                 {
                     mDamageRangeFlags = 1;
                 }
+                else if (mProjectileType == ProjectileType.Diamond)
+                {
+                    
+					mRotation = -1.2566371f;
+					mVelX = 2f;
+                }
             }
             if (flag)
             {
@@ -274,15 +294,19 @@ namespace Lawn
                 return;
             }
             int num = 20;
-            if (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Cabbage || mProjectileType == ProjectileType.Melon || mProjectileType == ProjectileType.Wintermelon || mProjectileType == ProjectileType.Kernel || mProjectileType == ProjectileType.Butter || mProjectileType == ProjectileType.Cobbig || mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.Spike || mProjectileType == ProjectileType.ZombiePeaMindControl)
+            if (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Cabbage || mProjectileType == ProjectileType.Melon || mProjectileType == ProjectileType.Wintermelon || mProjectileType == ProjectileType.Kernel || mProjectileType == ProjectileType.Butter || mProjectileType == ProjectileType.Cobbig || mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombieFirepea || mProjectileType == ProjectileType.Spike || mProjectileType == ProjectileType.ZombiePeaMindControl)
             {
                 num = 0;
+            }
+            if (mProjectileType == ProjectileType.Diamond)
+            {
+                mVelX = 2f;
             }
             if (mProjectileAge > num)
             {
                 mRenderOrder = Board.MakeRenderOrder(RenderLayer.Projectile, mRow, 0);
             }
-            if (mApp.IsFinalBossLevel())
+            if (mApp.IsFinalBossLevel() || mApp.mGameMode == GameMode.ChallengeFinalBoss2)
             {
                 mRenderOrder = Board.MakeRenderOrder(RenderLayer.Projectile, 5, 0);
             }
@@ -321,7 +345,11 @@ namespace Lawn
             {
                 image = AtlasResources.IMAGE_PROJECTILESNOWPEA;
             }
-            else if (mProjectileType == ProjectileType.Fireball)
+            else if (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.ZombieFirepea)
+            {
+                image = null;
+            }
+            else if (mProjectileType == ProjectileType.BlueFire)
             {
                 image = null;
             }
@@ -368,9 +396,17 @@ namespace Lawn
                 image = AtlasResources.IMAGE_REANIM_WINTERMELON_PROJECTILE;
                 num = 1f;
             }
+            else if (mProjectileType == ProjectileType.Diamond)
+            {
+                image = AtlasResources.IMAGE_REANIM_DG1;
+            }
+            else if (mProjectileType == ProjectileType.Turkey)
+            {
+                image = AtlasResources.IMAGE_ZOMBIEIMPHEAD;
+            }
             else
             {
-                Debug.ASSERT(false);
+                //Debug.ASSERT(false);
             }
             bool mirror = false;
             if (mMotionType == ProjectileMotion.BeeBackwards)
@@ -379,8 +415,8 @@ namespace Lawn
             }
             if (image != null)
             {
-                Debug.ASSERT(projectileDef.mImageRow < image.mNumRows);
-                Debug.ASSERT(mFrame < image.mNumCols);
+                //Debug.ASSERT(projectileDef.mImageRow < image.mNumRows);
+                //Debug.ASSERT(mFrame < image.mNumCols);
                 int celWidth = image.GetCelWidth();
                 int celHeight = image.GetCelHeight();
                 TRect theSrcRect = new TRect(celWidth * mFrame, celHeight * projectileDef.mImageRow, celWidth, celHeight);
@@ -435,7 +471,7 @@ namespace Lawn
             {
                 theCelCol = 1;
             }
-            if (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombiePeaMindControl)
+            if (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombieFirepea || mProjectileType == ProjectileType.ZombiePeaMindControl)
             {
                 num3 += 3f;
             }
@@ -466,7 +502,11 @@ namespace Lawn
                     num2 = 3f;
                     num3 += 57f;
                 }
-                else if (mProjectileType == ProjectileType.Fireball)
+                else if (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.ZombieFirepea)
+                {
+                    num = 1.4f;
+                }
+                else if (mProjectileType == ProjectileType.BlueFire)
                 {
                     num = 1.4f;
                 }
@@ -520,6 +560,10 @@ namespace Lawn
             {
                 mApp.AddTodParticle(num + 30f, num2 + 30f, aRenderOrder, ParticleEffect.Melonsplash);
             }
+            if (mProjectileType == ProjectileType.Snowpea)
+            {
+                mApp.AddTodParticle(num - 60f, num2 - 30f, aRenderOrder, ParticleEffect.IceballDeath);
+            }
             else if (mProjectileType == ProjectileType.Wintermelon)
             {
                 mApp.AddTodParticle(num + 30f, num2 + 30f, aRenderOrder, ParticleEffect.Wintermelon);
@@ -538,12 +582,7 @@ namespace Lawn
                 num3 -= 15f;
                 particleEffect = ParticleEffect.PeaSplat;
             }
-            else if (mProjectileType == ProjectileType.Snowpea)
-            {
-                num3 -= 15f;
-                particleEffect = ParticleEffect.SnowpeaSplat;
-            }
-            else if (mProjectileType == ProjectileType.Fireball)
+            else if (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire || mProjectileType == ProjectileType.ZombieFirepea)
             {
                 if (IsSplashDamage(theZombie))
                 {
@@ -551,6 +590,10 @@ namespace Lawn
                     reanimation.mAnimTime = 0.25f;
                     reanimation.mAnimRate = 24f;
                     reanimation.OverrideScale(0.7f, 0.4f);
+                    if (mProjectileType == ProjectileType.ZombieFirepea)
+                    {
+                        reanimation.OverrideScale(-0.7f, 0.4f);
+                    }
                 }
             }
             else if (mProjectileType == ProjectileType.Star)
@@ -577,6 +620,21 @@ namespace Lawn
                 {
                     theZombie.ApplyButter();
                 }
+            }
+            if (mProjectileType == ProjectileType.Turkey)
+            {
+                if (theZombie != null)
+                {
+                    Zombie turkey = mBoard.AddZombie(ZombieType.Imp, GameConstants.ZOMBIE_WAVE_DEBUG);
+                    turkey.mPosX = theZombie.mPosX;
+                    turkey.mRow = theZombie.mRow;
+                    turkey.mPosY = theZombie.mPosY;
+                    turkey.mScaleZombie = 0.75f;
+                    turkey.mVelX = 1.25f;
+                    turkey.mBodyHealth = 400;
+                    turkey.mInPool = theZombie.mInPool;
+                    turkey.mMindControlled = true;
+                } 
             }
             if (particleEffect != ParticleEffect.None)
             {
@@ -673,6 +731,11 @@ namespace Lawn
                 Die();
                 return;
             }
+            if (mMotionType == ProjectileMotion.LobPuff && mProjectileAge >= 75)
+            {
+                Die();
+                return;
+            }
             if (mPosX > Constants.WIDE_BOARD_WIDTH + 40 || mPosX + mWidth < 0f)
             {
                 Die();
@@ -707,7 +770,7 @@ namespace Lawn
             {
                 return;
             }
-            if (mProjectileType == ProjectileType.ZombiePea)
+            if (mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombieFirepea)
             {
                 Plant plant = FindCollisionTargetPlant();
                 if (plant != null)
@@ -789,10 +852,6 @@ namespace Lawn
                 mRotation = -1.5707964f;
             }
             mVelZ += /*3f * */mAccZ;
-            if (mApp.mGameMode == GameMode.ChallengeHighGravity)
-            {
-                mVelZ += /*3f * */mAccZ;
-            }
             mPosX += /*3f * */mVelX;
             mPosY += /*3f * */mVelY;
             mPosZ += /*3f * */mVelZ;
@@ -907,17 +966,17 @@ namespace Lawn
         public void CheckForHighGround()
         {
             float num = mShadowY - mPosY;
-            if ((mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.Spike || mProjectileType == ProjectileType.Cobbig) && num < 28f)
+            if (mMotionType != ProjectileMotion.Bee && (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.Spike || mProjectileType == ProjectileType.Cobbig || mProjectileType == ProjectileType.BlueFire) && num < 28f)
             {
                 DoImpact(null);
                 return;
             }
-            if (mProjectileType == ProjectileType.Puff && num < 0f)
+            if (mMotionType != ProjectileMotion.Bee && (mProjectileType == ProjectileType.Puff && num < 0f))
             {
                 DoImpact(null);
                 return;
             }
-            if (mProjectileType == ProjectileType.Star && num < 23f)
+            if (mMotionType != ProjectileMotion.Bee && mProjectileType == ProjectileType.Star && num < 23f)
             {
                 DoImpact(null);
                 return;
@@ -935,7 +994,7 @@ namespace Lawn
 
         public bool CantHitHighGround()
         {
-            return mMotionType != ProjectileMotion.Backwards && mMotionType != ProjectileMotion.Homing && (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Star || mProjectileType == ProjectileType.Puff || mProjectileType == ProjectileType.Fireball) && !mOnHighGround;
+            return mMotionType != ProjectileMotion.Backwards && mMotionType != ProjectileMotion.Bee && mMotionType != ProjectileMotion.Homing && (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Star || mProjectileType == ProjectileType.Puff || mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire) && !mOnHighGround;
         }
 
         public void DoSplashDamage(Zombie theZombie)
@@ -955,7 +1014,7 @@ namespace Lawn
             int num2 = 3;
             int num3 = projectileDef.mDamage / num2;
             int num4 = damage * 7;
-            if (mProjectileType == ProjectileType.Fireball)
+            if (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire)
             {
                 num4 = damage;
             }
@@ -985,7 +1044,7 @@ namespace Lawn
         public ProjectileDefinition GetProjectileDef()
         {
             ProjectileDefinition projectileDefinition = GameConstants.gProjectileDefinition[(int)mProjectileType];
-            Debug.ASSERT(projectileDefinition.mProjectileType == mProjectileType);
+            //Debug.ASSERT(projectileDefinition.mProjectileType == mProjectileType);
             return projectileDefinition;
         }
 
@@ -1000,11 +1059,11 @@ namespace Lawn
             {
                 TodCommon.SetBit(ref result, 0, 1);
             }
-            else if (mMotionType == ProjectileMotion.Star && mVelX < 0f)
+            else if ((mMotionType == ProjectileMotion.Star || mMotionType == ProjectileMotion.StarPlus) && mVelX < 0f)
             {
                 TodCommon.SetBit(ref result, 0, 1);
             }
-            if (mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Wintermelon)
+            if (mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Wintermelon || mProjectileType == ProjectileType.BlueFire)
             {
                 TodCommon.SetBit(ref result, 2, 1);
             }
@@ -1013,7 +1072,7 @@ namespace Lawn
 
         public TRect GetProjectileRect()
         {
-            if (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombiePeaMindControl)
+            if (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombieFirepea || mProjectileType == ProjectileType.ZombiePeaMindControl)
             {
                 return new TRect(mX - 15, mY, mWidth + 15, mHeight);
             }
@@ -1022,11 +1081,11 @@ namespace Lawn
                 int num = 115;
                 return new TRect(mX + mWidth / 2 - num, mY + mHeight / 2 - num, num * 2, num * 2);
             }
-            if (mProjectileType == ProjectileType.Melon || mProjectileType == ProjectileType.Wintermelon)
+            if (mProjectileType == ProjectileType.Melon || mProjectileType == ProjectileType.Wintermelon || mProjectileType == ProjectileType.Snowpea)
             {
                 return new TRect(mX + 20, mY, 60, mHeight);
             }
-            if (mProjectileType == ProjectileType.Fireball)
+            if (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire)
             {
                 return new TRect(mX, mY, mWidth - 10, mHeight);
             }
@@ -1066,7 +1125,7 @@ namespace Lawn
                 mShadowY += /*3f * */mVelY;
                 mRow = mBoard.PixelToGridYKeepOnBoard((int)mPosX, (int)mPosY);
             }
-            else if (mMotionType == ProjectileMotion.Star)
+            else if (mMotionType == ProjectileMotion.Star || mMotionType == ProjectileMotion.StarPlus || mMotionType == ProjectileMotion.StarBurst)
             {
                 mPosY += /*3f * */mVelY;
                 mPosX += /*3f * */mVelX;
@@ -1076,15 +1135,37 @@ namespace Lawn
                     int row = mBoard.PixelToGridYKeepOnBoard((int)mPosX, (int)mPosY);
                     mRow = row;
                 }
+                if (mMotionType == ProjectileMotion.StarPlus && mProjectileAge >= 45)
+                {
+                    mMotionType = ProjectileMotion.Straight;
+                }
+                if (mMotionType == ProjectileMotion.StarBurst)
+                {
+                    mVelX *= 0.98f;
+                    mVelY *= 0.98f;
+                }
+                if (mMotionType == ProjectileMotion.StarBurst && Math.Abs(mVelX+mVelY) <= 0.1f)
+                {
+                    mMotionType = ProjectileMotion.Straight;
+                    mProjectileType = ProjectileType.Melon;
+                }
             }
             else if (mMotionType == ProjectileMotion.Bee)
             {
-                if (mProjectileAge < 60)
+                mProjectileBee++;
+                if (mProjectileBee <= 1)
                 {
                     //mPosY -= 1.5f;
-                    mPosY -= 0.5f;
+                }
+                if (mProjectileBee < 25)
+                {
+                    mPosY -= 0.25f;
+
                 }
                 //mPosX += 9.99f;
+                mVelY *= 0.97f;
+                mPosY += /*3f * */mVelY;
+                mShadowY += /*3f * */mVelY;
                 mPosX += 3.33f;
             }
             else if (mMotionType == ProjectileMotion.FloatOver)
@@ -1125,7 +1206,7 @@ namespace Lawn
                 //mPosX += 9.99f;
                 mPosX += 3.33f;
             }
-            if (mApp.mGameMode == GameMode.ChallengeHighGravity)
+            if (mApp.mGameMode == GameMode.SurvivalEndlessStage5)
             {
                 if (mMotionType == ProjectileMotion.FloatOver)
                 {
@@ -1150,13 +1231,13 @@ namespace Lawn
             for (int i = 0; i < count; i++)
             {
                 Plant plant = mBoard.mPlants[i];
-                if (!plant.mDead && mRow == plant.mRow && (mProjectileType != ProjectileType.ZombiePea || (plant.mSeedType != SeedType.Puffshroom && plant.mSeedType != SeedType.Sunshroom && plant.mSeedType != SeedType.Potatomine && plant.mSeedType != SeedType.Spikeweed && plant.mSeedType != SeedType.Spikerock && plant.mSeedType != SeedType.Lilypad)))
+                if (!plant.mDead && mRow == plant.mRow && (mProjectileType != ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombieFirepea || (plant.mSeedType != SeedType.Puffshroom && plant.mSeedType != SeedType.Sunshroom && plant.mSeedType != SeedType.Potatomine && plant.mSeedType != SeedType.Spikeweed && plant.mSeedType != SeedType.Spikerock && plant.mSeedType != SeedType.Lilypad)))
                 {
                     TRect plantRect = plant.GetPlantRect();
                     int rectOverlap = GameConstants.GetRectOverlap(projectileRect, plantRect);
                     if (rectOverlap > 8)
                     {
-                        if (mProjectileType == ProjectileType.ZombiePea)
+                        if (mProjectileType == ProjectileType.ZombiePea || mProjectileType == ProjectileType.ZombieFirepea)
                         {
                             return mBoard.GetTopPlantAt(plant.mPlantCol, plant.mRow, TopPlant.EatingOrder);
                         }
@@ -1184,6 +1265,28 @@ namespace Lawn
             reanimation.mAnimRate = TodCommon.RandRangeFloat(50f, 80f);
             GlobalMembersAttachment.AttachReanim(ref mAttachmentID, reanimation, num, num2);
         }
+		
+		public void ConvertToBlueFire()
+        {
+            mProjectileType = ProjectileType.BlueFire;
+            mApp.PlayFoley(FoleyType.Firepea);
+            float num = -25f;
+            float num2 = -25f;
+            Reanimation reanimation = mApp.AddReanimation(0f, 0f, 0, ReanimationType.FirePea);
+            if (mMotionType == ProjectileMotion.Backwards)
+            {
+                reanimation.OverrideScale(-1f, 1f);
+                num += 80f;
+            }
+            reanimation.SetPosition((mPosX + num) * Constants.S, (mPosY + num2) * Constants.S);
+            reanimation.mLoopType = ReanimLoopType.Loop;
+            reanimation.mAnimRate = TodCommon.RandRangeFloat(50f, 80f);
+			
+                SexyColor sexyColor = new SexyColor(64,64,255);
+				
+            reanimation.mColorOverride = sexyColor;
+            GlobalMembersAttachment.AttachReanim(ref mAttachmentID, reanimation, num, num2);
+        }
 
         public void ConvertToFireball(int aGridX)
         {
@@ -1208,6 +1311,65 @@ namespace Lawn
             GlobalMembersAttachment.AttachReanim(ref mAttachmentID, reanimation, num, num2);
         }
 
+        public void ConvertToLobbed(int aGridX)
+        {
+            /*
+            if (mHitTorchwoodGridX == aGridX)
+            {
+                return;
+            }
+            mProjectileType = ProjectileType.Fireball;
+            mHitTorchwoodGridX = aGridX;
+            mApp.PlayFoley(FoleyType.Firepea);
+            float num = -25f;
+            float num2 = -25f;
+            Reanimation reanimation = mApp.AddReanimation(0f, 0f, 0, ReanimationType.FirePea);
+            if (mMotionType == ProjectileMotion.Backwards)
+            {
+                reanimation.OverrideScale(-1f, 1f);
+                num += 80f;
+            }
+            reanimation.SetPosition((mPosX + num) * Constants.S, (mPosY + num2) * Constants.S);
+            reanimation.mLoopType = ReanimLoopType.Loop;
+            reanimation.mAnimRate = TodCommon.RandRangeFloat(50f, 80f);
+            GlobalMembersAttachment.AttachReanim(ref mAttachmentID, reanimation, num, num2);
+            */
+
+
+            
+
+                mMotionType = ProjectileMotion.Bee;
+
+                mVelX += 0.5f;
+        }
+
+        public void ConvertToBlueFire(int aGridX)
+        {
+            if (mHitTorchwoodGridX == aGridX)
+            {
+                return;
+            }
+            mProjectileType = ProjectileType.BlueFire;
+            mHitTorchwoodGridX = aGridX;
+            mApp.PlayFoley(FoleyType.Firepea);
+            float num = -25f;
+            float num2 = -25f;
+            Reanimation reanimation = mApp.AddReanimation(0f, 0f, 0, ReanimationType.FirePea);
+            if (mMotionType == ProjectileMotion.Backwards)
+            {
+                reanimation.OverrideScale(-1f, 1f);
+                num += 80f;
+            }
+            reanimation.SetPosition((mPosX + num) * Constants.S, (mPosY + num2) * Constants.S);
+            reanimation.mLoopType = ReanimLoopType.Loop;
+            reanimation.mAnimRate = TodCommon.RandRangeFloat(50f, 80f);
+
+            SexyColor sexyColor = new SexyColor(64, 64, 255);
+
+            reanimation.mColorOverride = sexyColor;
+            GlobalMembersAttachment.AttachReanim(ref mAttachmentID, reanimation, num, num2);
+        }
+
         public void ConvertToPea(int aGridX)
         {
             if (mHitTorchwoodGridX == aGridX)
@@ -1222,7 +1384,7 @@ namespace Lawn
 
         public bool IsSplashDamage(Zombie theZombie)
         {
-            return (mProjectileType != ProjectileType.Fireball || theZombie == null || !theZombie.IsFireResistant()) && (mProjectileType == ProjectileType.Melon || mProjectileType == ProjectileType.Wintermelon || mProjectileType == ProjectileType.Fireball);
+            return (mProjectileType != ProjectileType.Fireball || mProjectileType != ProjectileType.BlueFire || theZombie == null || !theZombie.IsFireResistant()) && (mProjectileType == ProjectileType.Melon || mProjectileType == ProjectileType.Wintermelon || mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.BlueFire);
         }
 
         public void PlayImpactSound(Zombie theZombie)
@@ -1241,6 +1403,12 @@ namespace Lawn
                 flag2 = false;
             }
             else if (mProjectileType == ProjectileType.Fireball && IsSplashDamage(theZombie))
+            {
+                mApp.PlayFoley(FoleyType.Ignite);
+                flag = false;
+                flag2 = false;
+            }
+            else if (mProjectileType == ProjectileType.BlueFire && IsSplashDamage(theZombie))
             {
                 mApp.PlayFoley(FoleyType.Ignite);
                 flag = false;
@@ -1286,7 +1454,7 @@ namespace Lawn
             }
             int num = theZombie.mRow - mRow;
             TRect zombieRect = theZombie.GetZombieRect();
-            if (theZombie.IsFireResistant() && mProjectileType == ProjectileType.Fireball)
+            if (theZombie.IsFireResistant() && (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire))
             {
                 return false;
             }
@@ -1294,7 +1462,7 @@ namespace Lawn
             {
                 num = 0;
             }
-            if (mProjectileType == ProjectileType.Fireball)
+            if (mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire)
             {
                 if (num != 0)
                 {
@@ -1397,6 +1565,8 @@ namespace Lawn
         private int mTargetZombieIDSaved;
 
         public int mLastPortalX;
+
+        public int mProjectileBee;
 
         private static Stack<Projectile> unusedObjects = new Stack<Projectile>(200);
     }

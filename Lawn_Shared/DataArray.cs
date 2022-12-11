@@ -21,8 +21,8 @@ public class DataArray<T> where T : class, new()
 
     public void DataArrayInitialize(uint theMaxSize, string theName)
     {
-        Debug.ASSERT(mBlock == null);
-        Debug.ASSERT(theMaxSize <= 65536U);
+        //Debug.ASSERT(mBlock == null);
+        //Debug.ASSERT(theMaxSize <= 65536U);
         if (mBlock == null || mBlock.Length != (long)((ulong)theMaxSize))
         {
             mBlock = new T[theMaxSize];

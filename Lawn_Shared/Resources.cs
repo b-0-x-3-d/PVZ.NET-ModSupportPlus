@@ -42,6 +42,10 @@ public/*internal*/ static class Resources
             "DelayLoad_ZombieNote4" => ExtractDelayLoad_ZombieNote4Resources(theManager), 
             "DelayLoad_ZombieFinalNote" => ExtractDelayLoad_ZombieFinalNoteResources(theManager), 
             "DelayLoad_ZombieNoteHelp" => ExtractDelayLoad_ZombieNoteHelpResources(theManager), 
+            "DelayLoad_Background7" => ExtractDelayLoad_Background7Resources(theManager), 
+            "DelayLoad_Background8" => ExtractDelayLoad_Background8Resources(theManager),
+            "DelayLoad_Background9" => ExtractDelayLoad_Background9Resources(theManager),
+            "DelayLoad_Background10" => ExtractDelayLoad_Background10Resources(theManager),
             _ => false, 
         };
     }
@@ -83,6 +87,10 @@ public/*internal*/ static class Resources
         ExtractDelayLoad_ZombieNote4Resources(theManager);
         ExtractDelayLoad_ZombieFinalNoteResources(theManager);
         ExtractDelayLoad_ZombieNoteHelpResources(theManager);
+        ExtractDelayLoad_Background7Resources(theManager);
+        ExtractDelayLoad_Background8Resources(theManager);
+        ExtractDelayLoad_Background9Resources(theManager);
+        ExtractDelayLoad_Background10Resources(theManager);
         theRes.ExtractResources();
     }
 
@@ -659,6 +667,66 @@ public/*internal*/ static class Resources
         return true;
     }
 
+    public static bool ExtractDelayLoad_Background7Resources(ResourceManager theManager)
+    {
+        gNeedRecalcVariableToIdMap = true;
+        try
+        {
+            IMAGE_BACKGROUND7 = theManager.GetImageThrow("IMAGE_BACKGROUND7");
+            IMAGE_BACKGROUND7_GAMEOVER_MASK = theManager.GetImageThrow("IMAGE_BACKGROUND7_GAMEOVER_MASK");
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public static bool ExtractDelayLoad_Background8Resources(ResourceManager theManager)
+    {
+        gNeedRecalcVariableToIdMap = true;
+        try
+        {
+            IMAGE_BACKGROUND8 = theManager.GetImageThrow("IMAGE_BACKGROUND8");
+            IMAGE_BACKGROUND8_GAMEOVER_MASK = theManager.GetImageThrow("IMAGE_BACKGROUND8_GAMEOVER_MASK");
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public static bool ExtractDelayLoad_Background9Resources(ResourceManager theManager)
+    {
+        gNeedRecalcVariableToIdMap = true;
+        try
+        {
+            IMAGE_BACKGROUND9 = theManager.GetImageThrow("IMAGE_BACKGROUND9");
+            IMAGE_BACKGROUND9_GAMEOVER_MASK = theManager.GetImageThrow("IMAGE_BACKGROUND9_GAMEOVER_MASK");
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public static bool ExtractDelayLoad_Background10Resources(ResourceManager theManager)
+    {
+        gNeedRecalcVariableToIdMap = true;
+        try
+        {
+            IMAGE_BACKGROUND10 = theManager.GetImageThrow("IMAGE_BACKGROUND10");
+            IMAGE_BACKGROUND10_GAMEOVER_MASK = theManager.GetImageThrow("IMAGE_BACKGROUND4_GAMEOVER_MASK");
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+    }
+
     public static bool ExtractDelayLoad_AlmanacResources(ResourceManager theManager)
     {
         gNeedRecalcVariableToIdMap = true;
@@ -840,7 +908,7 @@ public/*internal*/ static class Resources
 
     public static void LinkUpResArray()
     {
-        gResources = new object[250]
+        gResources = new object[258]
         {
             IMAGE_POPCAP_LOGO, IMAGE_POPCAP_LOGO_REGISTERED, IMAGE_TITLESCREEN, IMAGE_LOADING, IMAGE_PVZ_LOGO, FONT_BRIANNETOD16, SOUND_BUTTONCLICK, SOUND_LOADINGBAR_FLOWER, SOUND_LOADINGBAR_ZOMBIE, FONT_HOUSEOFTERROR16,
             FONT_CONTINUUMBOLD14, FONT_CONTINUUMBOLD14OUTLINE, FONT_DWARVENTODCRAFT12, FONT_DWARVENTODCRAFT15, FONT_DWARVENTODCRAFT18, FONT_PICO129, FONT_BRIANNETOD12, IMAGE_CHARREDZOMBIES, IMAGE_ALMANACUI, IMAGE_SEEDATLAS,
@@ -866,7 +934,7 @@ public/*internal*/ static class Resources
             IMAGE_STARS_1, IMAGE_STARS_2, IMAGE_STARS_3, IMAGE_STARS_4, IMAGE_BACKGROUND_GREENHOUSE, IMAGE_AQUARIUM1, IMAGE_BACKGROUND_MUSHROOMGARDEN, IMAGE_BACKGROUND1, IMAGE_BACKGROUND1_GAMEOVER_INTERIOR_OVERLAY, IMAGE_BACKGROUND1_GAMEOVER_MASK,
             IMAGE_BACKGROUND1UNSODDED, IMAGE_BACKGROUND2, IMAGE_BACKGROUND2_GAMEOVER_INTERIOR_OVERLAY, IMAGE_BACKGROUND2_GAMEOVER_MASK, IMAGE_BACKGROUND3, IMAGE_BACKGROUND3_GAMEOVER_INTERIOR_OVERLAY, IMAGE_BACKGROUND3_GAMEOVER_MASK, IMAGE_BACKGROUND4, IMAGE_BACKGROUND4_GAMEOVER_INTERIOR_OVERLAY, IMAGE_BACKGROUND4_GAMEOVER_MASK,
             IMAGE_FOG, IMAGE_BACKGROUND5, IMAGE_BACKGROUND5_GAMEOVER_MASK, IMAGE_BACKGROUND6BOSS, IMAGE_BACKGROUND6_GAMEOVER_MASK, IMAGE_STORE_BACKGROUND, IMAGE_STORE_BACKGROUNDNIGHT, IMAGE_STORE_CAR, IMAGE_STORE_CAR_NIGHT, IMAGE_STORE_CARCLOSED,
-            IMAGE_STORE_CARCLOSED_NIGHT, IMAGE_STORE_HATCHBACKOPEN, IMAGE_ZOMBIE_NOTE, IMAGE_ZOMBIE_NOTE1, IMAGE_ZOMBIE_NOTE2, IMAGE_ZOMBIE_NOTE3, IMAGE_ZOMBIE_NOTE4, IMAGE_ZOMBIE_FINAL_NOTE, IMAGE_ZOMBIE_NOTE_HELP, null
+            IMAGE_STORE_CARCLOSED_NIGHT, IMAGE_STORE_HATCHBACKOPEN, IMAGE_ZOMBIE_NOTE, IMAGE_ZOMBIE_NOTE1, IMAGE_ZOMBIE_NOTE2, IMAGE_ZOMBIE_NOTE3, IMAGE_ZOMBIE_NOTE4, IMAGE_ZOMBIE_FINAL_NOTE, IMAGE_ZOMBIE_NOTE_HELP, IMAGE_BACKGROUND7, IMAGE_BACKGROUND7_GAMEOVER_MASK, IMAGE_BACKGROUND8, IMAGE_BACKGROUND8_GAMEOVER_MASK, IMAGE_BACKGROUND9, IMAGE_BACKGROUND9_GAMEOVER_MASK, IMAGE_BACKGROUND10, IMAGE_BACKGROUND10_GAMEOVER_MASK, null
         };
     }
 
@@ -1123,6 +1191,14 @@ public/*internal*/ static class Resources
             246 => "IMAGE_ZOMBIE_NOTE4", 
             247 => "IMAGE_ZOMBIE_FINAL_NOTE", 
             248 => "IMAGE_ZOMBIE_NOTE_HELP", 
+            249 => "IMAGE_BACKGROUND7", 
+            250 => "IMAGE_BACKGROUND7_GAMEOVER_MASK", 
+            251 => "IMAGE_BACKGROUND8", 
+            252 => "IMAGE_BACKGROUND8_GAMEOVER_MASK",
+            253 => "IMAGE_BACKGROUND9",
+            254 => "IMAGE_BACKGROUND9_GAMEOVER_MASK",
+            255 => "IMAGE_BACKGROUND10",
+            256 => "IMAGE_BACKGROUND10_GAMEOVER_MASK",
             _ => "", 
         };
     }
@@ -1377,6 +1453,14 @@ public/*internal*/ static class Resources
         IMAGE_ZOMBIE_NOTE4_ID,
         IMAGE_ZOMBIE_FINAL_NOTE_ID,
         IMAGE_ZOMBIE_NOTE_HELP_ID,
+        IMAGE_BACKGROUND7_ID,
+        IMAGE_BACKGROUND7_GAMEOVER_MASK_ID,
+        IMAGE_BACKGROUND8_ID,
+        IMAGE_BACKGROUND8_GAMEOVER_MASK_ID,
+        IMAGE_BACKGROUND9_ID,
+        IMAGE_BACKGROUND9_GAMEOVER_MASK_ID,
+        IMAGE_BACKGROUND10_ID,
+        IMAGE_BACKGROUND10_GAMEOVER_MASK_ID,
         RESOURCE_ID_MAX
     }
 
@@ -1879,6 +1963,22 @@ public/*internal*/ static class Resources
     public static Image IMAGE_ZOMBIE_FINAL_NOTE;
 
     public static Image IMAGE_ZOMBIE_NOTE_HELP;
+
+    public static Image IMAGE_BACKGROUND7;
+
+    public static Image IMAGE_BACKGROUND7_GAMEOVER_MASK;
+
+    public static Image IMAGE_BACKGROUND8;
+
+    public static Image IMAGE_BACKGROUND8_GAMEOVER_MASK;
+
+    public static Image IMAGE_BACKGROUND9;
+
+    public static Image IMAGE_BACKGROUND9_GAMEOVER_MASK;
+
+    public static Image IMAGE_BACKGROUND10;
+
+    public static Image IMAGE_BACKGROUND10_GAMEOVER_MASK;
 
     public static bool gNeedRecalcVariableToIdMap = false;
 

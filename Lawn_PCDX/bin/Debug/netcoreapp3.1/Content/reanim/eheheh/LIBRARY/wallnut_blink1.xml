@@ -1,0 +1,23 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="wallnut_blink1" itemID="6395c57e-00000003">
+  <timeline>
+    <DOMTimeline name="wallnut_blink1">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+                <DOMBitmapInstance selected="true" libraryItemName="TMP238089C08EFFD6395C57E.png copy"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

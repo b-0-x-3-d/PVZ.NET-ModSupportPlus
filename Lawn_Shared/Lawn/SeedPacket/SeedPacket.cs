@@ -261,6 +261,7 @@ namespace Lawn
                 {
                     SeedPacket.DrawIZombieSeedPacket(GlobalStaticVars.gLawnApp, g, x, y, seedType, thePercentDark, theGrayness, theDrawCost, theUseCurrentCost, theDrawBackground, theDrawCostBackground);
                 }
+                
                 else
                 {
                     g.DrawImageCel(AtlasResources.IMAGE_SEEDPACKETS, (int)x, (int)y, (int)seedType);
@@ -356,10 +357,13 @@ namespace Lawn
             @new.SetScale(1f);
             @new.ClipRect((int)x + Constants.IZombie_ClipOffset.X, (int)y + Constants.IZombie_ClipOffset.Y, Constants.IZombie_ClipOffset.Width, Constants.IZombie_ClipOffset.Height);
             @new.HardwareClip();
-            theApp.mReanimatorCache.DrawCachedZombie(@new, x + Constants.ZombieOffsets[(int)izombieTypeFromSeed].X * g.mScaleX, y + Constants.ZombieOffsets[(int)izombieTypeFromSeed].Y * g.mScaleY, izombieTypeFromSeed);
-            @new.SetColorizeImages(false);
-            @new.EndHardwareClip();
-            @new.PrepareForReuse();
+			if (aSeedType <= SeedType.ZombieImp)
+			{
+				theApp.mReanimatorCache.DrawCachedZombie(@new, x + Constants.ZombieOffsets[(int)izombieTypeFromSeed].X * g.mScaleX, y + Constants.ZombieOffsets[(int)izombieTypeFromSeed].Y * g.mScaleY, izombieTypeFromSeed);
+				@new.SetColorizeImages(false);
+				@new.EndHardwareClip();
+				@new.PrepareForReuse();
+			}
             g.DrawImage(AtlasResources.IMAGE_ALMANAC_ZOMBIEWINDOW2, x, y);
             g.SetScale(1f, 1f, 0f, 0f);
         }
@@ -398,6 +402,16 @@ namespace Lawn
                 return ZombieType.Gargantuar;
             case SeedType.ZombieImp:
                 return ZombieType.Imp;
+            case SeedType.ZombieDoor:
+                return ZombieType.Door;
+            case SeedType.ZombieDoorCone:
+                return ZombieType.DoorCone;
+            case SeedType.ZombieDoorPail:
+                return ZombieType.DoorPail;
+            case SeedType.ZombieMustache:
+                return ZombieType.Mustache;
+            case SeedType.ZombieSquashHead:
+                return ZombieType.SquashHead;
             default:
                 return ZombieType.Invalid;
             }
@@ -422,6 +436,10 @@ namespace Lawn
             if (theSeedType == SeedType.SlotMachineSun)
             {
                 TodCommon.TodDrawImageScaledF(g, AtlasResources.IMAGE_SEEDPACKET_SUN, x, y, scale, scale);
+            }
+            if (theSeedType == SeedType.IceRepeater)
+            {
+                TodCommon.TodDrawImageScaledF(g, AtlasResources.IMAGE_SEEDPACKET_IR, x, y, scale, scale);
             }
             else if (theSeedType == SeedType.SlotMachineDiamond)
             {
@@ -525,7 +543,7 @@ namespace Lawn
                         mBoard.DisplayAdvice("[ADVICE_PLANT_NEEDS_LILYPAD]", MessageStyle.HintLong, AdviceType.PlantNeedsLilypad);
                         return;
                     }
-                    Debug.ASSERT(false);
+                    //Debug.ASSERT(false);
                     return;
                 }
             }
@@ -610,7 +628,7 @@ namespace Lawn
 
         public void Activate()
         {
-            Debug.ASSERT(mPacketType != SeedType.None);
+            //Debug.ASSERT(mPacketType != SeedType.None);
             mActive = true;
         }
 
@@ -658,7 +676,7 @@ namespace Lawn
 
         public void WasPlanted()
         {
-            Debug.ASSERT(mPacketType != SeedType.None);
+            //Debug.ASSERT(mPacketType != SeedType.None);
             if (mBoard.HasConveyorBeltSeedBank())
             {
                 mBoard.mSeedBank.RemoveSeed(mIndex);
@@ -906,9 +924,9 @@ namespace Lawn
         private SeedType[] SLOT_SEED_TYPES = new SeedType[]
         {
             SeedType.Sunflower,
-            SeedType.Peashooter,
-            SeedType.Snowpea,
-            SeedType.Wallnut,
+            SeedType.Twinsunflower,
+            SeedType.Starfruit,
+            SeedType.Potatomine,
             SeedType.SlotMachineSun,
             SeedType.SlotMachineDiamond
         };
