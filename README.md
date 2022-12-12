@@ -1,4 +1,4 @@
-https://github.com/Meownojs/PlantsVsZombies.NET
+https://github.com/Mewnojs/PlantsVsZombies.NET
 
 # PlantsVsZombies.net Mod
 
