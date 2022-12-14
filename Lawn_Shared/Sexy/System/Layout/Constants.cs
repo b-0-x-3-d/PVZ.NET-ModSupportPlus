@@ -800,7 +800,7 @@ namespace Sexy
             Constants.RetardedDave_Bubble_Size = 400;
             Constants.RetardedDave_Bubble_Rect = new TRect(15, 6, 0, 250);
             Constants.RetardedDave_Bubble_TapToContinue_Y = 230;
-            Constants.PlantGallerySize = new Point(390, 750);
+            Constants.PlantGallerySize = new Point(390, 1068);
             Constants.ZombieGallerySize = new Point(415, 1068);
             Constants.AlmanacHeaderY = 8;
             Constants.Almanac_PlantsButtonRect = new TRect(67, 150, 300, 240);

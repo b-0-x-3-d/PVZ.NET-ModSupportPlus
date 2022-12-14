@@ -1998,7 +1998,21 @@ namespace Lawn
                 PlantDefinition plantDefinition2 = Plant.GetPlantDefinition(theSeedType);
                 if ((int)GameConstants.PLANT_MODE[(int)theSeedType] == 1)
                 {
-                    return plantDefinition2.mSeedCost + 25;
+                    switch (theSeedType)
+                    {
+                        case SeedType.Peashooter:
+                            return 175;
+                        default:
+                            return plantDefinition2.mSeedCost + 25;
+                    }
+                }
+                if ((int)GameConstants.PLANT_MODE[(int)theSeedType] == 2)
+                {
+                    switch (theSeedType)
+                    {
+                        default:
+                            return plantDefinition2.mSeedCost + 25;
+                    }
                 }
                 if (theSeedType == SeedType.Imitater && theImitaterType != SeedType.None)
                 {

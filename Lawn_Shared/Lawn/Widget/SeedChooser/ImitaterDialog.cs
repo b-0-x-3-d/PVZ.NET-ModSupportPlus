@@ -9,7 +9,7 @@ namespace Lawn
         public ImitaterDialog() : base(GlobalStaticVars.gLawnApp, null, 50, true, "Choose a Special Seed!", "", "[DIALOG_BUTTON_OK]", 3)
         {
             base.CalcSize(Constants.ImitaterDialog_Size.X, Constants.ImitaterDialog_Size.Y);
-            mSeedPacketsWidget = new SeedPacketsWidget(mApp, 16, true, this);
+            mSeedPacketsWidget = new SeedPacketsWidget(mApp, 32, true, this);
             mScrollWidget = new ScrollWidget();
             AddWidget(mScrollWidget);
             mScrollWidget.AddWidget(mSeedPacketsWidget);

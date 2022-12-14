@@ -9,7 +9,7 @@ namespace Lawn
         public PlantModeDialog() : base(GlobalStaticVars.gLawnApp, null, 50, true, "Click a plant to change its mode!", "", "[DIALOG_BUTTON_OK]", 3)
         {
             base.CalcSize(Constants.ImitaterDialog_Size.X, Constants.ImitaterDialog_Size.Y);
-            mSeedPacketsWidget = new SeedPacketsWidget(mApp, 16, false, this);
+            mSeedPacketsWidget = new SeedPacketsWidget(mApp, 32, false, this);
             mScrollWidget = new ScrollWidget();
             AddWidget(mScrollWidget);
             mScrollWidget.AddWidget(mSeedPacketsWidget);

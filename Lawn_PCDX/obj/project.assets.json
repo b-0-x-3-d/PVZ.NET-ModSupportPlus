@@ -12513,11 +12513,11 @@
   "project": {
     "version": "0.12.5",
     "restore": {
-      "projectUniqueName": "C:\\Users\\boxed\\Downloads\\PlantsVsZombies.NET-MOD\\Lawn_PCDX\\Lawn_PCDX.csproj",
+      "projectUniqueName": "C:\\Users\\boxed\\H\\PlantsVsZombies.MOD\\Lawn_PCDX\\Lawn_PCDX.csproj",
       "projectName": "LAWN",
-      "projectPath": "C:\\Users\\boxed\\Downloads\\PlantsVsZombies.NET-MOD\\Lawn_PCDX\\Lawn_PCDX.csproj",
+      "projectPath": "C:\\Users\\boxed\\H\\PlantsVsZombies.MOD\\Lawn_PCDX\\Lawn_PCDX.csproj",
       "packagesPath": "C:\\Users\\boxed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\boxed\\Downloads\\PlantsVsZombies.NET-MOD\\Lawn_PCDX\\obj\\",
+      "outputPath": "C:\\Users\\boxed\\H\\PlantsVsZombies.MOD\\Lawn_PCDX\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
