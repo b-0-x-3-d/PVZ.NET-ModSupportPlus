@@ -4,6 +4,6 @@ namespace Lawn
 {
     public enum NumImages
     {
-        NUM_IMAGES = 251
+        NUM_IMAGES = 252
     }
 }

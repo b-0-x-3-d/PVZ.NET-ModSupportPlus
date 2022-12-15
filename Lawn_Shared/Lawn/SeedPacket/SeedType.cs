@@ -69,6 +69,7 @@ namespace Lawn
         Zoybean,
         Infinut,
         Endurian,
+        Turnip,
         SeedTypeCount,
         Towerpot,
         BeghouledButtonShuffle,

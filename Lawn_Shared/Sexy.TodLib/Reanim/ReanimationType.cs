@@ -127,6 +127,7 @@ namespace Sexy.TodLib
         Lobbashroom,
         DG,
         Infinut,
+        Turnip,
         NumReanims
     }
 }

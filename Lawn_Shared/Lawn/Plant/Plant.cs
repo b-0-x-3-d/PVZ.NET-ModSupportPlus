@@ -440,6 +440,10 @@ namespace Lawn
             {
                 mState = PlantState.Ready;
             }
+            else if (theSeedType == SeedType.Turnip)
+            {
+                mState = PlantState.Ready;
+            }
             else if (theSeedType == SeedType.Plantern)
             {
                 mStateCountdown = 50;
@@ -1421,7 +1425,7 @@ namespace Lawn
                     {
                         rowDeviation = 0;
                     }
-                    if ((theZombieItem.mHasHead && !theZombieItem.IsTangleKelpTarget()) || (mSeedType != SeedType.Potatomine && mSeedType != SeedType.Chomper && mSeedType != SeedType.Tanglekelp))
+                    if ((theZombieItem.mHasHead && !theZombieItem.IsTangleKelpTarget()) || (mSeedType != SeedType.Potatomine && mSeedType != SeedType.Chomper && mSeedType != SeedType.Turnip && mSeedType != SeedType.Tanglekelp))
                     {
                         bool isPortalCheckNeeded = false;
                         if (mApp.mGameMode == GameMode.ChallengePortalCombat && (mSeedType == SeedType.Peashooter || mSeedType == SeedType.Cactus || mSeedType == SeedType.Repeater))
@@ -2258,6 +2262,10 @@ namespace Lawn
             {
                 UpdateChomper();
             }
+            else if (mSeedType == SeedType.Turnip)
+            {
+                UpdateTurnip();
+            }
             else if (mSeedType == SeedType.Blover)
             {
                 UpdateBlover();
@@ -2484,7 +2492,7 @@ namespace Lawn
                 {
                     return 13;
                 }
-                if (mSeedType == SeedType.Puffshroom || mSeedType == SeedType.Seashroom || mSeedType == SeedType.Fumeshroom || mSeedType == SeedType.Gloomshroom || mSeedType == SeedType.Chomper)
+                if (mSeedType == SeedType.Puffshroom || mSeedType == SeedType.Seashroom || mSeedType == SeedType.Fumeshroom || mSeedType == SeedType.Gloomshroom || mSeedType == SeedType.Chomper || mSeedType == SeedType.Turnip)
                 {
                     return 9;
                 }
@@ -2602,6 +2610,9 @@ namespace Lawn
                     break;
                 case SeedType.IceRepeater:
 					goto IL_27E;
+                case SeedType.Turnip:
+                    result = new TRect(mX - 160, mY, 480, mHeight);
+                    return result;
                 default:
                     if (seedType == SeedType.Leftpeater)
                     {
@@ -3217,6 +3228,70 @@ namespace Lawn
                 if (reanimation.mLoopCount > 0)
                 {
                     PlayBodyReanim(GlobalMembersReanimIds.ReanimTrackId_anim_chew, ReanimLoopType.Loop, 0, 15f);
+                    if (mApp.IsIZombieLevel())
+                    {
+                        reanimation.mAnimRate = 0f;
+                    }
+                    mState = PlantState.ChomperDigesting;
+                    mStateCountdown = 4000;
+                    return;
+                }
+            }
+            else if (mState == PlantState.ChomperDigesting)
+            {
+                if (mStateCountdown <= 0)
+                {
+                    PlayBodyReanim(GlobalMembersReanimIds.ReanimTrackId_anim_swallow, ReanimLoopType.PlayOnceAndHold, 20, 12f);
+                    mState = PlantState.ChomperSwallowing;
+                    return;
+                }
+            }
+            else if ((mState == PlantState.ChomperSwallowing || mState == PlantState.ChomperBitingMissed) && reanimation.mLoopCount > 0)
+            {
+                PlayIdleAnim(reanimation.mDefinition.mFPS);
+                mState = PlantState.Ready;
+            }
+        }
+
+        public void UpdateTurnip()//3update
+        {
+            Reanimation reanimation = mApp.ReanimationTryToGet(mBodyReanimID);
+            if (mState == PlantState.Ready)
+            {
+                Zombie zombie = FindTargetZombie(mRow, PlantWeapon.Primary);
+                if (zombie != null)
+                {
+                    PlayBodyReanim(GlobalMembersReanimIds.ReanimTrackId_anim_shooting, ReanimLoopType.PlayOnceAndHold, 20, 24f);
+                    mState = PlantState.ChomperBiting;
+                    mStateCountdown = 140;
+                    return;
+                }
+            }
+            else if (mState == PlantState.ChomperBiting)
+            {
+                if (mStateCountdown == 100)
+                {
+                    mApp.PlayFoley(FoleyType.Bigchomp);
+                    Zombie zombie2 = FindTargetZombie(mRow, PlantWeapon.Primary);
+                    mApp.PlayFoley(FoleyType.Splat);
+                    zombie2.TakeBodyDamage(15, 0U);
+                    mState = PlantState.ChomperBitingMissed;
+                }
+                if (mStateCountdown == 60)
+                {
+                    mApp.PlayFoley(FoleyType.Bigchomp);
+                    Zombie zombie2 = FindTargetZombie(mRow, PlantWeapon.Primary);
+                    mApp.PlayFoley(FoleyType.Splat);
+                    zombie2.TakeBodyDamage(15, 0U);
+                    mState = PlantState.ChomperBitingMissed;
+                    return;
+                }
+            }
+            else if (mState == PlantState.ChomperBitingGotOne)
+            {
+                if (reanimation.mLoopCount > 0)
+                {
+                    PlayBodyReanim("anim_burrow", ReanimLoopType.Loop, 0, 15f);
                     if (mApp.IsIZombieLevel())
                     {
                         reanimation.mAnimRate = 0f;

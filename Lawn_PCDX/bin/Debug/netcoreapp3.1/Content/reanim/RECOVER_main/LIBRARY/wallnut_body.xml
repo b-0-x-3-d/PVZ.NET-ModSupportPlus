@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="wallnut_body" itemID="6395c57e-00000006">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="wallnut_body" itemID="639a529a-00000071">
   <timeline>
     <DOMTimeline name="wallnut_body">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMBitmapInstance libraryItemName="wallnut_body.png"/>
+                <DOMBitmapInstance selected="true" libraryItemName="wallnut_body.png"/>
               </elements>
             </DOMFrame>
           </frames>

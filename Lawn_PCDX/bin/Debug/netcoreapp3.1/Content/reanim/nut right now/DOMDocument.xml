@@ -1,0 +1,1372 @@
+<DOMDocument frameRate="12" width="80" height="80" xflVersion="2.97" xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <timelines>
+        <DOMTimeline name="Scene 1">
+            <layers>
+                <DOMLayer name="anim_blink_thrice">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="17">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="18">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="19">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="20">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="21">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="22">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="23">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="24">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="25">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="26">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="27">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="28">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="29">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="30">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="31">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="32">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink2">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.634659767150879" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="33">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="34">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="35">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="36">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink2">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.634659767150879" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="37">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="38">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="39">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="40">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink2">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.634659767150879" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="41">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="42">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="43">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="44">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="45">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="46">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="47">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="48">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="49">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="50">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="51">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="52">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="53">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="54">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="55">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="anim_blink_twice">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="17">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="18">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="19">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="20">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="21">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="22">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="23">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="24">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink2">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.634659767150879" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="25">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="26">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="27">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="28">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink2">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.634659767150879" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="29">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_blink1">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="14.943599700927734" ty="11.52791976928711" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="30">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="31">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="32">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="33">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="34">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="35">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="36">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="37">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="38">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="39">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="40">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="41">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="42">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="43">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="44">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="45">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="46">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="47">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="48">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="49">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="50">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="51">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="52">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="53">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="54">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="55">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="anim_blink_twitch">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="17">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_twitch">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="15.584039688110352" ty="18.999719619750977" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="18">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_twitch">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="15.584039688110352" ty="18.252540588378906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="19">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_twitch">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="15.584039688110352" ty="18.999719619750977" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="20">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_twitch">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="15.584039688110352" ty="18.252540588378906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="21">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_twitch">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.699999988079071" tx="15.584039688110352" ty="18.999719619750977" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="22">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="23">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="24">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="25">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="26">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="27">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="28">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="29">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="30">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="31">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="32">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="33">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="34">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="35">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="36">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="37">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="38">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="39">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="40">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="41">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="42">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="43">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="44">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="45">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="46">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="47">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="48">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="49">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="50">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="51">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="52">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="53">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="54">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="55">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="anim_face">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.718999981880188" tx="3.682529926300049" ty="1.8679499626159668" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6999477468440564" b="-0.008551900293404269" c="0.008686287754694053" d="0.7109469631008719" tx="3.202199935913086" ty="2.5617599487304688" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6997910309365745" b="-0.017102524124406656" c="0.017151389307042058" d="0.7017904677614892" tx="2.775239944458008" ty="3.3089399337768555" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6994840295529291" b="-0.02687146648578269" c="0.02543073289765671" d="0.6935339110429192" tx="2.294909954071045" ty="4.002749919891357" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6991035380643204" b="-0.035415058614225316" c="0.0347067575022523" d="0.6851214684936002" tx="1.8679499626159668" ty="4.696559906005859" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6994840295529291" b="-0.02687146648578269" c="0.026641140303542987" d="0.6934884696846276" tx="2.294909954071045" ty="4.002749919891357" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6997910309365745" b="-0.017102524124406656" c="0.017151389307042058" d="0.7017904677614892" tx="2.775239944458008" ty="3.3089399337768555" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6999616066325329" b="-0.007330249047805929" c="0.007434966793262629" d="0.7099610487899242" tx="3.202199935913086" ty="2.5617599487304688" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.718999981880188" tx="3.7358999252319336" ty="1.8679499626159668" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6999317548847125" b="0.009773526216586954" c="-0.008686287754694053" d="0.7109469631008719" tx="4.2162299156188965" ty="2.081429958343506" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6997601155660461" b="0.018323863503457664" c="-0.018376218286305465" d="0.701759464059834" tx="4.696559906005859" ty="2.294909954071045" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6994360646921662" b="0.028092253712286405" c="-0.027851463670124643" d="0.6934409159500408" tx="5.230259895324707" ty="2.455019950866699" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.69904066242361" b="0.036635168746167464" c="-0.035902465433633436" d="0.6850598503655969" tx="5.6038498878479" ty="2.5617599487304688" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6994360646921662" b="0.028092253712286405" c="-0.027851463670124643" d="0.6934409159500408" tx="5.1235198974609375" ty="2.4016499519348145" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6997601155660461" b="0.018323863503457664" c="-0.018376218286305465" d="0.701759464059834" tx="4.643189907073975" ty="2.24153995513916" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6999317548847125" b="0.009773526216586954" c="-0.00992711072190553" d="0.7109307198384558" tx="4.162859916687012" ty="1.9746899604797363" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.718999981880188" tx="3.7358999252319336" ty="1.8679499626159668" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="17">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="18">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="19">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="20">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="21">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="22">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="23">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="24">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="25">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="26">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="27">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="28">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="29">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="30">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="31">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="32">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="33">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="34">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="35">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="36">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="37">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="38">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="39">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="40">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="41">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="42">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="43">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="0" c="-0" d="0.718999981880188" tx="3.896009922027588" ty="1.8679499626159668" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="44">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6194563005716472" b="0.3238439331148967" c="-0.33264655502236096" d="0.636294163024961" tx="15.584039688110352" ty="-3.9493799209594727" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="45">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.3735122848656025" b="0.5908380272017989" c="-0.6068979969285262" d="0.38366497597777005" tx="30.26078987121582" ty="-3.3623099327087402" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="46">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="4.286263724021099E-17" b="0.699999988079071" c="-0.718999981880188" d="4.402605131982886E-17" tx="44.030250549316406" ty="5.390369892120361" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="47">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="-0.3735123242030228" b="0.590838002333713" c="-0.606897971384484" d="-0.3836650163844475" tx="51.341941833496094" ty="17.665470123291016" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="48">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="-0.6194562682298231" b="0.32384399497909194" c="-0.33264661856812894" d="-0.6362941298040318" tx="50.48802185058594" ty="30.901229858398438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="49">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="-0.699999988079071" b="8.572527448042198E-17" c="-8.805210263965772E-17" d="-0.718999981880188" tx="43.2830696105957" ty="40.934791564941406" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="50">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="-0.6194562682298232" b="-0.3238439949790918" c="0.33264661856812877" d="-0.6362941298040319" tx="31.541669845581055" ty="48.726810455322266" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="51">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="-0.373512324203023" b="-0.590838002333713" c="0.6068979713844839" d="-0.38366501638444767" tx="16.81155014038086" ty="50.221168518066406" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="52">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="-1.2858791172063295E-16" b="-0.699999988079071" c="0.718999981880188" d="-1.3207815395948658E-16" tx="3.0420899391174316" ty="43.60329055786133" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="53">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.3735121668533318" b="-0.5908381018060409" c="0.6068980735606367" d="0.38366485475772766" tx="-4.2162299156188965" ty="29.086650848388672" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="54">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.6194562682298229" b="-0.3238439949790922" c="0.33264661856812927" d="0.6362941298040315" tx="-3.3623099327087402" ty="13.822830200195312" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="55">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="wallnut_body">
+                                    <matrix>
+                                        <Matrix a="0.699999988079071" b="-1.7145054896084396E-16" c="1.7610420527931543E-16" d="0.718999981880188" tx="3.682529926300049" ty="1.8679499626159668" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="anim_idle">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="17">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="18">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="19">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="20">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="21">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="22">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="23">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="24">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="25">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="26">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="27">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="28">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="29">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="30">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="31">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="32">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="33">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="34">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="35">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="36">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="37">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="38">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="39">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="40">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="41">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="42">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="43">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="44">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="45">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="46">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="47">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="48">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="49">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="50">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="51">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="52">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="53">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="54">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="55">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="_ground">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="17">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="18">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="19">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="20">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="21">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="22">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="23">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="24">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="25">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="26">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="27">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="28">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="29">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="30">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="31">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="32">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="33">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="34">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="35">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="36">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="37">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="38">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="39">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="40">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="41">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="42">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="43">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="44">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="45">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="46">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="47">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="48">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="49">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="50">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="51">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="52">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="53">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="54">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="55">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+            </layers>
+        </DOMTimeline>
+    </timelines>
+    <media>
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_blink2.png" href="wallnut_blink2.png" />
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_blink2.png" href="wallnut_blink2.png" />
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_blink2.png" href="wallnut_blink2.png" />
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_blink2.png" href="wallnut_blink2.png" />
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_blink2.png" href="wallnut_blink2.png" />
+        <DOMBitmapItem name="wallnut_blink1.png" href="wallnut_blink1.png" />
+        <DOMBitmapItem name="wallnut_twitch.png" href="wallnut_twitch.png" />
+        <DOMBitmapItem name="wallnut_body.png" href="wallnut_body.png" />
+    </media>
+    <symbols>
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_blink2.xml" />
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_blink2.xml" />
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_blink2.xml" />
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_blink2.xml" />
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_blink2.xml" />
+        <Include href="wallnut_blink1.xml" />
+        <Include href="wallnut_twitch.xml" />
+        <Include href="wallnut_body.xml" />
+    </symbols>
+</DOMDocument>

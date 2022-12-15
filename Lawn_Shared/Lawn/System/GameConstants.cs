@@ -264,6 +264,7 @@ namespace Lawn
                 new ReanimationParams(ReanimationType.Lobbashroom, "reanim/Lobbashroom", 0),
                 new ReanimationParams(ReanimationType.DG, "reanim/DG", 0),
                 new ReanimationParams(ReanimationType.Infinut, "reanim/Infinut", 0),
+                new ReanimationParams(ReanimationType.Turnip, "reanim/Turnip", 0),
             };
             GameConstants.gLawnTrailArray = new TrailParams[]
             {
@@ -886,6 +887,7 @@ namespace Lawn
                 new PlantDefinition(SeedType.Zoybean,    null, ReanimationType.Tallnut,         33, 200,750,PlantSubClass.Normal,  1500, "TURKEY_PULT"),
                 new PlantDefinition(SeedType.Infinut,    null, ReanimationType.Infinut,         33, 125,3000,PlantSubClass.Normal,  0, "TURKEY_PULT"),
                 new PlantDefinition(SeedType.Endurian,    null, ReanimationType.Wallnut,         33, 75,3000,PlantSubClass.Normal,  150, "TURKEY_PULT"),
+                new PlantDefinition(SeedType.Turnip,    null, ReanimationType.Turnip,         33, 250,750,PlantSubClass.Normal,  250, "TURNIP"),
             };
             GameConstants.PLANT_MODE = new List() 
             {
