@@ -22,7 +22,8 @@ namespace Lawn
         BlueFire,
         Diamond,
         ZombieFirepea,
-        Turkey,
+        Turkey, 
+        BowlingBulb,
         ProjectilesCount
     }
 }

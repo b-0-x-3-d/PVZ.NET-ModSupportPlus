@@ -70,6 +70,7 @@ namespace Lawn
         Infinut,
         Endurian,
         Turnip,
+        BowlingBulb,
         SeedTypeCount,
         Towerpot,
         BeghouledButtonShuffle,

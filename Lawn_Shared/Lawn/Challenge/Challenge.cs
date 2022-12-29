@@ -1699,6 +1699,17 @@ namespace Lawn
                 };
                 InitZombieWavesFromList(array15, array15.Length);
             }
+            else if (mApp.mGameMode == GameMode.ChallengeObjective)
+            {
+                ZombieType[] array15 = new ZombieType[]
+                {
+                    ZombieType.Normal,
+                    ZombieType.TrafficCone,
+                    ZombieType.Newspaper,
+                    ZombieType.DoorCone,
+                };
+                InitZombieWavesFromList(array15, array15.Length);
+            }
             else if (mApp.mGameMode == GameMode.ChallengeLastStand)
             {
                 ZombieType[] array16 = new ZombieType[]
@@ -2617,8 +2628,8 @@ namespace Lawn
             if (mBoard.mSeedBank.mNumPackets == 0)
             {
                 mBoard.mSeedBank.mSeedPackets[0].SetPacketType(SeedType.IceRepeater, SeedType.None);
-                mBoard.mSeedBank.mSeedPackets[1].SetPacketType(SeedType.Gloomshroom, SeedType.None);
-                mBoard.mSeedBank.mSeedPackets[2].SetPacketType(SeedType.Tallnut, SeedType.None);
+                mBoard.mSeedBank.mSeedPackets[1].SetPacketType(SeedType.Tallnut, SeedType.None);
+                mBoard.mSeedBank.mSeedPackets[2].SetPacketType(SeedType.Jalapeno, SeedType.None);
                 mBoard.mSeedBank.mSeedPackets[3].SetPacketType(SeedType.BeghouledButtonShuffle, SeedType.None);
                 mBoard.mSeedBank.mNumPackets = 4;
                 mBoard.DisplayAdvice("[ADVICE_BEGHOULED_SAVE_SUN]", MessageStyle.HintFast, AdviceType.BeghouledSaveSun);
@@ -2656,7 +2667,16 @@ namespace Lawn
                 num3 = TodCommon.ClampInt(num3, 1, 5);
                 for (int i = 0; i < num3; i++)
                 {
+                    mBoard.AddCoin((int)(num - 10f + 20f * i), (int)num2, CoinType.Largesun, CoinMotion.Coin);
                     mBoard.AddCoin((int)(num - 10f + 20f * i), (int)num2, CoinType.Sun, CoinMotion.Coin);
+                    if (i >= 3)
+                    {
+                        mBoard.AddCoin((int)(num - 10f + 20f * i), (int)num2, CoinType.Silver, CoinMotion.Coin);
+                    }
+                    if (i >= 5)
+                    {
+                        mBoard.AddCoin((int)(num - 10f + 20f * i), (int)num2, CoinType.Gold, CoinMotion.Coin);
+                    }
                 }
             }
             mBeghouledMatchesThisMove++;

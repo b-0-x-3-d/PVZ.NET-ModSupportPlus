@@ -653,7 +653,6 @@ namespace Sexy
 
         public virtual void BuyGame()
         {
-            Guide.ShowMarketplace(PlayerIndex.One);
         }
 
         public void ShowUpdateRequiredMessage()

@@ -4202,6 +4202,8 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_LS, 84, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_MG, 167, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_MS, 247, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+
+            new UNPACK_INFO(AtlasResources.IMAGE_KELPSTRIPE, 1, 1, 31, 451, 1, 1, AnimType.AnimType_None, 0, 0, 0),
         };
         mArrays["SeedAtlas"] = array;
         for (int i = 0; i < array.Length; i++)

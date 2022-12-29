@@ -37,8 +37,8 @@ namespace Lawn
             mStoreButton.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_StoreButton_X, Constants.GameSelector_StoreButton_Y, AtlasResources.IMAGE_SELECTORSCREEN_STORE.mWidth, AtlasResources.IMAGE_SELECTORSCREEN_STORE.mHeight);
             mAlmanacButton = GameButton.MakeNewButton(114, this, "", null, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC, AtlasResources.IMAGE_SELECTORSCREEN_ALMANACHIGHLIGHT, AtlasResources.IMAGE_SELECTORSCREEN_ALMANACHIGHLIGHT);
             mAlmanacButton.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_AlmanacButton_X, Constants.GameSelector_AlmanacButton_Y, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC.mWidth, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC.mHeight);
-            mCustomLevel = GameButton.MakeNewButton((int)GameSelectorButtons.Custom, this, "", null, AtlasResources.IMAGE_REANIM_DIAMOND, AtlasResources.IMAGE_REANIM_DIAMOND, AtlasResources.IMAGE_REANIM_DIAMOND);
-            mCustomLevel.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_AlmanacButton_X - (int)Constants.InvertAndScale(125f), Constants.GameSelector_AlmanacButton_Y - (int)Constants.InvertAndScale(100f), AtlasResources.IMAGE_REANIM_DIAMOND.mWidth, AtlasResources.IMAGE_SELECTORSCREEN_ALMANAC.mHeight);
+            mCustomLevel = GameButton.MakeButton((int)GameSelectorButtons.Custom, this, "News");
+            mCustomLevel.Resize(Constants.MAIN_MENU_ORIGIN_X + Constants.GameSelector_AlmanacButton_X - (int)Constants.InvertAndScale(300), Constants.GameSelector_AlmanacButton_Y - (int)Constants.InvertAndScale(75f), (int)Constants.InvertAndScale(120f), (int)Constants.InvertAndScale(30f));
             mMoreGamesButton = GameButton.MakeNewButton(115, this, "", null, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_BUTTON, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_HIGHLIGHT, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_HIGHLIGHT);
             mMoreGamesButton.Resize(Constants.MAIN_MENU_ORIGIN_X + (int)Constants.InvertAndScale(10f), (int)Constants.InvertAndScale(170f), AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_BUTTON.mWidth, AtlasResources.IMAGE_REANIM_SELECTORSCREEN_MOREGAMES_BUTTON.mHeight);
             mMoreGamesButton.mTranslateX = 0;
@@ -154,16 +154,9 @@ namespace Lawn
 
         private void SetupUnlockFullGameReanim()
         {
-            //if (SexyAppBase.IsInTrialMode)
-            //{
-                mWoodSignReanimID.AssignRenderGroupToPrefix("short rope1", -1);
-                mWoodSignReanimID.AssignRenderGroupToPrefix("short rope2", -1);
-                return;
-            //}
-            //mWoodSignReanimID.AssignRenderGroupToPrefix("long rope1", -1);
-            //mWoodSignReanimID.AssignRenderGroupToPrefix("long rope2", -1);
-            //mWoodSignReanimID.AssignRenderGroupToPrefix("click here", -1);
-            //mWoodSignReanimID.AssignRenderGroupToPrefix("broken", -1);
+            mWoodSignReanimID.AssignRenderGroupToPrefix("short rope1", -1);
+            mWoodSignReanimID.AssignRenderGroupToPrefix("short rope2", -1);
+            return;
         }
 
         public override void Dispose()
@@ -646,7 +639,7 @@ namespace Lawn
                 mApp.DoAlmanacDialog(SeedType.None, ZombieType.Invalid, this);
                 return;
             case GameSelectorButtons.Custom:
-                
+                    mApp.OpenNews();
                 return;
             case GameSelectorButtons.MoreGames:
                 mMoreGamesButton.mVisible = false;

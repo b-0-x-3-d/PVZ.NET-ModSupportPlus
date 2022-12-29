@@ -1141,13 +1141,7 @@ namespace Lawn
                 }
                 if (mMotionType == ProjectileMotion.StarBurst)
                 {
-                    mVelX *= 0.98f;
-                    mVelY *= 0.98f;
-                }
-                if (mMotionType == ProjectileMotion.StarBurst && Math.Abs(mVelX+mVelY) <= 0.1f)
-                {
-                    mMotionType = ProjectileMotion.Straight;
-                    mProjectileType = ProjectileType.Melon;
+                    mVelX += 0.15f;
                 }
             }
             else if (mMotionType == ProjectileMotion.Bee)

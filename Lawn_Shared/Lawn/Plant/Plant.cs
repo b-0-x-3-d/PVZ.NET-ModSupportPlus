@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using MLEM.Misc;
 using Sexy;
 using Sexy.TodLib;
@@ -164,6 +165,10 @@ namespace Lawn
             mPottedPlantIndex = -1;
             PlantDefinition plantDefinition = Plant.GetPlantDefinition(theSeedType);
             mLaunchRate = plantDefinition.mLaunchRate;
+            if (mApp.mGameMode == GameMode.ChallengeObjective)
+            {
+                mLaunchRate = plantDefinition.mLaunchRate / 2;
+            }
             mSubclass = (int)plantDefinition.mSubClass;
             mRenderOrder = CalcRenderOrder();
             Reanimation reanimation = null;
@@ -908,6 +913,63 @@ namespace Lawn
 					}
 			   }
             }
+            if (mApp.mGameMode == GameMode.ChallengeObjective && mBoard.mCursorObject.mCursorType == CursorType.Normal && (mSeedType != SeedType.Cherrybomb && mSeedType != SeedType.Potatomine && mSeedType != SeedType.Jalapeno && mSeedType != SeedType.Wallnut))
+            {
+                if (mSeedType == SeedType.Peashooter && mBoard.TakeSunMoney(250))
+                {
+                    Coin funni = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni.mUsableSeedType = SeedType.Repeater;
+                    Die();
+                    return;
+                }
+                if (mSeedType == SeedType.Repeater && mBoard.TakeSunMoney(275))
+                {
+                    Coin funni = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni.mUsableSeedType = SeedType.Threepeater;
+                    Die();
+                    Coin funni2 = mBoard.AddCoin(mX+20, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni2.mUsableSeedType = SeedType.Kernelpult;
+                    Die();
+                    return;
+                }
+                if (mSeedType == SeedType.Threepeater && mBoard.TakeSunMoney(350))
+                {
+                    Coin funni = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni.mUsableSeedType = SeedType.Melonpult;
+                    Coin funni2 = mBoard.AddCoin(mX+20, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni2.mUsableSeedType = SeedType.Kernelpult;
+                    Coin funni22 = mBoard.AddCoin(mX+40, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni22.mUsableSeedType = SeedType.Kernelpult;
+                    Die();
+                    return;
+                }
+                if (mSeedType == SeedType.Melonpult && mBoard.TakeSunMoney(225))
+                {
+                    Coin funni = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni.mUsableSeedType = SeedType.Melonpult;
+                    Coin funn2i = mBoard.AddCoin(mX+20, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funn2i.mUsableSeedType = SeedType.Wintermelon;
+                    Coin funn23i = mBoard.AddCoin(mX+40, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funn23i.mUsableSeedType = SeedType.Starfruit;
+                    Die();
+                    return;
+                }
+                if (mSeedType == SeedType.Wintermelon && mBoard.TakeSunMoney(25))
+                {
+                    Coin funni = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni.mUsableSeedType = SeedType.Melonpult;
+                    Coin funn2i = mBoard.AddCoin(mX+20, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funn2i.mUsableSeedType = SeedType.Wintermelon;
+                    Die();
+                    return;
+                }
+                if (mBoard.TakeSunMoney(25))
+                {
+                    Coin funni = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
+                    funni.mUsableSeedType = mSeedType;
+                    Die();
+                }
+            }
         }
 
         public void DoSpecial()
@@ -1081,7 +1143,7 @@ namespace Lawn
                     }
                     if (seedType == SeedType.Threepeater)
                     {
-                        projectileType = ProjectileType.Snowpea;
+                        projectileType = ProjectileType.Pea;
                         goto IL_157;
                     }
                 }
@@ -1153,6 +1215,9 @@ namespace Lawn
                     goto IL_157;
                 case SeedType.TurkeyPult:
                     projectileType = ProjectileType.Turkey;
+                    goto IL_157;
+                case SeedType.BowlingBulb:
+                    projectileType = ProjectileType.BowlingBulb;
                     goto IL_157;
                 default:
                     if (seedType == SeedType.Leftpeater)
@@ -1434,7 +1499,7 @@ namespace Lawn
                         }
                         if (mSeedType != SeedType.Cattail)
                         {
-                            if (mSeedType == SeedType.Gloomshroom)
+                            if (mSeedType == SeedType.Gloomshroom || mSeedType == SeedType.Turnip)
                             {
                                 if (rowDeviation < -1)
                                 {
@@ -2005,9 +2070,15 @@ namespace Lawn
                     switch (theSeedType)
                     {
                         case SeedType.Peashooter:
-                            return 175;
+                            return 125;
+                        case SeedType.Sunflower:
+                            return 75;
+                        case SeedType.Cherrybomb:
+                            return 0;
+                        case SeedType.Wallnut:
+                            return 75;
                         default:
-                            return plantDefinition2.mSeedCost + 25;
+                            return plantDefinition2.mSeedCost + 50;
                     }
                 }
                 if ((int)GameConstants.PLANT_MODE[(int)theSeedType] == 2)
@@ -2015,7 +2086,7 @@ namespace Lawn
                     switch (theSeedType)
                     {
                         default:
-                            return plantDefinition2.mSeedCost + 25;
+                            return plantDefinition2.mSeedCost + 100;
                     }
                 }
                 if (theSeedType == SeedType.Imitater && theImitaterType != SeedType.None)
@@ -3269,20 +3340,31 @@ namespace Lawn
             }
             else if (mState == PlantState.ChomperBiting)
             {
-                if (mStateCountdown == 100)
+                if (mStateCountdown == 130)
                 {
-                    mApp.PlayFoley(FoleyType.Bigchomp);
+                    mApp.PlayFoley(FoleyType.Thump);
                     Zombie zombie2 = FindTargetZombie(mRow, PlantWeapon.Primary);
+                    if (zombie2 == null)
+                    {
+                        PlayIdleAnim(reanimation.mDefinition.mFPS);
+                        mState = PlantState.Ready;
+                        return;
+                    }
                     mApp.PlayFoley(FoleyType.Splat);
-                    zombie2.TakeBodyDamage(15, 0U);
-                    mState = PlantState.ChomperBitingMissed;
+                    zombie2.TakeDamage(15, 0U);
                 }
                 if (mStateCountdown == 60)
                 {
-                    mApp.PlayFoley(FoleyType.Bigchomp);
+                    mApp.PlayFoley(FoleyType.Thump);
                     Zombie zombie2 = FindTargetZombie(mRow, PlantWeapon.Primary);
+                    if (zombie2 == null)
+                    {
+                        PlayIdleAnim(reanimation.mDefinition.mFPS);
+                        mState = PlantState.Ready;
+                        return; 
+                    }
                     mApp.PlayFoley(FoleyType.Splat);
-                    zombie2.TakeBodyDamage(15, 0U);
+                    zombie2.TakeDamage(15, 0U);
                     mState = PlantState.ChomperBitingMissed;
                     return;
                 }
