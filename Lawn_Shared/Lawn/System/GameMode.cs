@@ -50,6 +50,7 @@ namespace Lawn
         ChallengeCustom,
         ChallengeFinalBoss2,
         ChallengeObjective,
+        ChallengeShoot,
 
         ChallengeArtChallenge1,
         ChallengeArtChallenge2,

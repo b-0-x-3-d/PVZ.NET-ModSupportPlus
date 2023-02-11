@@ -154,7 +154,7 @@ namespace Lawn
 
         private void SetupUnlockFullGameReanim()
         {
-            mWoodSignReanimID.AssignRenderGroupToPrefix("short rope1", -1);
+            //mWoodSignReanimID.AssignRenderGroupToPrefix("short rope1", -1);
             mWoodSignReanimID.AssignRenderGroupToPrefix("short rope2", -1);
             return;
         }

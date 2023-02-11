@@ -1597,7 +1597,7 @@ namespace Lawn
                 };
                 InitZombieWavesFromList(array9, array9.Length);
             }
-            else if (mApp.mGameMode == GameMode.ChallengeBigTime)
+            else if (mApp.mGameMode == GameMode.ChallengeShoot)
             {
                 ZombieType[] array9 = new ZombieType[]
                 {
@@ -1609,6 +1609,12 @@ namespace Lawn
                     ZombieType.DoorCone,
                     ZombieType.Pogo,
                     ZombieType.Newspaper,
+                    ZombieType.DoorPail,
+                    ZombieType.PogoPail,
+                    ZombieType.Polevaulter,
+                    ZombieType.Gargantuar,
+                    ZombieType.RedeyeGargantuar,
+                    ZombieType.Zamboni,
                 };
                 InitZombieWavesFromList(array9, array9.Length);
             }
@@ -1641,7 +1647,11 @@ namespace Lawn
                     ZombieType.GatlingHead,
                     ZombieType.Mustache,
                     ZombieType.DoorPail,
-                    ZombieType.DoorCone
+                    ZombieType.DoorCone,
+                    ZombieType.TallnutHead,
+                    ZombieType.TallnutDoor,
+                    ZombieType.WallnutHead,
+                    ZombieType.Dancer,
                 };
                 InitZombieWavesFromList(array11, array11.Length);
             }
@@ -2753,6 +2763,10 @@ namespace Lawn
             {
                 num = 2f;
             }
+            else if (mApp.mGameMode == GameMode.ChallengeShoot)
+            {
+                num = 5f;
+            }
             else if (mApp.mGameMode == GameMode.ChallengeColumn)
             {
                 num = 3f;
@@ -2926,6 +2940,15 @@ namespace Lawn
                 num2++;
                 Challenge.aSeedPickArray[num2].mItem = 14;
                 Challenge.aSeedPickArray[num2].mWeight = 8;
+                num2++;
+            }
+            else if (mApp.mGameMode == GameMode.ChallengeShoot)
+            {
+                Challenge.aSeedPickArray[num2].mItem = SeedType.Cherrybomb;
+                Challenge.aSeedPickArray[num2].mWeight = 65;
+                num2++;
+                Challenge.aSeedPickArray[num2].mItem = SeedType.Jalapeno;
+                Challenge.aSeedPickArray[num2].mWeight = 35;
                 num2++;
             }
             else if (mApp.IsFinalBossLevel())

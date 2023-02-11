@@ -884,11 +884,12 @@ namespace Lawn
                 new PlantDefinition(SeedType.IceNut,        null, ReanimationType.Wallnut,      33, 75, 3000,PlantSubClass.Normal,  0, "ICENUT"),
                 new PlantDefinition(SeedType.PlantFood,     null, ReanimationType.Wallnut,      33, 0,  3000,PlantSubClass.Normal,  0, "PLANT_FOOD"),
                 new PlantDefinition(SeedType.TurkeyPult,    null, ReanimationType.Cabbagepult,  33, 300,750,PlantSubClass.Shooter,  600, "TURKEY_PULT"),
-                new PlantDefinition(SeedType.Zoybean,    null, ReanimationType.Tallnut,         33, 200,750,PlantSubClass.Normal,  1500, "TURKEY_PULT"),
-                new PlantDefinition(SeedType.Infinut,    null, ReanimationType.Infinut,         33, 125,3000,PlantSubClass.Normal,  0, "TURKEY_PULT"),
-                new PlantDefinition(SeedType.Endurian,    null, ReanimationType.Wallnut,         33, 75,3000,PlantSubClass.Normal,  150, "TURKEY_PULT"),
+                new PlantDefinition(SeedType.Zoybean,    null, ReanimationType.Tallnut,         33, 200,750,PlantSubClass.Normal,  1500, "ZOYBEAN"),
+                new PlantDefinition(SeedType.Infinut,    null, ReanimationType.Infinut,         33, 125,3000,PlantSubClass.Normal,  0, "INFINUT"),
+                new PlantDefinition(SeedType.Endurian,    null, ReanimationType.Wallnut,         33, 75,3000,PlantSubClass.Normal,  150, "ENDURIAN"),
                 new PlantDefinition(SeedType.Turnip,    null, ReanimationType.Turnip,         33, 250,750,PlantSubClass.Normal,  250, "TURNIP"),
                 new PlantDefinition(SeedType.BowlingBulb,    null, ReanimationType.Wallnut,         33, 150,750,PlantSubClass.Shooter,  750, "BOWLING_BULB"),
+                new PlantDefinition(SeedType.AirRaidPea,    null, ReanimationType.Gatlingpea,         33, 500,5000,PlantSubClass.Shooter,  50, "AIR_RAID_PEA"),
             };
             GameConstants.PLANT_MODE = new List() 
             {
@@ -1074,7 +1075,7 @@ namespace Lawn
 
         public const int PRICE_MULTIPLIER = 10;
 
-        public const int MINI_GAME_COUNT = 28;
+        public const int MINI_GAME_COUNT = 29;
 
         public const int I_ZOMBIE_LEVEL_COUNT = 10;
 

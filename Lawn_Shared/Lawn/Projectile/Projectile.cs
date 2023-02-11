@@ -994,7 +994,7 @@ namespace Lawn
 
         public bool CantHitHighGround()
         {
-            return mMotionType != ProjectileMotion.Backwards && mMotionType != ProjectileMotion.Bee && mMotionType != ProjectileMotion.Homing && (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Star || mProjectileType == ProjectileType.Puff || mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire) && !mOnHighGround;
+            return mMotionType != ProjectileMotion.Backwards && mMotionType != ProjectileMotion.StarBurst && mMotionType != ProjectileMotion.StarPlus && mMotionType != ProjectileMotion.Star && mMotionType != ProjectileMotion.Bee && mMotionType != ProjectileMotion.Homing && (mProjectileType == ProjectileType.Pea || mProjectileType == ProjectileType.Snowpea || mProjectileType == ProjectileType.Star || mProjectileType == ProjectileType.Puff || mProjectileType == ProjectileType.Fireball || mProjectileType == ProjectileType.BlueFire) && !mOnHighGround;
         }
 
         public void DoSplashDamage(Zombie theZombie)

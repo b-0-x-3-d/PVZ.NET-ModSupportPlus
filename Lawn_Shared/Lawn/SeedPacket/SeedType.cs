@@ -71,6 +71,7 @@ namespace Lawn
         Endurian,
         Turnip,
         BowlingBulb,
+        AirRaidPea,
         SeedTypeCount,
         Towerpot,
         BeghouledButtonShuffle,

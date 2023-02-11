@@ -3646,7 +3646,7 @@ namespace Lawn
 
         public bool ChooseSeedsOnCurrentLevel()
         {
-            return !mApp.IsChallengeWithoutSeedBank() && !HasConveyorBeltSeedBank() && mApp.mGameMode != GameMode.ChallengeIce && mApp.mGameMode != GameMode.ChallengeObjective && mApp.mGameMode != GameMode.ChallengeResodded && mApp.mGameMode != GameMode.ChallengeZenGarden && mApp.mGameMode != GameMode.ChallengeBigTime && mApp.mGameMode != GameMode.TreeOfWisdom && mApp.mGameMode != GameMode.ChallengeBeghouled && mApp.mGameMode != GameMode.ChallengeBeghouledTwist && mApp.mGameMode != GameMode.ChallengeZombiquarium && !mApp.IsIZombieLevel() && !mApp.IsSquirrelLevel() && !mApp.IsSlotMachineLevel() && ((!mApp.IsAdventureMode() && !mApp.IsQuickPlayMode()) || !mApp.IsFirstTimeAdventureMode() || mLevel > 7);
+            return !mApp.IsChallengeWithoutSeedBank() && !HasConveyorBeltSeedBank() && mApp.mGameMode != GameMode.ChallengeIce && mApp.mGameMode != GameMode.ChallengeObjective && mApp.mGameMode != GameMode.ChallengeResodded && mApp.mGameMode != GameMode.ChallengeZenGarden && mApp.mGameMode != GameMode.ChallengeBigTime && mApp.mGameMode != GameMode.TreeOfWisdom && mApp.mGameMode != GameMode.ChallengeBeghouled && mApp.mGameMode != GameMode.ChallengeBeghouledTwist && mApp.mGameMode != GameMode.ChallengeShoot && mApp.mGameMode != GameMode.ChallengeZombiquarium && !mApp.IsIZombieLevel() && !mApp.IsSquirrelLevel() && !mApp.IsSlotMachineLevel() && ((!mApp.IsAdventureMode() && !mApp.IsQuickPlayMode()) || !mApp.IsFirstTimeAdventureMode() || mLevel > 7);
         }
 
         public int GetNumSeedsInBank()
@@ -6737,6 +6737,7 @@ namespace Lawn
                 mBackground = BackgroundType.NumBWB;
                 break;
             case GameMode.ChallengeFinalBoss:
+            case GameMode.ChallengeShoot:
                 mBackground = BackgroundType.MushroomGarden;
                 break;
             case GameMode.ChallengeZenGarden:
@@ -6888,6 +6889,10 @@ namespace Lawn
             if (mApp.mGameMode == GameMode.ChallengeObjective)
             {
                 AddPlant(1, 2, SeedType.Peashooter, SeedType.None);
+            }
+            if (mApp.mGameMode == GameMode.ChallengeShoot)
+            {
+                AddPlant(1, 2, SeedType.AirRaidPea, SeedType.None);
             }
             if (StageHasGraveStones())
             {
@@ -8415,7 +8420,7 @@ namespace Lawn
 
         public bool HasConveyorBeltSeedBank()
         {
-            return mApp.IsFinalBossLevel() || mApp.IsMiniBossLevel() || mLevel == 50 || mApp.IsShovelLevel() || mApp.IsWallnutBowlingLevel() || mApp.IsLittleTroubleLevel() || mApp.IsStormyNightLevel() || mApp.IsBungeeBlitzLevel() || mApp.mGameMode == GameMode.ChallengePortalCombat || mApp.mGameMode == GameMode.ChallengeColumn || mApp.mGameMode == GameMode.ChallengeInvisighoul;
+            return mApp.IsFinalBossLevel() || mApp.IsMiniBossLevel() || mLevel == 50 || mApp.IsShovelLevel() || mApp.IsWallnutBowlingLevel() || mApp.IsLittleTroubleLevel() || mApp.IsStormyNightLevel() || mApp.IsBungeeBlitzLevel() || mApp.mGameMode == GameMode.ChallengePortalCombat || mApp.mGameMode == GameMode.ChallengeColumn || mApp.mGameMode == GameMode.ChallengeInvisighoul || mApp.mGameMode == GameMode.ChallengeShoot;
         }
 
         public bool StageHasRoof()

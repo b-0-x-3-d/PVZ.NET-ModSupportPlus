@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using LAWN;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using MLEM.Input;
 using MLEM.Misc;
 using Sexy;
 using Sexy.TodLib;
@@ -251,6 +254,28 @@ namespace Lawn
                     {
                         reanimation2.AttachToAnotherReanimation(ref reanimation, GlobalMembersReanimIds.ReanimTrackId_anim_idle);
                     }
+                }
+            }
+            else if (theSeedType == SeedType.AirRaidPea)
+            {
+                if (reanimation != null)
+                {
+                    reanimation.mAnimRate = TodCommon.RandRangeFloat(15f, 20f);
+                    Reanimation reanimation2 = mApp.AddReanimation(0f, 0f, mRenderOrder + 2, ReanimationType.FlowerPot);
+                    reanimation2.mLoopType = ReanimLoopType.Loop;
+                    reanimation2.mAnimRate = reanimation.mAnimRate;
+                    reanimation2.SetFramesForLayer(GlobalMembersReanimIds.ReanimTrackId_anim_idle);
+                    mHeadReanimID = mApp.ReanimationGetID(reanimation2);
+                    if (reanimation.TrackExists(GlobalMembersReanimIds.ReanimTrackId_anim_stem))
+                    {
+                        reanimation2.AttachToAnotherReanimation(ref reanimation, GlobalMembersReanimIds.ReanimTrackId_anim_stem);
+                    }
+                    else if (reanimation.TrackExists(GlobalMembersReanimIds.ReanimTrackId_anim_idle))
+                    {
+                        reanimation2.AttachToAnotherReanimation(ref reanimation, GlobalMembersReanimIds.ReanimTrackId_anim_idle);
+                    }
+
+                    reanimation.SetFramesForLayer(GlobalMembersReanimIds.ReanimTrackId_anim_head_idle);
                 }
             }
             else if (theSeedType == SeedType.Splitpea)
@@ -604,6 +629,19 @@ namespace Lawn
             {
                 mX = 10;
                 mPlantCol = 8;
+            }
+            if (mSeedType == SeedType.AirRaidPea)
+            {
+                if (IsInPlay() && mApp.mBoard != null && IsOnBoard())
+                {
+                    mX = Mouse.GetState().X;
+                    mY = Mouse.GetState().Y;
+                    if (mBoard.PixelToGridY(mX, mY) >= 0 && mBoard.PixelToGridY(mX, mY) <= 5)
+                    {
+                        mRow = mBoard.PixelToGridY(mX, mY);
+                    }
+                    mPlantHealth = 10000;
+                }
             }
             UpdateReanim();
         }
@@ -1219,6 +1257,9 @@ namespace Lawn
                 case SeedType.BowlingBulb:
                     projectileType = ProjectileType.BowlingBulb;
                     goto IL_157;
+                case SeedType.AirRaidPea:
+                    projectileType = ProjectileType.Pea;
+                    goto IL_157;
                 default:
                     if (seedType == SeedType.Leftpeater)
                     {
@@ -1451,6 +1492,13 @@ namespace Lawn
                 if (mSeedType == SeedType.Leftpeater)
                 {
                     projectile.mMotionType = ProjectileMotion.Backwards;
+                    return;
+                }
+                if (mSeedType == SeedType.AirRaidPea)
+                {
+                    projectile.mMotionType = ProjectileMotion.Bee;
+                    projectile.mVelX = 3f;
+                    projectile.mVelY = 0f;
                     return;
                 }
                 if (mSeedType == SeedType.Cattail)
@@ -2282,13 +2330,6 @@ namespace Lawn
                             var puffPacket = mBoard.AddCoin(mX, mY, CoinType.UsableSeedPacket, CoinMotion.FromPlant);
                             puffPacket.mUsableSeedType = SeedType.InstantCoffee;
                         }
-                    }
-                    break;
-                case SeedType.Threepeater:
-
-                    for (int i = 0; i < 5; i++)
-                    {
-                        LaunchThreepeaterPF();
                     }
                     break;
                 default:
@@ -4078,6 +4119,18 @@ namespace Lawn
                 if (mShootingCounter == 18 || mShootingCounter == 35 || mShootingCounter == 51 || mShootingCounter == 68)
                 {
                     Fire(null, mRow, PlantWeapon.Primary);
+                }
+            }
+            else if (mSeedType == SeedType.AirRaidPea)
+            {
+                //if ((mShootingCounter >= 18 && mShootingCounter < 21) || (mShootingCounter >= 35 && mShootingCounter < 38) || (mShootingCounter >= 51 && mShootingCounter < 54) || (mShootingCounter >= 68 && mShootingCounter < 71))
+                if (mShootingCounter == 18 || mShootingCounter == 35 || mShootingCounter == 51 || mShootingCounter == 68)
+                {
+                    Fire(null, mRow, PlantWeapon.Primary);
+                    Fire(null, mRow, PlantWeapon.Primary);
+                    Fire(null, mRow, PlantWeapon.Primary);
+                    int theRenderPostition2 = Board.MakeRenderOrder(RenderLayer.Particle, mRow, 0);
+                    AddAttachedParticle(mX + 40, mY + 40, theRenderPostition2, ParticleEffect.VaseShatterLeaf);
                 }
             }
             else if (mSeedType == SeedType.Cattail)
@@ -5917,6 +5970,10 @@ namespace Lawn
             {
                 return;
             }
+            if (mSeedType == SeedType.Waterpot)
+            {
+                PlayBodyReanim(GlobalMembersReanimIds.ReanimTrackId_anim_waterplants, ReanimLoopType.Loop, 20, theRate);
+            } else
             if (mSeedType == SeedType.Waterpot)
             {
                 PlayBodyReanim(GlobalMembersReanimIds.ReanimTrackId_anim_waterplants, ReanimLoopType.Loop, 20, theRate);
