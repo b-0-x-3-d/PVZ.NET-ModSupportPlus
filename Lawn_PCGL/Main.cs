@@ -400,7 +400,7 @@ namespace Sexy
 
         public static bool trialModeChecked = false;
 
-        private static bool trialModeCachedValue = true;
+        private static bool trialModeCachedValue = false;
 
         internal static Graphics graphics;
 

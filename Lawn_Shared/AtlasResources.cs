@@ -3598,6 +3598,10 @@ public/*internal*/ class AtlasResources
             return AtlasResources.IMAGE_REANIM_INFINUT_BODY;
         case 30004:
             return AtlasResources.IMAGE_REANIM_INFINUT_BASE;
+        case 30005:
+            return AtlasResources.IMAGE_REANIM_TURNIP;
+        case 30006:
+            return AtlasResources.IMAGE_KELPSTRIPE;
         default:
             return Resources.GetImageById(theId);
         }
@@ -9073,6 +9077,10 @@ public/*internal*/ class AtlasResources
         {
             return 10393;
         }
+        if (theImage == AtlasResources.IMAGE_KELPSTRIPE)
+        {
+            return 30006;
+        }
         if (theImage == AtlasResources.IMAGE_STORE_FIRSTAIDWALLNUTICON)
         {
             return 11745;
@@ -10640,6 +10648,10 @@ public/*internal*/ class AtlasResources
         if (theImage == AtlasResources.IMAGE_REANIM_INFINUT_BASE)
         {
             return 20005;
+        }
+        if (theImage == AtlasResources.IMAGE_REANIM_TURNIP)
+        {
+            return 20006;
         }
         int idByImage = (int)Resources.GetIdByImage(theImage);
         if (idByImage == 249)
@@ -14160,6 +14172,10 @@ public/*internal*/ class AtlasResources
 
     public static Image IMAGE_REANIM_INFINUT_BASE;
 
+    public static Image IMAGE_REANIM_TURNIP;
+
+    public static Image IMAGE_KELPSTRIPE;
+
     private static AtlasResources.AtlasStringTable[] table = new AtlasResources.AtlasStringTable[]
     {
         new AtlasResources.AtlasStringTable("IMAGE_REANIM_CRAZYDAVE_BODY1", 10794),
@@ -15917,7 +15933,9 @@ public/*internal*/ class AtlasResources
         new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBOTANY", 10001),
         new AtlasResources.AtlasStringTable("IMAGE_MINIGAMES_ZOMBOTANY2", 10002),
         new AtlasResources.AtlasStringTable("IMAGE_REANIM_INFINUT_BODY", 30003),
-        new AtlasResources.AtlasStringTable("IMAGE_REANIM_INFINUT_BASE", 30004)
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_INFINUT_BASE", 30004),
+        new AtlasResources.AtlasStringTable("IMAGE_REANIM_TURNIP", 30005),
+        new AtlasResources.AtlasStringTable("IMAGE_KELPSTRIPE", 30006),
     };
 
     public enum AtlasImageId
@@ -17675,10 +17693,12 @@ public/*internal*/ class AtlasResources
         IMAGE_REANIM_SPIKEROCK_BIGSPIKE3_ID,
         IMAGE_REANIM_INFINUT_BODY_ID,
         IMAGE_REANIM_INFINUT_BASE_ID,
+        IMAGE_REANIM_TURNIP_ID,
         IMAGE_SEEDPACKET_IR_ID,
         IMAGE_SEEDPACKET_LS_ID,
         IMAGE_SEEDPACKET_MG_ID,
         IMAGE_SEEDPACKET_MS_ID,
+        IMAGE_KELPSTRIPE,
     }
 
     public class AtlasStringTable

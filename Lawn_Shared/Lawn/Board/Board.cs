@@ -900,7 +900,7 @@ namespace Lawn
             }
             if (mCursorObject.mCursorType == CursorType.PlantFromUsableCoin && mCursorObject.mCoinID != null)
             {
-                mCursorObject.mCoinID.mIsBeingCollected = true;
+                mCursorObject.mCoinID.mIsBeingCollected = false;
             }
             mCursorObject.mType = SeedType.None;
             mCursorObject.mCursorType = CursorType.Normal;
@@ -1093,6 +1093,13 @@ namespace Lawn
                 mSeedBank.mSeedPackets[0].SetPacketType(SeedType.Sunflower, SeedType.None);
                 mSeedBank.mSeedPackets[1].SetPacketType(SeedType.Potatomine, SeedType.None);
                 mSeedBank.mSeedPackets[2].SetPacketType(SeedType.IceRepeater, SeedType.None);
+            }
+            else  if (mApp.mGameMode == GameMode.ChallengeObjective)
+            {
+                //Debug.ASSERT(mSeedBank.mNumPackets == 3);
+                mSeedBank.mSeedPackets[0].SetPacketType(SeedType.Wallnut, SeedType.None);
+                mSeedBank.mSeedPackets[1].SetPacketType(SeedType.Potatomine, SeedType.None);
+                mSeedBank.mSeedPackets[2].SetPacketType(SeedType.Jalapeno, SeedType.None);
             }
             else if (mApp.mGameMode == GameMode.ChallengeIce)
             {
@@ -2556,7 +2563,7 @@ namespace Lawn
                     }
                     else if (value_type == '2')
                     {
-                        mApp.DoZombieDialog();
+                        mApp.DoCheatDialog();
                     }
                     else if (value_type == '#')
                     {
@@ -3381,6 +3388,9 @@ namespace Lawn
             case BackgroundType.Num10Special:
                 image = Resources.IMAGE_BACKGROUND10;
                 break;
+            case BackgroundType.NumBWB:
+                image = Resources.IMAGE_BACKGROUND19;
+                break;
             case BackgroundType.MushroomGarden:
                 image = Resources.IMAGE_BACKGROUND_MUSHROOMGARDEN;
                 break;
@@ -3450,6 +3460,10 @@ namespace Lawn
             if (mApp.mGameScene == GameScenes.LevelIntro && StageHasGraveStones())
             {
                 g.DrawImage(AtlasResources.IMAGE_NIGHT_GRAVE_GRAPHIC, Constants.InvertAndScale(640f), 40f * Constants.S);
+            }
+            if (mBackground == BackgroundType.NumBWB)
+            {
+                g.DrawImage(AtlasResources.IMAGE_WALLNUT_BOWLINGSTRIPE, Constants.InvertAndScale(200f), 77f * Constants.S);
             }
         }
 
@@ -3632,7 +3646,7 @@ namespace Lawn
 
         public bool ChooseSeedsOnCurrentLevel()
         {
-            return !mApp.IsChallengeWithoutSeedBank() && !HasConveyorBeltSeedBank() && mApp.mGameMode != GameMode.ChallengeIce && mApp.mGameMode != GameMode.ChallengeResodded && mApp.mGameMode != GameMode.ChallengeZenGarden && mApp.mGameMode != GameMode.ChallengeBigTime && mApp.mGameMode != GameMode.TreeOfWisdom && mApp.mGameMode != GameMode.ChallengeBeghouled && mApp.mGameMode != GameMode.ChallengeBeghouledTwist && mApp.mGameMode != GameMode.ChallengeZombiquarium && !mApp.IsIZombieLevel() && !mApp.IsSquirrelLevel() && !mApp.IsSlotMachineLevel() && ((!mApp.IsAdventureMode() && !mApp.IsQuickPlayMode()) || !mApp.IsFirstTimeAdventureMode() || mLevel > 7);
+            return !mApp.IsChallengeWithoutSeedBank() && !HasConveyorBeltSeedBank() && mApp.mGameMode != GameMode.ChallengeIce && mApp.mGameMode != GameMode.ChallengeObjective && mApp.mGameMode != GameMode.ChallengeResodded && mApp.mGameMode != GameMode.ChallengeZenGarden && mApp.mGameMode != GameMode.ChallengeBigTime && mApp.mGameMode != GameMode.TreeOfWisdom && mApp.mGameMode != GameMode.ChallengeBeghouled && mApp.mGameMode != GameMode.ChallengeBeghouledTwist && mApp.mGameMode != GameMode.ChallengeShoot && mApp.mGameMode != GameMode.ChallengeZombiquarium && !mApp.IsIZombieLevel() && !mApp.IsSquirrelLevel() && !mApp.IsSlotMachineLevel() && ((!mApp.IsAdventureMode() && !mApp.IsQuickPlayMode()) || !mApp.IsFirstTimeAdventureMode() || mLevel > 7);
         }
 
         public int GetNumSeedsInBank()
@@ -3642,6 +3656,10 @@ namespace Lawn
                 return 1;
             }
             if (mApp.IsWhackAZombieLevel())
+            {
+                return 3;
+            }
+            if (mApp.mGameMode == GameMode.ChallengeObjective)
             {
                 return 3;
             }
@@ -6672,7 +6690,6 @@ namespace Lawn
                 mBackground = BackgroundType.Num2Night;
                 break;
             case GameMode.SurvivalNormalStage3:
-            case GameMode.SurvivalEndlessStage3:
             case GameMode.ChallengeLittleTrouble:
             case GameMode.ChallengeBobsledBonanza:
             case GameMode.ChallengeSpeed:
@@ -6716,7 +6733,11 @@ namespace Lawn
             case GameMode.SurvivalHardStage5:
                 mBackground = BackgroundType.Num10Special;
                 break;
+            case GameMode.SurvivalEndlessStage3:
+                mBackground = BackgroundType.NumBWB;
+                break;
             case GameMode.ChallengeFinalBoss:
+            case GameMode.ChallengeShoot:
                 mBackground = BackgroundType.MushroomGarden;
                 break;
             case GameMode.ChallengeZenGarden:
@@ -6733,7 +6754,7 @@ namespace Lawn
                 break;
             }
             LoadBackgroundImages();
-            if (mBackground == BackgroundType.Num1Day || mBackground == BackgroundType.Greenhouse || mBackground == BackgroundType.MushroomGarden || mBackground == BackgroundType.TreeOfWisdom)
+            if (mBackground == BackgroundType.NumBWB || mBackground == BackgroundType.Num1Day || mBackground == BackgroundType.Greenhouse || mBackground == BackgroundType.MushroomGarden || mBackground == BackgroundType.TreeOfWisdom)
             {
                 mPlantRow[0] = PlantRowType.Normal;
                 mPlantRow[1] = PlantRowType.Normal;
@@ -6865,6 +6886,14 @@ namespace Lawn
             }
             int levelRandSeed = GetLevelRandSeed();
             RandomNumbers.Seed(levelRandSeed);
+            if (mApp.mGameMode == GameMode.ChallengeObjective)
+            {
+                AddPlant(1, 2, SeedType.Peashooter, SeedType.None);
+            }
+            if (mApp.mGameMode == GameMode.ChallengeShoot)
+            {
+                AddPlant(1, 2, SeedType.AirRaidPea, SeedType.None);
+            }
             if (StageHasGraveStones())
             {
                 if (mApp.mGameMode == GameMode.ChallengeGraveDanger)
@@ -8391,7 +8420,7 @@ namespace Lawn
 
         public bool HasConveyorBeltSeedBank()
         {
-            return mApp.IsFinalBossLevel() || mApp.IsMiniBossLevel() || mLevel == 50 || mApp.IsShovelLevel() || mApp.IsWallnutBowlingLevel() || mApp.IsLittleTroubleLevel() || mApp.IsStormyNightLevel() || mApp.IsBungeeBlitzLevel() || mApp.mGameMode == GameMode.ChallengePortalCombat || mApp.mGameMode == GameMode.ChallengeColumn || mApp.mGameMode == GameMode.ChallengeInvisighoul;
+            return mApp.IsFinalBossLevel() || mApp.IsMiniBossLevel() || mLevel == 50 || mApp.IsShovelLevel() || mApp.IsWallnutBowlingLevel() || mApp.IsLittleTroubleLevel() || mApp.IsStormyNightLevel() || mApp.IsBungeeBlitzLevel() || mApp.mGameMode == GameMode.ChallengePortalCombat || mApp.mGameMode == GameMode.ChallengeColumn || mApp.mGameMode == GameMode.ChallengeInvisighoul || mApp.mGameMode == GameMode.ChallengeShoot;
         }
 
         public bool StageHasRoof()
@@ -9421,6 +9450,11 @@ namespace Lawn
                 if (mBackground == BackgroundType.Num10Special)
                 {
                     mApp.DelayLoadBackgroundResource("DelayLoad_Background10");
+                    return;
+                }
+                if (mBackground == BackgroundType.NumBWB)
+                {
+                    mApp.DelayLoadBackgroundResource("DelayLoad_Background19");
                     return;
                 }
                 if (mBackground == BackgroundType.Greenhouse)

@@ -1,0 +1,1608 @@
+<DOMDocument frameRate="12" width="80" height="80" xflVersion="2.97" xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <timelines>
+        <DOMTimeline name="Scene 1">
+            <layers>
+                <DOMLayer name="anim_lift">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="anim_idle">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="anim_drop">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements />
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements />
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="broken">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="0.8660254037844384" b="-0.5000000000000004" c="0.5000000000000004" d="0.8660254037844384" tx="12" ty="-23.799999237060547" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="0.9914448613738105" b="0.13052619222005118" c="-0.13052619222005118" d="0.9914448613738105" tx="16.5" ty="57.099998474121094" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="0.7071067811865477" b="0.7071067811865474" c="-0.7071067811865474" d="0.7071067811865477" tx="23.399999618530273" ty="146.8000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="0.8309845877946969" b="0.5562954384566512" c="-0.5562954384566512" d="0.8309845877946969" tx="20.700000762939453" ty="151" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="0.9229556648733579" b="0.38230075385962226" c="-0.38230075385962226" d="0.9229556648733579" tx="18.299999237060547" ty="135.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="0.9803113634738291" b="0.19232955146710992" c="-0.19232955146710992" d="0.9803113634738291" tx="16.299999237060547" ty="121.19999694824219" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.4492935982947064E-16" d="1" tx="14.899999618530273" ty="106.5999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.4492935982947064E-16" d="1" tx="14.899999618530273" ty="115.30000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.4492935982947064E-16" d="1" tx="14.899999618530273" ty="124" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.4492935982947064E-16" d="1" tx="14.899999618530273" ty="132.60000610351562" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.4492935982947064E-16" d="1" tx="14.899999618530273" ty="132.60000610351562" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.343974015612945E-16" d="0.9570000171661377" tx="14.899999618530273" ty="134.8000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="1.917796868778128E-16" d="0.7829999923706055" tx="14.899999618530273" ty="143.5" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="1.917796868778128E-16" d="0.7829999923706055" tx="14.899999618530273" ty="143.5" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.1994656559403031E-16" d="0.8980000019073486" tx="14.899999618530273" ty="142.6999969482422" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="3.299198483910455E-16" d="1.347000002861023" tx="14.899999618530273" ty="117.19999694824219" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign3">
+                                    <matrix>
+                                        <Matrix a="1" b="-2.4492935982947064E-16" c="2.620744278645898E-16" d="1.0700000524520874" tx="14.899999618530273" ty="-38.20000076293945" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="click here">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="-74.80000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="20" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="115" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="115" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="98.30000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="81.69999694824219" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.8999999761581421" ty="65" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="0.20000000298023224" ty="74" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="-0.30000001192092896" ty="83" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="-1" ty="92" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="-1" ty="92" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.9570000171661377" tx="-1" ty="96" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.7829999923706055" tx="-1" ty="111.69999694824219" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.7829999923706055" tx="-1" ty="111.69999694824219" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.8980000019073486" tx="-1" ty="106.30000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.347000002861023" tx="-1" ty="62.5" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="selectorscreen_unlock">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.0700000524520874" tx="-1" ty="-81.5999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="welcome">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="-169.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="-77.4000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="14.899999618530273" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="26.899999618530273" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="3.5" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="-19.600000381469727" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="-42.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="-28.299999237060547" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="-13.600000381469727" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="0.8999999761581421" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="1.899999976158142" ty="0.8999999761581421" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.9570000171661377" tx="1.899999976158142" ty="8.800000190734863" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.7829999923706055" tx="1.899999976158142" ty="40.29999923706055" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.7829999923706055" tx="1.899999976158142" ty="40.29999923706055" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="0.8980000019073486" tx="1.899999976158142" ty="24.5" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.347000002861023" tx="1.899999976158142" ty="-60" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign1">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.0700000524520874" tx="1.899999976158142" ty="-179.10000610351562" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="long rope2">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.4620000123977661" tx="184.10000610351562" ty="-146.39999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-113.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-113.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-130.60000610351562" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-147.3000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-163.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-155.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-147.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-139.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-139.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.840000033378601" tx="184.10000610351562" ty="-125.80000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.50600004196167" tx="184.10000610351562" ty="-69.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.50600004196167" tx="184.10000610351562" ty="-69.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.7269999980926514" tx="184.10000610351562" ty="-101.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.5910000801086426" tx="184.10000610351562" ty="-249.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.058000087738037" tx="184.10000610351562" ty="-329.8999938964844" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="long rope1">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5390000343322754" tx="25.100000381469727" ty="-130.39999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-81.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-81.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5779999494552612" tx="25.100000381469727" ty="-98.5999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5779999494552612" tx="25.100000381469727" ty="-115.30000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8769999742507935" tx="25.100000381469727" ty="-131.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.878000020980835" tx="25.100000381469727" ty="-123.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.878000020980835" tx="25.100000381469727" ty="-115.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-107.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-107.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.7960000038146973" tx="25.100000381469727" ty="-95.4000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.4700000286102295" tx="25.100000381469727" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.4700000286102295" tx="25.100000381469727" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.6859999895095825" tx="25.100000381469727" ty="-73.0999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.5290000438690186" tx="25.100000381469727" ty="-206.8000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.009000062942505" tx="25.100000381469727" ty="-295.70001220703125" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="short rope2">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="184.10000610351562" ty="-130" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="184.10000610351562" ty="-130" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.7960000038146973" tx="184.10000610351562" ty="-95.4000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5" tx="184.10000610351562" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5" tx="184.10000610351562" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.6859999895095825" tx="184.10000610351562" ty="-73.0999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.5290000438690186" tx="184.10000610351562" ty="-206.8000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.009000062942505" tx="184.10000610351562" ty="-295.70001220703125" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="short rope1">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-130" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-130" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.7960000038146973" tx="25.100000381469727" ty="-95.4000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5" tx="25.100000381469727" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5" tx="25.100000381469727" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.6859999895095825" tx="25.100000381469727" ty="-73.0999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.5290000438690186" tx="25.100000381469727" ty="-206.8000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.009000062942505" tx="25.100000381469727" ty="-295.70001220703125" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="long rope2">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1" tx="184.10000610351562" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.4620000123977661" tx="184.10000610351562" ty="-146.39999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-113.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-113.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-130.60000610351562" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-147.3000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-163.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-155.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-147.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-139.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8240000009536743" tx="184.10000610351562" ty="-139.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.840000033378601" tx="184.10000610351562" ty="-125.80000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.50600004196167" tx="184.10000610351562" ty="-69.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.50600004196167" tx="184.10000610351562" ty="-69.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.7269999980926514" tx="184.10000610351562" ty="-101.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.5910000801086426" tx="184.10000610351562" ty="-249.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.058000087738037" tx="184.10000610351562" ty="-329.8999938964844" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+                <DOMLayer name="long rope1">
+                    <frames>
+                        <DOMFrame index="0">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.2000000476837158" tx="25.100000381469727" ty="-178.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="1">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5390000343322754" tx="25.100000381469727" ty="-130.39999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="2">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-81.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="3">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-81.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="4">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5779999494552612" tx="25.100000381469727" ty="-98.5999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="5">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5779999494552612" tx="25.100000381469727" ty="-115.30000305175781" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="6">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.8769999742507935" tx="25.100000381469727" ty="-131.89999389648438" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="7">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.878000020980835" tx="25.100000381469727" ty="-123.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="8">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.878000020980835" tx="25.100000381469727" ty="-115.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="9">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-107.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="10">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.5770000219345093" tx="25.100000381469727" ty="-107.9000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="11">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.7960000038146973" tx="25.100000381469727" ty="-95.4000015258789" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="12">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.4700000286102295" tx="25.100000381469727" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="13">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.4700000286102295" tx="25.100000381469727" ty="-44.900001525878906" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="14">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="1.6859999895095825" tx="25.100000381469727" ty="-73.0999984741211" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="15">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.5290000438690186" tx="25.100000381469727" ty="-206.8000030517578" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                        <DOMFrame index="16">
+                            <elements>
+                                <DOMSymbolInstance libraryItemName="woodsign2">
+                                    <matrix>
+                                        <Matrix a="1" b="0" c="-0" d="2.009000062942505" tx="25.100000381469727" ty="-295.70001220703125" />
+                                    </matrix>
+                                </DOMSymbolInstance>
+                            </elements>
+                        </DOMFrame>
+                    </frames>
+                </DOMLayer>
+            </layers>
+        </DOMTimeline>
+    </timelines>
+    <media>
+        <DOMBitmapItem name="woodsign3.png" href="woodsign3.png" />
+        <DOMBitmapItem name="selectorscreen_unlock.png" href="selectorscreen_unlock.png" />
+        <DOMBitmapItem name="woodsign1.png" href="woodsign1.png" />
+        <DOMBitmapItem name="woodsign2.png" href="woodsign2.png" />
+        <DOMBitmapItem name="woodsign2.png" href="woodsign2.png" />
+        <DOMBitmapItem name="woodsign2.png" href="woodsign2.png" />
+        <DOMBitmapItem name="woodsign2.png" href="woodsign2.png" />
+        <DOMBitmapItem name="woodsign2.png" href="woodsign2.png" />
+        <DOMBitmapItem name="woodsign2.png" href="woodsign2.png" />
+    </media>
+    <symbols>
+        <Include href="woodsign3.xml" />
+        <Include href="selectorscreen_unlock.xml" />
+        <Include href="woodsign1.xml" />
+        <Include href="woodsign2.xml" />
+        <Include href="woodsign2.xml" />
+        <Include href="woodsign2.xml" />
+        <Include href="woodsign2.xml" />
+        <Include href="woodsign2.xml" />
+        <Include href="woodsign2.xml" />
+    </symbols>
+</DOMDocument>

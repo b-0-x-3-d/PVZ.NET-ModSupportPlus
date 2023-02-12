@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading;
 //using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework;
@@ -425,6 +426,18 @@ namespace Lawn
             LawnDialog lawnDialog = DoDialog(13, true, theDialogHeader, theDialogLines, "", 2);
             lawnDialog.mLawnYesButton.mLabel = TodStringFile.TodStringTranslate("[QUIT_BUTTON]");
             LawnApp.CenterDialog(lawnDialog, lawnDialog.mWidth, lawnDialog.mHeight);
+        }
+
+        public void OpenNews()
+        {
+            WebClient web = new WebClient();
+            System.IO.Stream stream = web.OpenRead("https://pvzgxnews.boxed.repl.co/index.html");
+            using (System.IO.StreamReader reader = new System.IO.StreamReader(stream))
+            {
+                String text = reader.ReadToEnd();
+                LawnDialog lawnDialog = DoDialog(117, true, "News", text, "[DIALOG_BUTTON_OK]", 3);
+                LawnApp.CenterDialog(lawnDialog, lawnDialog.mWidth, lawnDialog.mHeight);
+            }
         }
 
         public void ConfirmCheckForUpdates()

@@ -345,7 +345,7 @@ namespace Lawn
                     mPage--;
                     if (mPage < StorePage.SlotUpgrades)
                     {
-                        mPage = StorePage.Zen2;
+                        mPage = StorePage.Misc;
                     }
                 }
                 while (!IsPageShown(mPage));
@@ -359,7 +359,7 @@ namespace Lawn
                 do
                 {
                     mPage++;
-                    if (mPage >= StorePage.Zen2)
+                    if (mPage >= StorePage.Misc)
                     {
                         mPage = StorePage.SlotUpgrades;
                     }
@@ -1122,11 +1122,7 @@ namespace Lawn
 
         public bool IsPageShown(StorePage thePage)
         {
-            if (mApp.IsTrialStageLocked())
-            {
-                return thePage == StorePage.SlotUpgrades;
-            }
-            return (thePage != StorePage.Zen1 || mApp.mPlayerInfo.mZenGardenTutorialComplete || mApp.mZenGarden.mIsTutorial) && (thePage != StorePage.Zen2 || mApp.mPlayerInfo.mZenGardenTutorialComplete || mApp.HasFinishedAdventure()) && (mApp.HasFinishedAdventure() || thePage != StorePage.PlantUpgrades || mApp.mPlayerInfo.mLevel >= 42);
+                return thePage < StorePage.NumStorePages;
         }
 
         public override void DrawOverlay(Graphics g)

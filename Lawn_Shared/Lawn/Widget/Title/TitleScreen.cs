@@ -149,7 +149,7 @@ namespace Lawn
                 mNeedToInit = false;
                 mStartButton.mLabel = TodStringFile.TodStringTranslate("[LOADING]");
                 mStartButton.SetFont(Resources.FONT_BRIANNETOD16);
-                mStartButton.Resize(mWidth / 2 - AtlasResources.IMAGE_LOADBAR_DIRT.mWidth / 2, (int)(Constants.S * 650f), (int)mTotalBarWidth, (int)Constants.InvertAndScale(18f));
+                mStartButton.Resize(15, (int)(Constants.S * 650f), (int)mTotalBarWidth, (int)Constants.InvertAndScale(18f));
                 mStartButton.mVisible = true;
                 float num2;
                 if (num > 1E-06f)
@@ -328,7 +328,7 @@ namespace Lawn
             {
                 theY = TodCommon.TodAnimateCurve(60, 50, mTitleStateCounter, (int)Constants.InvertAndScale(10f), (int)Constants.InvertAndScale(15f), TodCurves.Bounce);
             }
-            g.DrawImage(Resources.IMAGE_PVZ_LOGO, mWidth / 2 - Resources.IMAGE_PVZ_LOGO.mWidth / 2, theY);
+            g.DrawImage(Resources.IMAGE_PVZ_LOGO, 15, theY);
             int grassX = mStartButton.mX;
             int grassY = mStartButton.mY - (int)Constants.InvertAndScale(34f);
             g.DrawImage(AtlasResources.IMAGE_LOADBAR_DIRT, grassX, grassY + Constants.InvertAndScale(18f));

@@ -2005,6 +2005,7 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
             new UNPACK_INFO(AtlasResources.IMAGE_REANIM_PLANTERN_LEAF1, 30, 1445, 12, 12, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_REANIM_INFINUT_BODY, 147, 1469, 83, 108, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_REANIM_INFINUT_BASE, 61, 1469, 83, 108, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+            new UNPACK_INFO(AtlasResources.IMAGE_REANIM_TURNIP, 0, 1600, 49, 90, 1, 1, AnimType.AnimType_None, 0, 0, 0),
         };
         mArrays["PlantsZombies"] = array;
         for (int i = 0; i < array.Length; i++)
@@ -4148,6 +4149,8 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
         num++;
         AtlasResources.IMAGE_REANIM_INFINUT_BASE = array[num].mpImage;
         num++;
+        AtlasResources.IMAGE_REANIM_TURNIP = array[num].mpImage;
+        num++;
     }
 
     public override void UnpackSeedAtlasAtlasImages()
@@ -4199,6 +4202,8 @@ public/*internal*/ class AtlasResources_480x800 : AtlasResources
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_LS, 84, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_MG, 167, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
             new UNPACK_INFO(AtlasResources.IMAGE_SEEDPACKET_MS, 247, 1, 81, 53, 1, 1, AnimType.AnimType_None, 0, 0, 0),
+
+            new UNPACK_INFO(AtlasResources.IMAGE_KELPSTRIPE, 1, 1, 31, 451, 1, 1, AnimType.AnimType_None, 0, 0, 0),
         };
         mArrays["SeedAtlas"] = array;
         for (int i = 0; i < array.Length; i++)

@@ -6,9 +6,9 @@ namespace Lawn
     {
         SlotUpgrades,
         PlantUpgrades,
-        Misc,
         Zen1,
         Zen2,
+        Misc,
         NumStorePages
     }
 }

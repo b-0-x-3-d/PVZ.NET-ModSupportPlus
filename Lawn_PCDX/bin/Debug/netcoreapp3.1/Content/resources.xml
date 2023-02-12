@@ -388,6 +388,12 @@
 <Image id="BACKGROUND10_GAMEOVER_MASK" path="background6_gameover_mask"  a4r4g4b4="" />
 </Resources>
   
+<Resources id="DelayLoad_Background19">
+<SetDefaults path="images" idprefix="IMAGE_" />
+<Image id="BACKGROUND19" path="background19" ddsurface="" r5g6b5="" format="jpg" surface="bgr565" />
+<Image id="BACKGROUND19_GAMEOVER_MASK" path="background6_gameover_mask"  a4r4g4b4="" />
+</Resources>
+  
   
 
 

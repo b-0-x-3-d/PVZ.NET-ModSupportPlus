@@ -149,6 +149,7 @@
   <Reanim id="LOBBASHROOM" path="lobbashroom" />
   <Reanim id="DG" path="dg" />
   <Reanim id="INFINUT" path="infinut" />
+  <Reanim id="TURNIP" path="turnip" />
   
 </Resources>
 

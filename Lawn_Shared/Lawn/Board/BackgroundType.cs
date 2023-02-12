@@ -17,6 +17,7 @@ namespace Lawn
         MushroomGarden,
         Greenhouse,
         Zombiquarium,
-        TreeOfWisdom
+        TreeOfWisdom,
+        NumBWB
     }
 }

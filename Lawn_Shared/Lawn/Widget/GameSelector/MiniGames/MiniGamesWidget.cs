@@ -317,6 +317,7 @@ namespace Lawn
             Image result = null;
             switch (index)
             {
+            default:
             case 1:
                 result = AtlasResources.IMAGE_MINIGAMES_ZOMBOTANY;
                 break;

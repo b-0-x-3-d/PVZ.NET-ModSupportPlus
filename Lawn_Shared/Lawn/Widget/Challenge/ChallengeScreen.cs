@@ -536,6 +536,9 @@ namespace Lawn
             new ChallengeDefinition(GameMode.ChallengeAirRaid, 5, ChallengePage.Challenge, 1, 0, "[AIR_RAID]"),
             new ChallengeDefinition(GameMode.ChallengeCustom, 5, ChallengePage.Challenge, 1, 0, "Wall-Nut Bowling ULTIMATE"),
             new ChallengeDefinition(GameMode.ChallengeFinalBoss2, 19, ChallengePage.Challenge, 3, 4, "Return of the Zombot (Part 1)"),
+            new ChallengeDefinition(GameMode.ChallengeObjective, 19, ChallengePage.Challenge, 3, 4, "J"),
+            new ChallengeDefinition(GameMode.ChallengeShoot, 19, ChallengePage.Challenge, 3, 4, "Shooting"),
+
             new ChallengeDefinition(GameMode.ChallengeArtChallenge1, 0, ChallengePage.Limbo, 0, 4, "[ART_CHALLENGE_WALL_NUT]"),
             new ChallengeDefinition(GameMode.ChallengeArtChallenge2, 4, ChallengePage.Limbo, 0, 4, "[ART_CHALLENGE_SUNFLOWER]"),
             new ChallengeDefinition(GameMode.ChallengeZenGarden, 7, ChallengePage.Limbo, 1, 2, "[ZEN_GARDEN]"),
